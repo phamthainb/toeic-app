@@ -1,0 +1,55 @@
+{
+  "id": 1570,
+  "tag": "listen",
+  "kind": "question - response",
+  "general": {
+    "audio": "https://migiitoeic.eupgroup.net/uploads/audio_ETS/dac0739e04b119b2da7947d5a5cee751.mp3",
+    "txt_read": "",
+    "txt_read_vn": "",
+    "image": "",
+    "txt_audio": "Aren’t we supposed to take the highway to the airport?<br>A. It’s not on the market yet.<br>B. There’s road maintenance going on.<br>C. The flight to Singapore.",
+    "txt_audio_vn": "<p>Ch&uacute;ng ta kh&ocirc;ng phải đi đường cao tốc đến s&acirc;n bay sao?</p><p>A. N&oacute; chưa c&oacute; tr&ecirc;n thị trường.</p><p>B. Đang bảo tr&igrave; đường bộ.</p><p>C. Chuyến bay đến Singapore.</p>",
+    "txt_audio_trans": {
+      "vi": "<p>Ch&uacute;ng ta kh&ocirc;ng phải đi đường cao tốc đến s&acirc;n bay sao?</p><p>A. N&oacute; chưa c&oacute; tr&ecirc;n thị trường.</p><p>B. Đang bảo tr&igrave; đường bộ.</p><p>C. Chuyến bay đến Singapore.</p>",
+      "ja": "高速道路で空港に行くことになっていないのですか？<br>A.まだ市場に出ていません。<br>B.道路のメンテナンスが行われています。<br>C.シンガポールへのフライト。",
+      "ko": "공항까지 고속도로를 타야 하는 것 아닌가요?<br>A. 아직 출시되지 않았습니다.<br>B. 도로 정비가 진행 중입니다.<br>C. 싱가포르행 비행기.",
+      "zh-CN": "我们不是应该走高速公路去机场吗？<br>A. 尚未上市。<br>B. 正在进行道路维护。<br>C. 飞往新加坡的航班。",
+      "fr": "Ne sommes-nous pas censés prendre l'autoroute jusqu'à l'aéroport ?<br>R. Il n'est pas encore sur le marché.<br>B. Il y a des travaux d'entretien routier en cours.<br>C. Le vol vers Singapour.",
+      "zh-TW": "我們不是應該走高速公路去機場嗎？<br>A. 尚未上市。<br>B. 正在進行道路維護。<br>C. 飛往新加坡的航班。"
+    }
+  },
+  "content": [
+    {
+      "question": "",
+      "answers": [
+        "A",
+        "B",
+        "C"
+      ],
+      "correctAnswer": 1,
+      "image": "",
+      "explainAll": {
+        "vn": "take highway, road, maintenance",
+        "en": "take highway, road, maintenance",
+        "ja": "take highway, road, maintenance",
+        "vi": "take highway, road, maintenance",
+        "ko": "take highway, road, maintenance",
+        "zh-CN": "take highway, road, maintenance",
+        "fr": "take highway, road, maintenance",
+        "zh-TW": "take highway, road, maintenance"
+      }
+    }
+  ],
+  "correct_answers": [
+    1
+  ],
+  "count_question": 1,
+  "title": "In this part of the test, you will hear a question or statement spoken in English, followed by three responses, also spoken in English. The question or statement and the responses will be spoken just one time. They will not be printed in your test book, so you must listen carefully. You are to choose the best response to each question or statement.",
+  "title_trans": {
+    "vn": "Trong phần này của đề thi, bạn sẽ nghe 1 câu hỏi hoặc 1 câu phát biểu bằng tiếng Anh, theo sau đó là 3 câu phản hồi, cũng được nói bằng tiếng Anh. Câu hỏi hay câu phát biểu và các câu phản hồi sẽ chỉ được nói 1 lần. Chúng sẽ không được in trên đề thi, nên bạn cần nghe thật cẩn thận. Bạn cần chọn câu phản hồi đúng nhất với mỗi câu hỏi hoặc câu phát biểu.",
+    "en": "In this part of the test, you will hear a question or statement spoken in English, followed by three responses, also spoken in English. The question or statement and the responses will be spoken just one time. They will not be printed in your test book, so you must listen carefully. You are to choose the best response to each question or statement."
+  },
+  "scores": [
+    1
+  ]
+}

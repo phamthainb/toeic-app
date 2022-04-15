@@ -1,0 +1,48 @@
+{
+  "id": 1926,
+  "tag": "read",
+  "kind": "incomplete sentences",
+  "general": {
+    "audio": "",
+    "txt_read": "",
+    "txt_read_vn": "",
+    "image": "",
+    "txt_audio": "",
+    "txt_audio_vn": ""
+  },
+  "content": [
+    {
+      "question": "Following many months of research, the marketing team finally decided on a ____ for the new perfume bottle",
+      "answers": [
+        "force",
+        "style",
+        "belief",
+        "request"
+      ],
+      "correctAnswer": 1,
+      "image": "",
+      "explainAll": {
+        "vn": "<p>Sau nhiều th&aacute;ng nghi&ecirc;n cứu, tổ tiếp thị cuối c&ugrave;ng cũng quyết định được một ____ cho chai nước hoa mới</p><p>A. sức mạnh (n)</p><p>B. kiểu d&aacute;ng (n)</p><p>C. t&iacute;n ngưỡng (n)</p><p>D. y&ecirc;u cầu (n)</p>###<p>Giải th&iacute;ch:</p><p>Dựa tr&ecirc;n &yacute; nghĩa, (B) l&agrave; c&acirc;u trả lời đ&uacute;ng.</p>",
+        "en": "<p>Following many months of research, the marketing team finally decided on a ____ for the new perfume bottle</p><p>A. force (n)</p><p>B. style (n)</p><p>C. belief (n)</p><p>D. request (n)</p>###<p>Explanation:</p><p>Based on the meaning, (B) is the correct answer.</p>",
+        "ja": "<p>何ヶ月にもわたる調査の結果、マーケティングチームは最終的に新しい香水瓶の____を決定しました</p><p>A.力 (n)</p><p>B.スタイル (n)</p><p>C.信念 (n)</p><p>D.リクエスト (n)</p>###<p>Explanation:</p><p>Based on the meaning, (B) is the correct answer.</p>",
+        "vi": "<p>Sau nhiều th&aacute;ng nghi&ecirc;n cứu, tổ tiếp thị cuối c&ugrave;ng cũng quyết định được một ____ cho chai nước hoa mới</p><p>A. sức mạnh (n)</p><p>B. kiểu d&aacute;ng (n)</p><p>C. t&iacute;n ngưỡng (n)</p><p>D. y&ecirc;u cầu (n)</p>###<p>Giải th&iacute;ch:</p><p>Dựa tr&ecirc;n &yacute; nghĩa, (B) l&agrave; c&acirc;u trả lời đ&uacute;ng.</p>",
+        "ko": "<p>수개월의 연구 끝에 마케팅 팀은 마침내 새 향수병에 대해 ____를 결정했습니다.</p><p>가. 힘 (n)</p><p>나. 스타일 (n)</p><p>다. 믿음 (n)</p><p>D. 요청 (n)</p>###<p>Explanation:</p><p>Based on the meaning, (B) is the correct answer.</p>",
+        "zh-CN": "<p>经过数月的研究，营销团队最终决定为新香水瓶使用____</p><p>力 (n)</p><p>B、风格 (n)</p><p>C、信念 (n)</p><p>D. 请求 (n)</p>###<p>Explanation:</p><p>Based on the meaning, (B) is the correct answer.</p>",
+        "fr": "<p>Après plusieurs mois de recherche, l'équipe marketing a finalement opté pour un ____ pour le nouveau flacon de parfum</p><p>Une force (n)</p><p>Style B. (n)</p><p>C. croyance (n)</p><p>D. demande (n)</p>###<p>Explanation:</p><p>Based on the meaning, (B) is the correct answer.</p>",
+        "zh-TW": "<p>經過數月的研究，營銷團隊最終決定為新香水瓶使用____</p><p>力 (n)</p><p>B、風格 (n)</p><p>C、信念 (n)</p><p>D. 請求 (n)</p>###<p>Explanation:</p><p>Based on the meaning, (B) is the correct answer.</p>"
+      }
+    }
+  ],
+  "correct_answers": [
+    1
+  ],
+  "count_question": 1,
+  "title": "A word or pharse is missing in each of the sentences below. Four answer choices are given below each sentence. Select the best answer to complete the sentence. Then mark the letter (A), (B), (C) or (D) on your answer sheet.",
+  "title_trans": {
+    "vn": "Một từ hoặc một cụm từ bị thiếu trong mỗi câu nói dưới đây. Bốn lựa chọn đáp án được đưa ra dưới mỗi câu hỏi. Hãy chọn đáp án đúng nhất để hoàn thành câu. Sau đó đánh dấu đáp án A, B, C hoặc D vào phần làm bài của bạn. ",
+    "en": "A word or pharse is missing in each of the sentences below. Four answer choices are given below each sentence. Select the best answer to complete the sentence. Then mark the letter (A), (B), (C) or (D) on your answer sheet."
+  },
+  "scores": [
+    1
+  ]
+}
