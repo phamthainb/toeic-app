@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/page9_setting_revert" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="16dp"
+        android:text="Photographs"
+        android:textColor="#00BCD4"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:text="All Questions "
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="410dp"
+        android:layout_height="636dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="29dp"
+        android:background="#EDEDED"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout10"
+            android:layout_width="366dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="16dp"
+            android:background="#ffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textViewquestion3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="23dp"
+                android:text="Question 1"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="10dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="209dp"
+                android:layout_marginTop="23dp"
+                android:text="B"
+                android:textColor="#D1534B"
+                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="8dp"
+                android:layout_height="7dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="29dp"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/page30_cancel" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout11"
+            android:layout_width="366dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="12dp"
+            android:background="#ffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
+
+            <TextView
+                android:id="@+id/textViewquestion3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="23dp"
+                android:text="Question 2"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="10dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="209dp"
+                android:layout_marginTop="23dp"
+                android:text="A"
+                android:textColor="#4CAF50"
+                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="8dp"
+                android:layout_height="7dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="29dp"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/page30_cancel"
+                tools:srcCompat="@drawable/page30_tick" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout12"
+            android:layout_width="366dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="14dp"
+            android:background="#ffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
+
+            <TextView
+                android:id="@+id/textViewquestion3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="23dp"
+                android:text="Question 3"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="10dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="209dp"
+                android:layout_marginTop="23dp"
+                android:text="A"
+                android:textColor="#4CAF50"
+                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="8dp"
+                android:layout_height="7dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="29dp"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/page30_cancel"
+                tools:srcCompat="@drawable/page30_tick" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout13"
+            android:layout_width="366dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="13dp"
+            android:background="#ffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout12">
+
+            <TextView
+                android:id="@+id/textViewquestion3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="23dp"
+                android:text="Question 4"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="10dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="209dp"
+                android:layout_marginTop="23dp"
+                android:text="A"
+                android:textColor="#4CAF50"
+                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="8dp"
+                android:layout_height="7dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="29dp"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/page30_cancel"
+                tools:srcCompat="@drawable/page30_tick" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout14"
+            android:layout_width="366dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:background="#ffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout13">
+
+            <TextView
+                android:id="@+id/textViewquestion3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="23dp"
+                android:text="Question 5"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="10dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="209dp"
+                android:layout_marginTop="23dp"
+                android:text="A"
+                android:textColor="#4CAF50"
+                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="8dp"
+                android:layout_height="7dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="29dp"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/page30_cancel"
+                tools:srcCompat="@drawable/page30_tick" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout15"
+            android:layout_width="366dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="17dp"
+            android:background="#ffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout14">
+
+            <TextView
+                android:id="@+id/textViewquestion3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="23dp"
+                android:text="Question 6"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="10dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="209dp"
+                android:layout_marginTop="23dp"
+                android:text="A"
+                android:textColor="#4CAF50"
+                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="8dp"
+                android:layout_height="7dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="29dp"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/page30_cancel"
+                tools:srcCompat="@drawable/page30_tick" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="366dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="13dp"
+            android:background="#ffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout15">
+
+            <TextView
+                android:id="@+id/textViewquestion3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="23dp"
+                android:text="Question 7"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="10dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="209dp"
+                android:layout_marginTop="23dp"
+                android:text="A"
+                android:textColor="#4CAF50"
+                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="8dp"
+                android:layout_height="7dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="29dp"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/page30_cancel"
+                tools:srcCompat="@drawable/page30_tick" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
