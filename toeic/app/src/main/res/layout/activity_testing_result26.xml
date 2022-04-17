@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".TestingResult26">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Congratulations!"
+        android:textColor="@color/black"
+        android:background="@color/gray"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:text="Total time:"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:text="01:25:00"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintLeft_toRightOf="@id/tv2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <ImageView
+        android:id="@+id/imgtotal"
+        android:layout_width="338dp"
+        android:layout_height="172dp"
+        android:background="@color/gray"
+        android:src="@drawable/screen26_total"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
+
+    <ImageView
+        android:id="@+id/imglistening"
+        android:layout_width="338dp"
+        android:layout_height="172dp"
+        android:src="@drawable/screen26_listening"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgtotal"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <ImageView
+        android:id="@+id/imgreading"
+        android:layout_width="338dp"
+        android:layout_height="172dp"
+        android:background="@color/gray"
+        android:src="@drawable/screen26_reading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imglistening"
+        app:layout_constraintVertical_bias="0.397" />
+
+    <ImageView
+        android:id="@+id/imgtotalcircle"
+        android:layout_width="123dp"
+        android:layout_height="117dp"
+        android:src="@drawable/screen26_circle_red"
+        app:layout_constraintBottom_toBottomOf="@id/imgtotal"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintLeft_toLeftOf="@id/imgtotal"
+        app:layout_constraintRight_toRightOf="@id/imgtotal"
+        app:layout_constraintTop_toTopOf="@id/imgtotal"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <ImageView
+        android:id="@+id/imglisteningcircle"
+        android:layout_width="121dp"
+        android:layout_height="119dp"
+        android:src="@drawable/screen26_circle_violet"
+        app:layout_constraintBottom_toBottomOf="@id/imglistening"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintLeft_toLeftOf="@id/imglistening"
+        app:layout_constraintRight_toRightOf="@id/imglistening"
+        app:layout_constraintTop_toTopOf="@id/imglistening"
+        app:layout_constraintVertical_bias="0.867" />
+
+    <ImageView
+        android:id="@+id/imgreadingcircle"
+        android:layout_width="129dp"
+        android:layout_height="116dp"
+        android:src="@drawable/screen26_circle_yellow"
+        app:layout_constraintBottom_toBottomOf="@id/imgreading"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintLeft_toLeftOf="@id/imgreading"
+        app:layout_constraintRight_toRightOf="@id/imgreading"
+        app:layout_constraintTop_toTopOf="@id/imgreading"
+        app:layout_constraintVertical_bias="0.875" />
+
+    <TextView
+        android:id="@+id/certificate"
+        android:layout_width="168dp"
+        android:layout_height="16dp"
+        android:text="Green certificate 470-725"
+        android:textColor="@color/red"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgtotal"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintLeft_toLeftOf="@id/imgtotal"
+        app:layout_constraintRight_toRightOf="@id/imgtotal"
+
+        app:layout_constraintTop_toTopOf="@id/imgtotal"
+        app:layout_constraintVertical_bias="0.305" />
+
+    <TextView
+        android:id="@+id/review"
+        android:layout_width="165dp"
+        android:layout_height="76dp"
+        android:text="The ability to communicate in English isacceptable,
+and the conversation is a bit lack of vocabulary
+and simple sentences, but he can already master
+a small amount of relevant languages.Can engage
+in jobs with lower English-related levels."
+        android:textColor="@color/black1"
+        android:textSize="9dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgtotal"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintLeft_toLeftOf="@id/imgtotal"
+        app:layout_constraintRight_toRightOf="@id/imgtotal"
+
+        app:layout_constraintTop_toBottomOf="@+id/certificate"
+        app:layout_constraintVertical_bias="0.212" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last score: 540"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgtotal"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintLeft_toLeftOf="@id/imgtotal"
+        app:layout_constraintRight_toLeftOf="@id/imgtotalcircle"
+        app:layout_constraintTop_toTopOf="@id/review"
+        app:layout_constraintVertical_bias="0.906" />
+
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="600"
+        android:textColor="@color/red"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imgtotalcircle"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintLeft_toLeftOf="@id/imgtotalcircle"
+        app:layout_constraintRight_toRightOf="@id/imgtotalcircle"
+        app:layout_constraintTop_toTopOf="@id/imgtotalcircle"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <TextView
+        android:id="@+id/part1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Part 1: 80 (12/25)"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/imglistening"
+        app:layout_constraintHorizontal_bias="0.123"
+        app:layout_constraintLeft_toLeftOf="@id/imglistening"
+        app:layout_constraintRight_toLeftOf="@id/imglisteningcircle"
+        app:layout_constraintTop_toTopOf="@id/imglistening"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/part2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Part 2: 50 (8/25)"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/imglistening"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintLeft_toLeftOf="@id/imglistening"
+        app:layout_constraintRight_toLeftOf="@id/imglisteningcircle"
+        app:layout_constraintTop_toBottomOf="@id/part1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/part3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Part 3: 120 (15/25)"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/imglistening"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintLeft_toLeftOf="@id/imglistening"
+        app:layout_constraintRight_toLeftOf="@id/imglisteningcircle"
+        app:layout_constraintTop_toBottomOf="@id/part2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/part4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Part 4: 50 (12/25)"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/imglistening"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintLeft_toLeftOf="@id/imglistening"
+        app:layout_constraintRight_toLeftOf="@id/imglisteningcircle"
+        app:layout_constraintTop_toBottomOf="@id/part3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last score: 280"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/imglistening"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintLeft_toLeftOf="@id/imglistening"
+        app:layout_constraintRight_toLeftOf="@id/imglisteningcircle"
+        app:layout_constraintTop_toBottomOf="@+id/part4"
+        app:layout_constraintVertical_bias="0.433" />
+
+    <TextView
+        android:id="@+id/listening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="300"
+        android:textColor="@color/violet"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imglisteningcircle"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintLeft_toLeftOf="@id/imglisteningcircle"
+        app:layout_constraintRight_toRightOf="@id/imglisteningcircle"
+        app:layout_constraintTop_toTopOf="@id/imglisteningcircle"
+        app:layout_constraintVertical_bias="0.436" />
+
+    <TextView
+        android:id="@+id/numberListening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="60/100"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/imglisteningcircle"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintLeft_toLeftOf="@id/imglisteningcircle"
+        app:layout_constraintRight_toRightOf="@id/imglisteningcircle"
+        app:layout_constraintTop_toBottomOf="@+id/listening"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last score: 260"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgreading"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintLeft_toLeftOf="@id/imgreading"
+        app:layout_constraintRight_toLeftOf="@id/imgreadingcircle"
+        app:layout_constraintTop_toBottomOf="@id/part7"
+        app:layout_constraintVertical_bias="0.673" />
+
+    <TextView
+        android:id="@+id/part5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Part 5: 145 (15/40)"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgreading"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintLeft_toLeftOf="@id/imgreading"
+        app:layout_constraintRight_toLeftOf="@id/imgreadingcircle"
+        app:layout_constraintTop_toTopOf="@id/imgreading"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <TextView
+        android:id="@+id/part6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Part 6: 100 (10/30)"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgreading"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintLeft_toLeftOf="@id/imgreading"
+        app:layout_constraintRight_toLeftOf="@id/imgreadingcircle"
+        app:layout_constraintTop_toBottomOf="@id/part5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/part7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Part 7: 55 (12/30)"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgreading"
+        app:layout_constraintHorizontal_bias="0.126"
+        app:layout_constraintLeft_toLeftOf="@id/imgreading"
+        app:layout_constraintRight_toLeftOf="@id/imgreadingcircle"
+        app:layout_constraintTop_toTopOf="@id/imgreading"
+        app:layout_constraintVertical_bias="0.575" />
+
+    <TextView
+        android:id="@+id/reading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="300"
+        android:textColor="@color/yellow"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imgreadingcircle"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintLeft_toLeftOf="@id/imgreadingcircle"
+        app:layout_constraintRight_toRightOf="@id/imgreadingcircle"
+        app:layout_constraintTop_toTopOf="@id/imgreadingcircle"
+        app:layout_constraintVertical_bias="0.464" />
+
+    <TextView
+        android:id="@+id/numberReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="60/100"
+        android:textColor="@color/black1"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgreadingcircle"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="@id/imgreadingcircle"
+        app:layout_constraintRight_toRightOf="@id/imgreadingcircle"
+        app:layout_constraintTop_toBottomOf="@+id/reading"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

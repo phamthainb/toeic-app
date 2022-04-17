@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Toeic">
         <activity
+            android:name=".TestingResult26"
+            android:exported="true" />
+        <activity
+            android:name=".Target32"
+            android:exported="true" />
+        <activity
             android:name=".Login2"
             android:exported="true" />
         <activity

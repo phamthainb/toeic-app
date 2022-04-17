@@ -11,7 +11,7 @@
         android:id="@+id/imageView3"
         android:layout_width="293dp"
         android:layout_height="347dp"
-        android:src="@drawable/img"
+        android:src="@drawable/screen1_plane"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintLeft_toLeftOf="parent"
