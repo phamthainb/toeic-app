@@ -20,26 +20,32 @@
         android:id="@+id/kind"
         android:layout_width="0dp"
         android:layout_height="30dp"
-        android:layout_marginStart="152dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
-        android:fontWeight="700"
         android:text="Photographs"
-        android:textSize="8pt"
+        android:gravity="center"
+        android:textColor="#00BCD4"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/question_number"
         android:layout_width="0dp"
         android:layout_height="30dp"
-        android:layout_marginStart="160dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginTop="44dp"
         android:text="Question 4/30"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/back_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="?attr/homeAsUpIndicator"
@@ -48,13 +54,14 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/list_btn"
         android:layout_width="37dp"
         android:layout_height="22dp"
         app:srcCompat="@android:drawable/arrow_down_float"
         tools:layout_editor_absoluteX="333dp"
         tools:layout_editor_absoluteY="16dp"
         tools:ignore="MissingConstraints" />
+
 
     <TextView
         android:id="@+id/question"
@@ -63,18 +70,21 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="44dp"
+        android:padding="10dip"
+        android:background="#00BCD4"
+        android:textColor="#ffffff"
         android:text="Question: ban co biet jh jgjh jhgh cksd jhsdf jkhsjf kjshf sdfjkh sdfkhs skjdfh sdfkh  khfd khfs khd khjd kjhdf khsfdk  khsf sdkf dfjks kjhsfkj skj sfjh fds"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/image" />
 
     <RadioGroup
-        android:id="@+id/radioGroup_character"
+        android:id="@+id/group_answers"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,5 +115,84 @@
             android:layout_height="wrap_content"
             android:text="answer4" />
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/explains"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="30dp"
+        android:text="Explaination"
+        android:gravity="left"
+        android:textColor="#00BCD4"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/group_answers" />
+
+    <TextView
+        android:id="@+id/explain1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:text="(A): ban co biet jh jgjh jhgh cksd jhsdf jkhsjf kjshf sdfjkh sdfkhs skjdfh sdfkh  khfd khfs khd khjd kjhdf khsfdk  khsf sdkf dfjks kjhsfkj skj sfjh fds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/explains" />
+
+    <TextView
+        android:id="@+id/explain2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:text="(B): ban co biet jh jgjh jhgh cksd jhsdf jkhsjf kjshf sdfjkh sdfkhs skjdfh sdfkh  khfd khfs khd khjd kjhdf khsfdk  khsf sdkf dfjks kjhsfkj skj sfjh fds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/explain1" />
+    <TextView
+        android:id="@+id/explain3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:text="(C): ban co biet jh jgjh jhgh cksd jhsdf jkhsjf kjshf sdfjkh sdfkhs skjdfh sdfkh  khfd khfs khd khjd kjhdf khsfdk  khsf sdkf dfjks kjhsfkj skj sfjh fds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/explain2" />
+    <TextView
+        android:id="@+id/explain4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:text="(D): ban co biet jh jgjh jhgh cksd jhsdf jkhsjf kjshf sdfjkh sdfkhs skjdfh sdfkh  khfd khfs khd khjd kjhdf khsfdk  khsf sdkf dfjks kjhsfkj skj sfjh fds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/explain3" />
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:text="*colleague (n): one of a group of people who
+work together"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/explain4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
