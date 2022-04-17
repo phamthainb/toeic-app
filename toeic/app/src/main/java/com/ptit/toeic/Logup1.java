@@ -1,5 +1,9 @@
 package com.ptit.toeic;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -7,37 +11,32 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
-public class Login2 extends AppCompatActivity {
-    Button btnSignIn1;
-    TextView tvSignUp;
+public class Logup1 extends AppCompatActivity {
+    Button btnSignUp1;
+    TextView tvSignIn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login2);
+        setContentView(R.layout.activity_logup1);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("");
-        btnSignIn1=findViewById(R.id.btnSignIn);
-        tvSignUp=findViewById(R.id.txtSignUp);
-        btnSignIn1.setOnClickListener(new View.OnClickListener() {
+        btnSignUp1=findViewById(R.id.btnSignUp);
+        tvSignIn=findViewById(R.id.txtSignIn);
+        btnSignUp1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
         });
-        tvSignUp.setOnClickListener(new View.OnClickListener() {
+        tvSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Login2.this,Logup1.class);
+                Intent intent=new Intent(Logup1.this,Login2.class);
                 startActivity(intent);
             }
         });
-
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -45,4 +44,5 @@ public class Login2 extends AppCompatActivity {
                 onBackPressed();
                 return true;
     }
+
 }

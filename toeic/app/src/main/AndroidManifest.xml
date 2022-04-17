@@ -13,7 +13,7 @@
             android:name=".Login2"
             android:exported="true" />
         <activity
-            android:name=".Login1"
+            android:name=".Logup1"
             android:exported="true" />
         <activity
             android:name=".Login"
