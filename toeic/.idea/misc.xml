@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Coconut/PTIT/toeic-app/toeic/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Coconut/PTIT/toeic-app/toeic/app/src/main/res/layout/layout.xml" value="0.1" />
-        <entry key="..\:/Coconut/PTIT/toeic-app/toeic/app/src/main/res/layout/screen2.xml" value="0.21428571428571427" />
+        <entry key="..\:/mobile_demo/toeic-app/toeic/app/src/main/res/drawable/round_btn.xml" value="0.1" />
+        <entry key="..\:/mobile_demo/toeic-app/toeic/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/mobile_demo/toeic-app/toeic/app/src/main/res/layout/activity_login1.xml" value="0.16666666666666666" />
+        <entry key="..\:/mobile_demo/toeic-app/toeic/app/src/main/res/layout/activity_login2.xml" value="0.1" />
+        <entry key="..\:/mobile_demo/toeic-app/toeic/app/src/main/res/layout/activity_logup1.xml" value="0.1796875" />
+        <entry key="..\:/mobile_demo/toeic-app/toeic/app/src/main/res/layout/activity_target32.xml" value="0.16666666666666666" />
+        <entry key="..\:/mobile_demo/toeic-app/toeic/app/src/main/res/layout/activity_testing_result26.xml" value="0.22" />
       </map>
     </option>
   </component>
