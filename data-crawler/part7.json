@@ -1,0 +1,79 @@
+{
+  "id": 1430,
+  "tag": "read",
+  "kind": "reading comprehension",
+  "general": {
+    "audio": "",
+    "txt_read": "<p><img src=\"https://migiitoeic.eupgroup.net/uploads/image_ETS/5634406bc916b7a0484de2dcbcbff940.JPG\" /></p>",
+    "txt_read_vn": "<p>Từ: Outbox &lt;customer_service@outbox.com&gt;<br />Đến: Waris Duale &lt;warisduale@mailinsights.com&gt;<br />Ng&agrave;y: 1 th&aacute;ng 9<br />Chủ đề: Tin tức cửa h&agrave;ng<br />Tin tốt đ&acirc;y, c&ocirc; Duale. Outbox, cửa h&agrave;ng cung cấp văn ph&ograve;ng phẩm số một ở v&ugrave;ng Thung lũng S&ocirc;ng Grindstone, đ&atilde; mở rộng cửa h&agrave;ng tại Đại lộ Lakeview để th&ecirc;m v&agrave;o bộ phận đồ nội thất văn ph&ograve;ng. Để đ&aacute;nh dấu dịp n&agrave;y, c&aacute;c th&agrave;nh vi&ecirc;n của c&acirc;u lạc bộ qu&agrave; thưởng của ch&uacute;ng ta sẽ nhận được một khoản chiết khấu 20% tr&ecirc;n tất cả đồ nội thất văn ph&ograve;ng. Ngo&agrave;i ra, họ sẽ kiếm được gấp đ&ocirc;i điểm thưởng trong suốt sự kiện b&aacute;n h&agrave;ng n&agrave;y. Đơn đặt h&agrave;ng được chấp nhận ở tất cả c&aacute;c cửa h&agrave;ng cũng như tr&ecirc;n trang web của ch&uacute;ng t&ocirc;i, www.outbox.com. Tận dụng cơ hội n&agrave;y để cập nhật cho văn ph&ograve;ng l&agrave;m việc của c&ocirc; v&agrave; trong l&uacute;c đ&oacute;, tiết kiệm một ch&uacute;t tiền v&agrave; t&iacute;ch lũy điểm thưởng. Nhanh l&ecirc;n n&agrave;o, đề nghị n&agrave;y hết hiệu lực v&agrave;o ng&agrave;y 30 th&aacute;ng 9.</p>",
+    "image": "",
+    "txt_audio": "",
+    "txt_audio_vn": "",
+    "txt_read_trans": {
+      "vi": "<p>Từ: Outbox &lt;customer_service@outbox.com&gt;<br />Đến: Waris Duale &lt;warisduale@mailinsights.com&gt;<br />Ng&agrave;y: 1 th&aacute;ng 9<br />Chủ đề: Tin tức cửa h&agrave;ng<br />Tin tốt đ&acirc;y, c&ocirc; Duale. Outbox, cửa h&agrave;ng cung cấp văn ph&ograve;ng phẩm số một ở v&ugrave;ng Thung lũng S&ocirc;ng Grindstone, đ&atilde; mở rộng cửa h&agrave;ng tại Đại lộ Lakeview để th&ecirc;m v&agrave;o bộ phận đồ nội thất văn ph&ograve;ng. Để đ&aacute;nh dấu dịp n&agrave;y, c&aacute;c th&agrave;nh vi&ecirc;n của c&acirc;u lạc bộ qu&agrave; thưởng của ch&uacute;ng ta sẽ nhận được một khoản chiết khấu 20% tr&ecirc;n tất cả đồ nội thất văn ph&ograve;ng. Ngo&agrave;i ra, họ sẽ kiếm được gấp đ&ocirc;i điểm thưởng trong suốt sự kiện b&aacute;n h&agrave;ng n&agrave;y. Đơn đặt h&agrave;ng được chấp nhận ở tất cả c&aacute;c cửa h&agrave;ng cũng như tr&ecirc;n trang web của ch&uacute;ng t&ocirc;i, www.outbox.com. Tận dụng cơ hội n&agrave;y để cập nhật cho văn ph&ograve;ng l&agrave;m việc của c&ocirc; v&agrave; trong l&uacute;c đ&oacute;, tiết kiệm một ch&uacute;t tiền v&agrave; t&iacute;ch lũy điểm thưởng. Nhanh l&ecirc;n n&agrave;o, đề nghị n&agrave;y hết hiệu lực v&agrave;o ng&agrave;y 30 th&aacute;ng 9.</p>",
+      "ja": "<p><img src=\"https://migiitoeic.eupgroup.net/uploads/image_ETS/5634406bc916b7a0484de2dcbcbff940.JPG\" /></p>",
+      "ko": "<p><img src=\"https://migiitoeic.eupgroup.net/uploads/image_ETS/5634406bc916b7a0484de2dcbcbff940.JPG\" /></p>",
+      "zh-CN": "<p><img src=\"https://migiitoeic.eupgroup.net/uploads/image_ETS/5634406bc916b7a0484de2dcbcbff940.JPG\" /></p>",
+      "fr": "<p><img src=\"https://migiitoeic.eupgroup.net/uploads/image_ETS/5634406bc916b7a0484de2dcbcbff940.JPG\" /></p>",
+      "zh-TW": "<p><img src=\"https://migiitoeic.eupgroup.net/uploads/image_ETS/5634406bc916b7a0484de2dcbcbff940.JPG\" /></p>"
+    }
+  },
+  "content": [
+    {
+      "question": "Why was the e-mail sent?",
+      "answers": [
+        "To introduce an online ordering process",
+        "To announce a new store location",
+        "To mention a special offer",
+        "To explain a new program"
+      ],
+      "correctAnswer": 2,
+      "image": "",
+      "explainAll": {
+        "vn": "<p>Tại sao bức e-mail lại được gửi?</p><p>A. Giới thiệu qu&aacute; tr&igrave;nh đặt h&agrave;ng trực tuyến</p><p>B. C&ocirc;ng bố địa điểm cửa h&agrave;ng mới</p><p>C. Nhắc về một đề nghị đặc biệt</p><p>D. Giải th&iacute;ch một chương tr&igrave;nh mới</p>###<p>Th&ocirc;ng tin trong b&agrave;i:</p><p>To mark this occasion, members of our rewards club will receive a 20% discount on all office furniture. Additionally, they will earn double rewards points during this sales event.</p>",
+        "en": "<p>Why was the e-mail sent?</p><p>A. To introduce an online ordering process</p><p>B. To announce a new store location</p><p>C. To mention a special offer</p><p>D. To explain a new program</p>###<p>Information:</p><p>To mark this occasion, members of our rewards club will receive a 20% discount on all office furniture. Additionally, they will earn double rewards points during this sales event.</p>",
+        "ja": "<p>なぜメールが送信されたのですか？</p><p>A.オンライン注文プロセスを導入するには</p><p>B.新しい店舗の場所を発表する</p><p>C.特別オファーについて言及する</p><p>D.新しいプログラムを説明する</p>###<p>Information:</p><p>To mark this occasion, members of our rewards club will receive a 20% discount on all office furniture. Additionally, they will earn double rewards points during this sales event.</p>",
+        "vi": "<p>Tại sao bức e-mail lại được gửi?</p><p>A. Giới thiệu qu&aacute; tr&igrave;nh đặt h&agrave;ng trực tuyến</p><p>B. C&ocirc;ng bố địa điểm cửa h&agrave;ng mới</p><p>C. Nhắc về một đề nghị đặc biệt</p><p>D. Giải th&iacute;ch một chương tr&igrave;nh mới</p>###<p>Th&ocirc;ng tin trong b&agrave;i:</p><p>To mark this occasion, members of our rewards club will receive a 20% discount on all office furniture. Additionally, they will earn double rewards points during this sales event.</p>",
+        "ko": "<p>이메일을 보낸 이유는 무엇입니까?</p><p>A. 온라인 주문 프로세스 도입</p><p>나. 새로운 매장 위치를 ​​알리기 위해</p><p>C. 특별 제안을 언급하기 위해</p><p>D. 새로운 프로그램을 설명하기 위해</p>###<p>Information:</p><p>To mark this occasion, members of our rewards club will receive a 20% discount on all office furniture. Additionally, they will earn double rewards points during this sales event.</p>",
+        "zh-CN": "<p>为什么发送电子邮件？</p><p>A. 引入在线订购流程</p><p>B. 宣布新店址</p><p>C. 提及特别优惠</p><p>D. 解释一个新程序</p>###<p>Information:</p><p>To mark this occasion, members of our rewards club will receive a 20% discount on all office furniture. Additionally, they will earn double rewards points during this sales event.</p>",
+        "fr": "<p>Pourquoi l'e-mail a-t-il été envoyé ?</p><p>A. Pour introduire un processus de commande en ligne</p><p>B. Pour annoncer un nouvel emplacement de magasin</p><p>C. Pour mentionner une offre spéciale</p><p>D. Expliquer un nouveau programme</p>###<p>Information:</p><p>To mark this occasion, members of our rewards club will receive a 20% discount on all office furniture. Additionally, they will earn double rewards points during this sales event.</p>",
+        "zh-TW": "<p>為什麼發送電子郵件？</p><p>A. 引入在線訂購流程</p><p>B. 宣布新店址</p><p>C. 提及特別優惠</p><p>D. 解釋一個新程序</p>###<p>Information:</p><p>To mark this occasion, members of our rewards club will receive a 20% discount on all office furniture. Additionally, they will earn double rewards points during this sales event.</p>"
+      }
+    },
+    {
+      "question": "What is indicated about the store on Lakeview Avenue?",
+      "answers": [
+        "It was recently enlarged.",
+        "It has updated its Web site.",
+        "It often hosts sales events for rewards club members.",
+        "It was the first Outbox store in the region."
+      ],
+      "correctAnswer": 0,
+      "image": "",
+      "explainAll": {
+        "vn": "<p>Điều g&igrave; được ngụ &yacute; về cửa h&agrave;ng tr&ecirc;n Đại lộ Lakeview?</p><p>A. N&oacute; được mở rộng gần đ&acirc;y.</p><p>B. N&oacute; đ&atilde; cập nhật trang web của m&igrave;nh.</p><p>C. N&oacute; thường tổ chức c&aacute;c sự kiện b&aacute;n h&agrave;ng cho c&aacute;c th&agrave;nh vi&ecirc;n c&acirc;u lạc bộ qu&agrave; thưởng.</p><p>D. N&oacute; l&agrave; cửa h&agrave;ng Outbox đầu ti&ecirc;n trong v&ugrave;ng.</p>###<p>Th&ocirc;ng tin trong b&agrave;i:</p><p>Great news, Ms. Duale. Outbox, the number one office supply store in the Grindstone River Valley region, has expanded its store on Lakeview Avenue to include an office furniture department.</p>",
+        "en": "<p>What is indicated about the store on Lakeview Avenue?</p><p>A. It was recently enlarged.</p><p>B. It has updated its Web site.</p><p>C. It often hosts sales events for rewards club members.</p><p>D. It was the first Outbox store in the region.</p>###<p>Information:</p><p>Great news, Ms. Duale. Outbox, the number one office supply store in the Grindstone River Valley region, has expanded its store on Lakeview Avenue to include an office furniture department.</p>",
+        "ja": "<p>レイクビューアベニューの店について何が示されていますか？</p><p>A.最近拡大されました。</p><p>B.Webサイトを更新しました。</p><p>C.リワードクラブ会員向けの販売イベントを頻繁に開催します。</p><p>D.この地域で最初の送信トレイストアでした。</p>###<p>Information:</p><p>Great news, Ms. Duale. Outbox, the number one office supply store in the Grindstone River Valley region, has expanded its store on Lakeview Avenue to include an office furniture department.</p>",
+        "vi": "<p>Điều g&igrave; được ngụ &yacute; về cửa h&agrave;ng tr&ecirc;n Đại lộ Lakeview?</p><p>A. N&oacute; được mở rộng gần đ&acirc;y.</p><p>B. N&oacute; đ&atilde; cập nhật trang web của m&igrave;nh.</p><p>C. N&oacute; thường tổ chức c&aacute;c sự kiện b&aacute;n h&agrave;ng cho c&aacute;c th&agrave;nh vi&ecirc;n c&acirc;u lạc bộ qu&agrave; thưởng.</p><p>D. N&oacute; l&agrave; cửa h&agrave;ng Outbox đầu ti&ecirc;n trong v&ugrave;ng.</p>###<p>Th&ocirc;ng tin trong b&agrave;i:</p><p>Great news, Ms. Duale. Outbox, the number one office supply store in the Grindstone River Valley region, has expanded its store on Lakeview Avenue to include an office furniture department.</p>",
+        "ko": "<p>Lakeview Avenue의 상점에 대해 무엇이 표시되어 있습니까?</p><p>A. 최근에 증축했습니다.</p><p>B. 웹사이트를 업데이트했습니다.</p><p>다. 리워드 클럽 회원을 위한 세일 행사를 자주 개최합니다.</p><p>D. 지역 최초의 아웃박스 매장이었습니다.</p>###<p>Information:</p><p>Great news, Ms. Duale. Outbox, the number one office supply store in the Grindstone River Valley region, has expanded its store on Lakeview Avenue to include an office furniture department.</p>",
+        "zh-CN": "<p>湖景大道上的商店有什么指示？</p><p>A. 最近扩大了。</p><p>B. 它更新了它的网站。</p><p>C. 它经常为奖励俱乐部会员举办销售活动。</p><p>D. 这是该地区第一家 Outbox 商店。</p>###<p>Information:</p><p>Great news, Ms. Duale. Outbox, the number one office supply store in the Grindstone River Valley region, has expanded its store on Lakeview Avenue to include an office furniture department.</p>",
+        "fr": "<p>Qu'est-ce qui est indiqué sur le magasin de Lakeview Avenue ?</p><p>R. Il a été récemment agrandi.</p><p>B. Il a mis à jour son site Web.</p><p>C. Il organise souvent des événements de vente pour les membres du club de récompenses.</p><p>D. C'était le premier magasin Outbox de la région.</p>###<p>Information:</p><p>Great news, Ms. Duale. Outbox, the number one office supply store in the Grindstone River Valley region, has expanded its store on Lakeview Avenue to include an office furniture department.</p>",
+        "zh-TW": "<p>湖景大道上的商店有什麼指示？</p><p>A. 最近擴大了。</p><p>B. 它更新了它的網站。</p><p>C. 它經常為獎勵俱樂部會員舉辦銷售活動。</p><p>D. 這是該地區第一家 Outbox 商店。</p>###<p>Information:</p><p>Great news, Ms. Duale. Outbox, the number one office supply store in the Grindstone River Valley region, has expanded its store on Lakeview Avenue to include an office furniture department.</p>"
+      }
+    }
+  ],
+  "correct_answers": [
+    2,
+    0
+  ],
+  "count_question": 2,
+  "title": "In this part you will read a selection of texts, such as magezine and newspaper articles, letters, and advertisements. Each text is followed by several questions. Select the best answer for each question and mark the letter (A), (B), (C) or (D) on your answer sheet.",
+  "title_trans": {
+    "vn": "Trong phần này bạn sẽ đọc một số đoạn văn, ví dụ như tạp chí hay các bài báo, lá thư, và mẩu quảng cáo. Theo sau mỗi đoạn văn là 1 số câu hỏi. Hãy chọn đáp án đúng nhất cho mỗi câu hỏi và đánh dấu đáp án A, B, C hoặc D vào phần trả lời của bạn.",
+    "en": "In this part you will read a selection of texts, such as magezine and newspaper articles, letters, and advertisements. Each text is followed by several questions. Select the best answer for each question and mark the letter (A), (B), (C) or (D) on your answer sheet."
+  },
+  "scores": [
+    1,
+    1
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": 910,
+  "tag": "read",
+  "kind": "text completion",
+  "general": {
+    "audio": "",
+    "txt_read": "<p>www.kateweicommunications.com</p><p>Marketing your business can be confusing. Newspapers and magazines are __(1)__&nbsp;useful venues&nbsp;for advertising. __(2)__&nbsp;, social media platforms have become even more critical marketing outlets.&nbsp;Kate Wei Communications utilizes both traditional outlets and the latest communication platforms. __(3)__&nbsp;. In addition to exceptional print services, Kate Wei Communications has the&nbsp;expertise to help you __(4)__&nbsp;your online presence. Why wait? Choose our award-winning firm to&nbsp;strengthen your company&#39;s image today!</p>",
+    "txt_read_vn": "<p><a href=\"http://www.kateweicommunications.com \">www.kateweicommunications.com </a></p><p>Tiếp thị doanh nghiệp của bạn c&oacute; thể kh&oacute; hiểu. B&aacute;o v&agrave; tạp ch&iacute; l&agrave; __ (1) __ địa điểm hữu &iacute;ch để quảng c&aacute;o. __ (2) __, c&aacute;c nền tảng truyền th&ocirc;ng x&atilde; hội thậm ch&iacute; c&ograve;n trở th&agrave;nh phương tiện tiếp thị quan trọng hơn. Kate Wei Communications sử dụng cả c&aacute;c cửa h&agrave;ng truyền thống v&agrave; c&aacute;c nền tảng truyền th&ocirc;ng mới nhất. __ (3) __. Ngo&agrave;i c&aacute;c dịch vụ in đặc biệt, Kate Wei Communications c&oacute; chuy&ecirc;n m&ocirc;n để gi&uacute;p bạn __ (4) __ sự hiện diện trực tuyến của bạn. Tại sao c&ograve;n chần chờ? H&atilde;y lựa chọn c&ocirc;ng ty từng đoạt giải thưởng của ch&uacute;ng t&ocirc;i để củng cố h&igrave;nh ảnh c&ocirc;ng ty của bạn ngay h&ocirc;m nay!</p>",
+    "image": "",
+    "txt_audio": "",
+    "txt_audio_vn": "",
+    "txt_read_trans": {
+      "vi": "<p><a href=\"http://www.kateweicommunications.com \">www.kateweicommunications.com </a></p><p>Tiếp thị doanh nghiệp của bạn c&oacute; thể kh&oacute; hiểu. B&aacute;o v&agrave; tạp ch&iacute; l&agrave; __ (1) __ địa điểm hữu &iacute;ch để quảng c&aacute;o. __ (2) __, c&aacute;c nền tảng truyền th&ocirc;ng x&atilde; hội thậm ch&iacute; c&ograve;n trở th&agrave;nh phương tiện tiếp thị quan trọng hơn. Kate Wei Communications sử dụng cả c&aacute;c cửa h&agrave;ng truyền thống v&agrave; c&aacute;c nền tảng truyền th&ocirc;ng mới nhất. __ (3) __. Ngo&agrave;i c&aacute;c dịch vụ in đặc biệt, Kate Wei Communications c&oacute; chuy&ecirc;n m&ocirc;n để gi&uacute;p bạn __ (4) __ sự hiện diện trực tuyến của bạn. Tại sao c&ograve;n chần chờ? H&atilde;y lựa chọn c&ocirc;ng ty từng đoạt giải thưởng của ch&uacute;ng t&ocirc;i để củng cố h&igrave;nh ảnh c&ocirc;ng ty của bạn ngay h&ocirc;m nay!</p>",
+      "ja": "<p>www.kateweicommunications.com</p><p>あなたのビジネスのマーケティングは混乱する可能性があります。新聞や雑誌は今でも広告の場として役立ちます。ただし、ソーシャルメディアプラットフォームはさらに重要なマーケティング手段になっています。 Kate Wei Communicationsは、従来のアウトレットと最新の通信プラットフォームの両方を利用しています。私たちはあなたのビジネスのための多様な計画を立てます。卓越した印刷サービスに加えて、Kate Wei Communicationsは、オンラインプレゼンスを最適化するのに役立つ専門知識を備えています。なぜ待つのですか？受賞歴のある会社を選んで、今日の会社のイメージを強化してください。</p>",
+      "ko": "<p>www.kateweicommunications.com</p><p>귀하의 비즈니스를 마케팅하는 것은 혼란스러울 수 있습니다. 신문과 잡지는 여전히 광고에 유용한 공간입니다. 그러나 소셜 미디어 플랫폼은 훨씬 더 중요한 마케팅 수단이 되었습니다. Kate Wei Communications는 기존 콘센트와 최신 통신 플랫폼을 모두 활용합니다. 귀하의 비즈니스를 위한 다양한 계획을 개발할 것입니다. 탁월한 인쇄 서비스 외에도 Kate Wei Communications는 온라인 인지도를 최적화하는 데 도움이 되는 전문 지식을 보유하고 있습니다. 왜 기다려? 오늘 수상 경력에 빛나는 회사를 선택하여 귀사의 이미지를 강화하세요!</p>",
+      "zh-CN": "<p>www.kateweicommunications.com</p><p>营销您的业务可能会令人困惑。报纸和杂志仍然是有用的广告场所。然而，社交媒体平台已成为更加重要的营销渠道。 Kate Wei Communications 利用传统渠道和最新的传播平台。我们将为您的业务制定多样化的计划。除了卓越的印刷服务外，Kate Wei Communications 还拥有帮助您优化在线形象的专业知识。干嘛要等？立即选择我们屡获殊荣的公司来提升您公司的形象！</p>",
+      "fr": "<p>www.kateweicommunications.com</p><p>Le marketing de votre entreprise peut être source de confusion. Les journaux et les magazines sont toujours des lieux utiles pour la publicité. Cependant , les plateformes de médias sociaux sont devenues des débouchés marketing encore plus critiques. Kate Wei Communications utilise à la fois les points de vente traditionnels et les dernières plateformes de communication. Nous développerons un plan diversifié pour votre entreprise . En plus de services d'impression exceptionnels, Kate Wei Communications possède l'expertise pour vous aider à optimiser votre présence en ligne. Pourquoi attendre? Choisissez notre entreprise primée pour renforcer l'image de votre entreprise dès aujourd'hui !</p>",
+      "zh-TW": "<p>www.kateweicommunications.com</p><p>營銷您的業務可能會令人困惑。報紙和雜誌仍然是有用的廣告場所。然而，社交媒體平台已成為更加重要的營銷渠道。 Kate Wei Communications 利用傳統渠道和最新的傳播平台。我們將為您的業務制定多樣化的計劃。除了卓越的印刷服務外，Kate Wei Communications 還擁有幫助您優化在線形象的專業知識。幹嘛要等？立即選擇我們屢獲殊榮的公司來提升您公司的形象！</p>"
+    }
+  },
+  "content": [
+    {
+      "question": "__(1)__",
+      "answers": [
+        "still",
+        "nowhere",
+        "soon",
+        "evenly"
+      ],
+      "correctAnswer": 0,
+      "image": "",
+      "explainAll": {
+        "vn": "<p>__ (1) __</p><p>A. vẫn</p><p>B. kh&ocirc;ng ở đ&acirc;u</p><p>C. sớm</p><p>D. đồng đều</p><p>###</p><p>Th&ocirc;ng tin</p><p>Khoảng trống c&ograve;n thiếu trạng từ, v&agrave; dựa tr&ecirc;n nghĩa, ta chọn A</p>",
+        "en": "<p>__(1)__</p><p>A. still</p><p>B. nowhere</p><p>C. soon</p><p>D. evenly</p><p>###</p><p>Explanation</p><p>the blank needs an adv and based on their meanings, we choose A</p>",
+        "ja": "<p>__(1)__</p><p>A.まだ</p><p>B.どこにも</p><p>C.すぐに</p><p>D.均等に</p><p>###</p><p>Explanation</p><p>the blank needs an adv and based on their meanings, we choose A</p>",
+        "vi": "<p>__ (1) __</p><p>A. vẫn</p><p>B. kh&ocirc;ng ở đ&acirc;u</p><p>C. sớm</p><p>D. đồng đều</p><p>###</p><p>Th&ocirc;ng tin</p><p>Khoảng trống c&ograve;n thiếu trạng từ, v&agrave; dựa tr&ecirc;n nghĩa, ta chọn A</p>",
+        "ko": "<p>__(1)__</p><p>가. 아직</p><p>나. 아무데도</p><p>C. 곧</p><p>D. 고르게</p><p>###</p><p>Explanation</p><p>the blank needs an adv and based on their meanings, we choose A</p>",
+        "zh-CN": "<p>__(1)__</p><p>A. 仍然</p><p>B、无处可去</p><p>C、很快</p><p>D、均匀</p><p>###</p><p>Explanation</p><p>the blank needs an adv and based on their meanings, we choose A</p>",
+        "fr": "<p>__(1)__</p><p>A. encore</p><p>B. nulle part</p><p>C bientôt</p><p>D. uniformément</p><p>###</p><p>Explanation</p><p>the blank needs an adv and based on their meanings, we choose A</p>",
+        "zh-TW": "<p>__(1)__</p><p>A. 仍然</p><p>B、無處可去</p><p>C、很快</p><p>D、均勻</p><p>###</p><p>Explanation</p><p>the blank needs an adv and based on their meanings, we choose A</p>"
+      }
+    },
+    {
+      "question": "__(2)__",
+      "answers": [
+        "As a result",
+        "To demonstrate",
+        "Otherwise",
+        "However"
+      ],
+      "correctAnswer": 3,
+      "image": "",
+      "explainAll": {
+        "vn": "<p>__ (2) __</p><p>A. kết quả l&agrave;</p><p>B. để chứng minh</p><p>C. nếu kh&ocirc;ng</p><p>D. tuy nhi&ecirc;n</p><p>###</p><p>Th&ocirc;ng tin</p><p>Nghĩa giữa c&acirc;u 1 v&agrave; c&acirc;u 2 c&oacute; sự tương phản n&ecirc;n ta chọn D</p>",
+        "en": "<p>__(2)__</p><p>A. as a result</p><p>B. to demonstrate</p><p>C. otherwise</p><p>D. however</p><p>###</p><p>Explanation</p><p>The meanings of sentence 1 and sentence 2 contrast, so we choose D</p>",
+        "ja": "<p>__(2)__</p><p>A.結果として</p><p>B.デモンストレーションする</p><p>C.それ以外の場合</p><p>D.しかし</p><p>###</p><p>Explanation</p><p>The meanings of sentence 1 and sentence 2 contrast, so we choose D</p>",
+        "vi": "<p>__ (2) __</p><p>A. kết quả l&agrave;</p><p>B. để chứng minh</p><p>C. nếu kh&ocirc;ng</p><p>D. tuy nhi&ecirc;n</p><p>###</p><p>Th&ocirc;ng tin</p><p>Nghĩa giữa c&acirc;u 1 v&agrave; c&acirc;u 2 c&oacute; sự tương phản n&ecirc;n ta chọn D</p>",
+        "ko": "<p>__(2)__</p><p>가. 결과적으로</p><p>나. 시연하다</p><p>다. 그렇지 않으면</p><p>D. 그러나</p><p>###</p><p>Explanation</p><p>The meanings of sentence 1 and sentence 2 contrast, so we choose D</p>",
+        "zh-CN": "<p>__(2)__</p><p>A. 结果</p><p>B、展示</p><p>C. 否则</p><p>D. 然而</p><p>###</p><p>Explanation</p><p>The meanings of sentence 1 and sentence 2 contrast, so we choose D</p>",
+        "fr": "<p>__(2)__</p><p>A. en conséquence</p><p>B. démontrer</p><p>C. sinon</p><p>D. cependant</p><p>###</p><p>Explanation</p><p>The meanings of sentence 1 and sentence 2 contrast, so we choose D</p>",
+        "zh-TW": "<p>__(2)__</p><p>A. 結果</p><p>B、展示</p><p>C. 否則</p><p>D. 然而</p><p>###</p><p>Explanation</p><p>The meanings of sentence 1 and sentence 2 contrast, so we choose D</p>"
+      }
+    },
+    {
+      "question": "__(3)__",
+      "answers": [
+        "Marketing professionals give conflicting advice",
+        "Traditional methods have the best impact",
+        "We will develop a diverse plan for your business",
+        "We have recently changed our terms of service"
+      ],
+      "correctAnswer": 2,
+      "image": "",
+      "explainAll": {
+        "vn": "<p>__ (3) __</p><p>A. c&aacute;c chuy&ecirc;n gia tiếp thị đưa ra lời khuy&ecirc;n m&acirc;u thuẫn</p><p>B. phương ph&aacute;p truyền thống c&oacute; t&aacute;c động tốt nhất</p><p>C. ch&uacute;ng t&ocirc;i sẽ ph&aacute;t triển một kế hoạch đa dạng cho doanh nghiệp của bạn</p><p>D. gần đ&acirc;y ch&uacute;ng t&ocirc;i đ&atilde; thay đổi điều khoản dịch vụ của m&igrave;nh</p><p>###</p><p>Th&ocirc;ng tin</p><p>Dựa v&agrave;o c&acirc;u trước đ&oacute; v&agrave; đ&aacute;p &aacute;n, ta chọn C</p>",
+        "en": "<p>__(3)__</p><p>A. marketing professionals give conflicting advice</p><p>B. traditional methods have the best impact</p><p>C. we will develop a diverse plan for your business</p><p>D. we have recently changed our terms of service</p><p>###</p><p>Explanation</p><p>From the meaning of the before sentence and the answers, we choose C</p>",
+        "ja": "<p>__(3)__</p><p>A.マーケティングの専門家は相反するアドバイスをします</p><p>B.従来の方法が最も効果的</p><p>C.私たちはあなたのビジネスのための多様な計画を開発します</p><p>D.最近利用規約を変更しました</p><p>###</p><p>Explanation</p><p>From the meaning of the before sentence and the answers, we choose C</p>",
+        "vi": "<p>__ (3) __</p><p>A. c&aacute;c chuy&ecirc;n gia tiếp thị đưa ra lời khuy&ecirc;n m&acirc;u thuẫn</p><p>B. phương ph&aacute;p truyền thống c&oacute; t&aacute;c động tốt nhất</p><p>C. ch&uacute;ng t&ocirc;i sẽ ph&aacute;t triển một kế hoạch đa dạng cho doanh nghiệp của bạn</p><p>D. gần đ&acirc;y ch&uacute;ng t&ocirc;i đ&atilde; thay đổi điều khoản dịch vụ của m&igrave;nh</p><p>###</p><p>Th&ocirc;ng tin</p><p>Dựa v&agrave;o c&acirc;u trước đ&oacute; v&agrave; đ&aacute;p &aacute;n, ta chọn C</p>",
+        "ko": "<p>__(3)__</p><p>A. 마케팅 전문가가 상충되는 조언을 제공합니다.</p><p>B. 전통적인 방법이 가장 큰 영향을 미칩니다.</p><p>C. 귀하의 비즈니스를 위한 다양한 플랜을 개발하겠습니다.</p><p>D. 최근에 서비스 약관을 변경했습니다.</p><p>###</p><p>Explanation</p><p>From the meaning of the before sentence and the answers, we choose C</p>",
+        "zh-CN": "<p>__(3)__</p><p>A. 营销专家给出相互矛盾的建议</p><p>B. 传统方法效果最好</p><p>C. 我们将为您的业务制定多样化的计划</p><p>D. 我们最近更改了服务条款</p><p>###</p><p>Explanation</p><p>From the meaning of the before sentence and the answers, we choose C</p>",
+        "fr": "<p>__(3)__</p><p>A. Les professionnels du marketing donnent des conseils contradictoires</p><p>B. les méthodes traditionnelles ont le meilleur impact</p><p>C. nous développerons un plan diversifié pour votre entreprise</p><p>D. nous avons récemment modifié nos conditions d'utilisation</p><p>###</p><p>Explanation</p><p>From the meaning of the before sentence and the answers, we choose C</p>",
+        "zh-TW": "<p>__(3)__</p><p>A. 營銷專家給出相互矛盾的建議</p><p>B. 傳統方法效果最好</p><p>C. 我們將為您的業務制定多樣化的計劃</p><p>D. 我們最近更改了服務條款</p><p>###</p><p>Explanation</p><p>From the meaning of the before sentence and the answers, we choose C</p>"
+      }
+    },
+    {
+      "question": "__(4)__",
+      "answers": [
+        "optimal",
+        "optimize",
+        "optimization",
+        "optimum"
+      ],
+      "correctAnswer": 1,
+      "image": "",
+      "explainAll": {
+        "vn": "<p>__(4)__</p><p>A. optimal</p><p>B. optimize</p><p>C. optimization</p><p>D. optimum</p><p>###</p><p>Th&ocirc;ng tin</p><p>Khoảng trống c&ograve;n thiếu động từ, n&ecirc;n ta chọn B</p>",
+        "en": "<p>__(4)__</p><p>A. optimal (adj)</p><p>B. optimize (v)</p><p>C. optimization (n)</p><p>D. optimum (adj)</p><p>###</p><p>Explanation</p><p>The blank needs a verb, so we choose B&nbsp;</p>",
+        "ja": "<p>__(4)__</p><p>A.最適 (adj)</p><p>B.最適化 (v)</p><p>C.最適化 (n)</p><p>D.最適 (adj)</p><p>###</p><p>Explanation</p><p>The blank needs a verb, so we choose B&nbsp;</p>",
+        "vi": "<p>__(4)__</p><p>A. optimal</p><p>B. optimize</p><p>C. optimization</p><p>D. optimum</p><p>###</p><p>Th&ocirc;ng tin</p><p>Khoảng trống c&ograve;n thiếu động từ, n&ecirc;n ta chọn B</p>",
+        "ko": "<p>__(4)__</p><p>가. 최적 (adj)</p><p>B. 최적화 (v)</p><p>다. 최적화 (n)</p><p>D. 최적 (adj)</p><p>###</p><p>Explanation</p><p>The blank needs a verb, so we choose B&nbsp;</p>",
+        "zh-CN": "<p>__(4)__</p><p>A. 最优 (adj)</p><p>B、优化 (v)</p><p>C. 优化 (n)</p><p>D. 最优 (adj)</p><p>###</p><p>Explanation</p><p>The blank needs a verb, so we choose B&nbsp;</p>",
+        "fr": "<p>__(4)__</p><p>A. optimale (adj)</p><p>B. optimiser (v)</p><p>C. optimisation (n)</p><p>D. optimal (adj)</p><p>###</p><p>Explanation</p><p>The blank needs a verb, so we choose B&nbsp;</p>",
+        "zh-TW": "<p>__(4)__</p><p>A. 最優 (adj)</p><p>B、優化 (v)</p><p>C. 優化 (n)</p><p>D. 最優 (adj)</p><p>###</p><p>Explanation</p><p>The blank needs a verb, so we choose B&nbsp;</p>"
+      }
+    }
+  ],
+  "correct_answers": [
+    0,
+    3,
+    2,
+    1
+  ],
+  "count_question": 4,
+  "title": "Read the texts that follow. A word or pharse is missing in some of the sentences. Four answer choices are given below each of the sentences. Select the best answer to complete the text. Then mark the letter (A), (B), (C) or (D) on your answer sheet.",
+  "title_trans": {
+    "vn": "Đọc đoạn văn dưới đây. Một từ hoặc cụm từ bị thiếu trong một số câu. Bốn lựa chọn đáp án được đưa ra dưới mỗi câu hỏi. Hãy chọn đáp án đúng nhất để hoàn thành đoạn văn. Sau đó đánh dấu đáp án A, B, C hoặc D vào phần trả lời của bạn.",
+    "en": "Read the texts that follow. A word or pharse is missing in some of the sentences. Four answer choices are given below each of the sentences. Select the best answer to complete the text. Then mark the letter (A), (B), (C) or (D) on your answer sheet."
+  },
+  "scores": [
+    1,
+    1,
+    1,
+    1
+  ]
+}
