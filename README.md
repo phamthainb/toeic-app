@@ -12,7 +12,27 @@
     - full-test
     - 
 - tài liệu
-    - 
+    - Duyên
+        singin
+        signup
+        logout
+        select target
+        update personal information 
+
+    - Huy
+        practise
+        select part
+        answer
+        view list status
+        result page (time, true rate + list status)
+
+    - Ngân
+        test: (Ngân)
+        select test
+        answer
+        view result page (26)
+        history
+
 - ghép api
     - Duyên
         - login
