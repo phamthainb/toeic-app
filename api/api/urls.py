@@ -16,11 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-import question.views, question.urls
+import question.views
+import question.urls
+import account.urls
+import account.views
 from django.urls import re_path
-from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -31,12 +38,13 @@ schema_view = get_schema_view(
         license=openapi.License(name="D18 Team 2 PTIT"),
     ),
     public=True,
-    permission_classes=[permissions.AllowAny],
+    # permission_classes=[permissions.AllowAny],
 )
 
 
 router = routers.DefaultRouter()
 router.register('question', question.views.QuestionView)
+router.register('target', account.views.TargetView)
 
 urlpatterns = [
     re_path(r'^swagger(?P<format>\.json|\.yaml)$',
@@ -48,5 +56,15 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('pratice/', include(question.urls)),
-    path('', include(router.urls))
+    path('account/', include(account.urls)),
+    path('', include(router.urls)),
+
+    re_path(r'^account/login/$', TokenObtainPairView.as_view(),
+            name='token_obtain_pair'),
+    re_path(r'^account/refresh/$',
+            TokenRefreshView.as_view(), name='token_refresh'),
+
+    # path('auth/', include('djoser.urls')),
+    # path('auth/', include('djoser.urls.jwt')),
+    # path('auth/', include('djoser.social.urls')),
 ]

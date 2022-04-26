@@ -10,6 +10,9 @@ djangorestframework = "*"
 django-filter = "*"
 django-rest-swagger = "*"
 drf-yasg = "*"
+pyrebase = "*"
+djangorestframework-simplejwt = "*"
+djoser = "*"
 
 [dev-packages]
 
