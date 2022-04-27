@@ -11,7 +11,7 @@ def gen_question(part, limit, sum_child=False):
     result = []
     # print("len " + str(part) + " => " + str(len_max))
     if(len_max >= 0):
-        while(len(count) <= limit):
+        while(len(count) + 1 <= int(limit)):
             r = random.randint(0, len_max)
             time_check = 0
 
