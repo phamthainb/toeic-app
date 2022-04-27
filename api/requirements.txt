@@ -1,0 +1,7 @@
+django = "*"
+psycopg2 = "*"
+djangorestframework = "*"
+django-filter = "*"
+django-rest-swagger = "*"
+drf-yasg = "*"
+djangorestframework-simplejwt = "*"
