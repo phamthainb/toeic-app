@@ -70,5 +70,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
+    <include layout="@layout/part3_control" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

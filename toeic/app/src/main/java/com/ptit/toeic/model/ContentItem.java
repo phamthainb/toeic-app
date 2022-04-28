@@ -21,6 +21,23 @@ public class ContentItem {
     }
 
     // Getter Methods
+
+    public ArrayList<Object> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(ArrayList<Object> answers) {
+        this.answers = answers;
+    }
+
+    public Object getExplainAllObject() {
+        return explainAllObject;
+    }
+
+    public void setExplainAllObject(Object explainAllObject) {
+        this.explainAllObject = explainAllObject;
+    }
+
     public String getQuestion() {
         return question;
     }

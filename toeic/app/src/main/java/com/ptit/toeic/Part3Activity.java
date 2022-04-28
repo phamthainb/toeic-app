@@ -1,19 +1,32 @@
 package com.ptit.toeic;
 
 import android.graphics.Color;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.gson.Gson;
+import com.ptit.toeic.adapter.ContentItemAdapter;
+import com.ptit.toeic.model.ContentItem;
 import com.ptit.toeic.model.General;
 import com.ptit.toeic.model.Question;
 import com.ptit.toeic.utils.Utils;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class Part3Activity extends AppCompatActivity {
     Gson gson = new Gson();
@@ -49,11 +62,16 @@ public class Part3Activity extends AppCompatActivity {
         // timer
         
         // general
+        ImageView quest_img = findViewById(R.id.quest_img);
+        TextView quest_desc = findViewById(R.id.quest_desc);
         switch (part){
-            case 1:
+            case 1:{
+                quest_desc.setVisibility(View.INVISIBLE);
+                Utils.loadImage(quest_img, question.getGeneral().getImage());
+                break;
+            }
             case 2:{
                 System.out.println("getImage: " + question.getGeneral().getImage());
-                Utils.loadImage(findViewById(R.id.quest_img), question.getGeneral().getImage());
                 break;
             }
 
@@ -65,9 +83,25 @@ public class Part3Activity extends AppCompatActivity {
             default:
                 break;
         }
-        // list question
 
-        // control
+        // list question
+        ListView contentItemView = findViewById(R.id.quest_list);
+        ArrayList<ContentItem> contentItem = question.getContent();
+        contentItemView.setAdapter(new ContentItemAdapter(contentItem));
+
+        // control: prev, next, pause, audio process
+        if(part == 1){
+            MediaPlayer mediaPlayer = new MediaPlayer();
+            mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+            try {
+                mediaPlayer.setDataSource(question.getGeneral().getAudio());
+                mediaPlayer.prepare();
+                mediaPlayer.start();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
 
     }
 
