@@ -24,6 +24,7 @@ def get_user_from_username(request):
 # "email": "test@gmail.com",
 # "password": "12345678"
 # }
+
 @api_view(["POST"])
 def signup(request):
     serializer = CustomUserSerializer(data=request.data)
@@ -87,6 +88,35 @@ def get_profile(request):
     return Response(data={
         "status": 'success',
         "data": CustomUserSerializer(u).data
+    }, status=200)
+
+
+@api_view(["PUT"])
+@permission_classes([IsAuthenticated])
+def update_profile(request):
+    u = get_user_from_username(request=request)
+
+    if not u:
+        return Response(data={'message': "not found"}, status=400)
+
+    birth_day = request.data.get('birth_day', False)
+    if birth_day:
+        u.birth_day = birth_day
+    sex = request.data.get('sex', False)
+    if sex:
+        u.sex = sex
+    phone = request.data.get('phone', False)
+    if phone:
+        u.phone = phone
+    fullname = request.data.get('fullname', False)
+    if fullname:
+        u.fullname = fullname
+
+    CustomUser.save(u)
+
+    return Response(data={
+        "status": 'success',
+        "data": "Update success"
     }, status=200)
 
 

@@ -28,7 +28,13 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractUser):
     email = models.EmailField(_('email address'), unique=True)
     level = models.IntegerField(default=0)
+    
+    # can update
     birth_day = models.DateField(null=True)
+    phone=models.CharField(null=True, max_length=255)
+    sex=models.IntegerField(null=True) # 0: man, 1: woman
+    fullname=models.CharField(null=True, max_length=255)
+
     is_pass_chaged = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
