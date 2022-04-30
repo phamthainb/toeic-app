@@ -1,3 +1,4 @@
+from uuid import uuid4
 from rest_framework import viewsets, decorators, response
 from rest_framework.permissions import IsAuthenticated
 from account.views import get_profile
@@ -21,7 +22,11 @@ class QuestionView(viewsets.ModelViewSet):
         limmit = params.get('limmit') or 10
         return response.Response({
             "status": "success",
-            "result": gen_question(part=part, limit=limmit)
+            "result": {
+                "task_id": uuid4(),
+                "data": gen_question(part=part, limit=limmit)
+            }
+
         })
 
     # exam test
@@ -30,25 +35,31 @@ class QuestionView(viewsets.ModelViewSet):
         params = request.query_params
         part = int(params.get('part') or 0)
 
+        task_id = params.get('task_id') or ""
+
         if part == 0:
             return response.Response(
                 {
                     "status": "success",
-                    "result": [
-                        {"part": 1, "len": 6, "question": gen_question(1, 6)},
-                        {"part": 2, "len": 25,
-                            "question": gen_question(2, 25)},
-                        {"part": 3, "len": 13,
-                         "question": gen_question(3, 13)},  # *3
-                        {"part": 4, "len": 10,
-                         "question": gen_question(4, 10)},  # *3
-                        {"part": 5, "len": 30,
-                            "question": gen_question(5, 30)},
-                        {"part": 6, "len": 16,
-                         "question": gen_question(6, 16)},  # *4
-                        {"part": 7, "len": 54,
-                         "question": gen_question(7, 54, True)}
-                    ]
+                    "result": {
+                        "task_id": uuid4(),
+                        "data": [
+                            {"part": 1, "len": 6,
+                                "question": gen_question(1, 6)},
+                            {"part": 2, "len": 25,
+                             "question": gen_question(2, 25)},
+                            {"part": 3, "len": 13,
+                             "question": gen_question(3, 13)},  # *3
+                            {"part": 4, "len": 10,
+                             "question": gen_question(4, 10)},  # *3
+                            {"part": 5, "len": 30,
+                             "question": gen_question(5, 30)},
+                            {"part": 6, "len": 16,
+                             "question": gen_question(6, 16)},  # *4
+                            {"part": 7, "len": 54,
+                             "question": gen_question(7, 54, True)}
+                        ]
+                    }
                 }
             )
 
@@ -73,10 +84,13 @@ class QuestionView(viewsets.ModelViewSet):
         elif part == 6:
             res = {"part": 6, "len": 16,
                               "question": gen_question(6, 16)}
-            
+
         return response.Response(
             {
                 "status": "success",
-                "result": res
+                "result": {
+                    "task_id": task_id if task_id != "" else uuid4(),
+                    "data": res
+                }
             }
         )
