@@ -3,12 +3,6 @@ from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext as _
 from django.db import models
 
-class Target(models.Model):
-    level = models.IntegerField()
-    desc = models.TextField(max_length=255, null=True)
-
-    def __str__(self):
-        return str(self.level) + " > " + self.desc
 
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, password, **extra_fields):
@@ -33,7 +27,7 @@ class CustomUserManager(BaseUserManager):
 
 class CustomUser(AbstractUser):
     email = models.EmailField(_('email address'), unique=True)
-    level = models.ForeignKey(Target, on_delete=models.SET_NULL, null=True)
+    level = models.IntegerField(default=0)
     birth_day = models.DateField(null=True)
     is_pass_chaged = models.BooleanField(default=False)
 

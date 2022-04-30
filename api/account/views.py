@@ -4,8 +4,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.views import APIView
 from account.models import CustomUser
-from .models import Target
-from .serializers import CustomUserSerializer, TargetSerializer
+# from .models import Target
+from .serializers import CustomUserSerializer
 from django.contrib.auth.hashers import make_password, check_password
 from django.http import JsonResponse
 from rest_framework import status
@@ -69,11 +69,11 @@ def reset_password(request):
                 'status': 400,
             }, status=status.HTTP_400_BAD_REQUEST)
 
-class TargetView(ModelViewSet):
-    queryset = Target.objects.all()
-    serializer_class = TargetSerializer
-    filterset_fields = ['id', 'level', 'desc']
-    permission_classes = [IsAuthenticated, ]
+# class TargetView(ModelViewSet):
+#     queryset = Target.objects.all()
+#     serializer_class = TargetSerializer
+#     filterset_fields = ['id', 'level', 'desc']
+#     permission_classes = [IsAuthenticated, ]
 
 
 @api_view(["GET"])
@@ -92,18 +92,17 @@ def get_profile(request):
 
 @api_view(['POST'])
 def set_target(request):
-    d = request.data.get('level', False)
+    d = request.data.get('level', 0)
     if not d:
         return Response(data={'message': "Invalid level"}, status=400)
     try:
-        level_id = Target.objects.get(id=d)
         u = get_user_from_username(request)
-        u.level = level_id
+        u.level = d
         CustomUser.save(u)
 
         return Response(data={
             "status": 'success',
-            "data": "Update success"
+            "data": "Update target success"
         }, status=200)
     except:
-        return Response(data={'message': "Level not found"}, status=400)
+        return Response(data={'message': "target not found"}, status=400)

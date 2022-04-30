@@ -44,7 +44,7 @@ schema_view = get_schema_view(
 
 router = routers.DefaultRouter()
 router.register('question', question.views.QuestionView)
-router.register('target', account.views.TargetView)
+# router.register('target', account.views.TargetView)
 
 urlpatterns = [
     re_path(r'^swagger(?P<format>\.json|\.yaml)$',

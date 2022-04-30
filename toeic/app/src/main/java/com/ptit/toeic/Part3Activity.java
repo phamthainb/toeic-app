@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.gson.Gson;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.loopj.android.http.ResponseHandlerInterface;
 import com.ptit.toeic.adapter.ContentItemAdapter;
 import com.ptit.toeic.model.ContentItem;
 import com.ptit.toeic.model.General;
@@ -37,6 +39,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
+import cz.msebera.android.httpclient.HttpResponse;
 
 public class Part3Activity extends AppCompatActivity {
     Gson gson = new Gson();
@@ -117,12 +120,33 @@ public class Part3Activity extends AppCompatActivity {
             btn_submit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    RequestParams params = new RequestParams();
-                    params.put("email", "phamthainb@gmail.com");
-                    params.put("password", "12345678");
+//                    RequestParams params = new RequestParams();
+//                    params.put("email", "phamthainb@gmail.com");
+//                    params.put("password", "12345678");
+//
+//                    CallAPI.login(params);
 
-                    CallAPI.login(params);
+                    RequestParams signup = new RequestParams();
+                    signup.put("email", "sss@gmail.com");
+                    signup.put("password", "12345678");
+                    signup.put("username", "sss");
 
+                   new CallAPI(getApplicationContext()).post("/account/signup/", signup, new JsonHttpResponseHandler(){
+                        @Override
+                        public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                            System.out.println("response : "+ response);
+                        }
+
+                        @Override
+                        public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                            System.out.println("1");
+                            try {
+                                System.out.println("response : "+ errorResponse.getJSONObject("message").getJSONArray("email").get(0));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
 //                    if(mediaPlayer.isPlaying()){
 //                        mediaPlayer.pause();
 //                        audio_play = false;
