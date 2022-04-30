@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ptit.toeic.activity.Login;
+
 public class Login2 extends AppCompatActivity {
     Button btnSignIn1;
     TextView tvSignUp;
@@ -41,8 +43,10 @@ public class Login2 extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-            if(item.getItemId()==android.R.id.home)
-                onBackPressed();
+            if(item.getItemId()==android.R.id.home){
+                Intent intent=new Intent(Login2.this, Login.class);
+                startActivity(intent);}
+                //onBackPressed();
                 return true;
     }
 }

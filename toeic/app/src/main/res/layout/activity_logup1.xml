@@ -71,7 +71,7 @@
         app:layout_constraintVertical_bias="0.089" />
 
     <EditText
-        android:id="@+id/edPassword"
+        android:id="@+id/etPassword"
         android:layout_width="290dp"
         android:layout_height="40dp"
         android:layout_marginLeft="4dp"
@@ -89,7 +89,7 @@
         app:layout_constraintVertical_bias="0.005" />
 
     <EditText
-        android:id="@+id/edRePassword"
+        android:id="@+id/etRePassword"
         android:layout_width="290dp"
         android:layout_height="40dp"
         android:background="@color/gray1"
@@ -102,7 +102,7 @@
         app:layout_constraintHorizontal_bias="0.438"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edPassword"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
         app:layout_constraintVertical_bias="0.093" />
 
     <CheckBox
@@ -115,7 +115,7 @@
         app:layout_constraintHorizontal_bias="0.165"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edRePassword"
+        app:layout_constraintTop_toBottomOf="@id/etRePassword"
         app:layout_constraintVertical_bias="0.091" />
 
     <TextView
@@ -130,7 +130,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@id/checkBox"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edRePassword"
+        app:layout_constraintTop_toBottomOf="@id/etRePassword"
         app:layout_constraintVertical_bias="0.112" />
 
     <TextView
@@ -144,7 +144,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@id/terms"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edRePassword"
+        app:layout_constraintTop_toBottomOf="@id/etRePassword"
         app:layout_constraintVertical_bias="0.112" />
 
     <TextView
@@ -158,7 +158,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@id/and"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edRePassword"
+        app:layout_constraintTop_toBottomOf="@id/etRePassword"
         app:layout_constraintVertical_bias="0.112" />
 
     <Button

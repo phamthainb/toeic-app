@@ -11,9 +11,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.ptit.toeic.activity.Login;
+
 public class Logup1 extends AppCompatActivity {
     Button btnSignUp1;
     TextView tvSignIn;
+    TextView tvEmail;
+    TextView tvPassword;
+    TextView tvRePassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,9 +29,17 @@ public class Logup1 extends AppCompatActivity {
         actionBar.setTitle("");
         btnSignUp1=findViewById(R.id.btnSignUp);
         tvSignIn=findViewById(R.id.txtSignIn);
+        tvEmail=findViewById(R.id.etUsername);
+        tvPassword=findViewById(R.id.etPassword);
+        tvRePassword=findViewById(R.id.etRePassword);
+
         btnSignUp1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String email=tvEmail.getText().toString();
+                String password=tvPassword.getText().toString();
+                String repassword=tvRePassword.getText().toString();
+                //check validate cuar email, pass, pass vs repass cos giong nhau ko?
 
             }
         });
@@ -40,8 +53,10 @@ public class Logup1 extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-            if(item.getItemId()==android.R.id.home)
-                onBackPressed();
+            if(item.getItemId()==android.R.id.home){
+                Intent intent=new Intent(Logup1.this, Login.class);
+                startActivity(intent);}
+               // onBackPressed();
                 return true;
     }
 
