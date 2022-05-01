@@ -63,75 +63,13 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout9"
-            android:layout_width="409dp"
-            android:layout_height="72dp"
-            android:layout_marginTop="65dp"
-            android:background="#FAF9F9"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
-
-            <TextView
-                android:id="@+id/textViewPracticeTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="38dp"
-                android:layout_marginTop="26dp"
-                android:text="Practice Time"
-                android:textColor="#00BCD4"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textViewTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="206dp"
-                android:layout_marginTop="26dp"
-                android:text="10:00"
-                app:layout_constraintStart_toEndOf="@+id/textViewPracticeTime"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout10"
-            android:layout_width="409dp"
-            android:layout_height="72dp"
-            android:layout_marginTop="65dp"
-            android:background="#FAF9F9"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
-
-            <TextView
-                android:id="@+id/textViewAutoNext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="38dp"
-                android:layout_marginTop="27dp"
-                android:text="Auto next"
-                android:textColor="#00BCD4"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textViewOnOff"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="233dp"
-                android:layout_marginTop="27dp"
-                android:text="on"
-                app:layout_constraintStart_toEndOf="@+id/textViewAutoNext"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout11"
             android:layout_width="409dp"
             android:layout_height="72dp"
-            android:layout_marginTop="65dp"
+            android:layout_marginTop="68dp"
             android:background="#FAF9F9"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
 
             <TextView
                 android:id="@+id/textViewHistory"
