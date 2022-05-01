@@ -8,7 +8,7 @@
     tools:context=".Login">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageViewCorrectPart1"
         android:layout_width="293dp"
         android:layout_height="347dp"
         android:src="@drawable/screen1_plane"
@@ -29,7 +29,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCorrectPart1"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button

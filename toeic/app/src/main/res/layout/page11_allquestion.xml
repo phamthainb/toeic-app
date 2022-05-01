@@ -57,7 +57,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textViewquestion3"
+                android:id="@+id/textViewquestion1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -68,23 +68,23 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/textViewAB1"
                 android:layout_width="10dp"
                 android:layout_height="17dp"
                 android:layout_marginStart="209dp"
                 android:layout_marginTop="23dp"
                 android:text="B"
                 android:textColor="#D1534B"
-                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
+                app:layout_constraintStart_toEndOf="@+id/textViewquestion1"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/imageViewXO1"
                 android:layout_width="8dp"
                 android:layout_height="7dp"
                 android:layout_marginStart="6dp"
                 android:layout_marginTop="29dp"
-                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintStart_toEndOf="@+id/textViewAB1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/page30_cancel" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -100,7 +100,7 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
 
             <TextView
-                android:id="@+id/textViewquestion3"
+                android:id="@+id/textViewquestion2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -111,245 +111,27 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/textViewAB2"
                 android:layout_width="10dp"
                 android:layout_height="17dp"
                 android:layout_marginStart="209dp"
                 android:layout_marginTop="23dp"
                 android:text="A"
                 android:textColor="#4CAF50"
-                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
+                app:layout_constraintStart_toEndOf="@+id/textViewquestion2"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/imageViewXO2"
                 android:layout_width="8dp"
                 android:layout_height="7dp"
                 android:layout_marginStart="6dp"
                 android:layout_marginTop="29dp"
-                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintStart_toEndOf="@+id/textViewAB2"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/page30_cancel"
                 tools:srcCompat="@drawable/page30_tick" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout12"
-            android:layout_width="366dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="14dp"
-            android:background="#ffff"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
-
-            <TextView
-                android:id="@+id/textViewquestion3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="23dp"
-                android:text="Question 3"
-                android:textColor="#00BCD4"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="10dp"
-                android:layout_height="17dp"
-                android:layout_marginStart="209dp"
-                android:layout_marginTop="23dp"
-                android:text="A"
-                android:textColor="#4CAF50"
-                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="8dp"
-                android:layout_height="7dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="29dp"
-                app:layout_constraintStart_toEndOf="@+id/textView12"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/page30_cancel"
-                tools:srcCompat="@drawable/page30_tick" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout13"
-            android:layout_width="366dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="13dp"
-            android:background="#ffff"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout12">
-
-            <TextView
-                android:id="@+id/textViewquestion3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="23dp"
-                android:text="Question 4"
-                android:textColor="#00BCD4"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="10dp"
-                android:layout_height="17dp"
-                android:layout_marginStart="209dp"
-                android:layout_marginTop="23dp"
-                android:text="A"
-                android:textColor="#4CAF50"
-                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="8dp"
-                android:layout_height="7dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="29dp"
-                app:layout_constraintStart_toEndOf="@+id/textView12"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/page30_cancel"
-                tools:srcCompat="@drawable/page30_tick" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout14"
-            android:layout_width="366dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="16dp"
-            android:background="#ffff"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout13">
-
-            <TextView
-                android:id="@+id/textViewquestion3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="23dp"
-                android:text="Question 5"
-                android:textColor="#00BCD4"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="10dp"
-                android:layout_height="17dp"
-                android:layout_marginStart="209dp"
-                android:layout_marginTop="23dp"
-                android:text="A"
-                android:textColor="#4CAF50"
-                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="8dp"
-                android:layout_height="7dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="29dp"
-                app:layout_constraintStart_toEndOf="@+id/textView12"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/page30_cancel"
-                tools:srcCompat="@drawable/page30_tick" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout15"
-            android:layout_width="366dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="17dp"
-            android:background="#ffff"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout14">
-
-            <TextView
-                android:id="@+id/textViewquestion3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="23dp"
-                android:text="Question 6"
-                android:textColor="#00BCD4"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="10dp"
-                android:layout_height="17dp"
-                android:layout_marginStart="209dp"
-                android:layout_marginTop="23dp"
-                android:text="A"
-                android:textColor="#4CAF50"
-                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="8dp"
-                android:layout_height="7dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="29dp"
-                app:layout_constraintStart_toEndOf="@+id/textView12"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/page30_cancel"
-                tools:srcCompat="@drawable/page30_tick" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="366dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="13dp"
-            android:background="#ffff"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout15">
-
-            <TextView
-                android:id="@+id/textViewquestion3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="23dp"
-                android:text="Question 7"
-                android:textColor="#00BCD4"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="10dp"
-                android:layout_height="17dp"
-                android:layout_marginStart="209dp"
-                android:layout_marginTop="23dp"
-                android:text="A"
-                android:textColor="#4CAF50"
-                app:layout_constraintStart_toEndOf="@+id/textViewquestion3"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="8dp"
-                android:layout_height="7dp"
-                android:layout_marginStart="6dp"
-                android:layout_marginTop="29dp"
-                app:layout_constraintStart_toEndOf="@+id/textView12"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/page30_cancel"
-                tools:srcCompat="@drawable/page30_tick" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
