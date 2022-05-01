@@ -66,7 +66,7 @@ public class Part3Activity extends AppCompatActivity {
         callAPI = new CallAPI(this.getApplicationContext());
         questionDao = new QuestionDao(getApplicationContext());
 
-        callAPI.getWithToken("/pratice/get_question/?part=3&limmit=10" , null, new JsonHttpResponseHandler(){
+        callAPI.getWithToken("/question/233" , null, new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 System.out.println(response);
@@ -112,7 +112,7 @@ public class Part3Activity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                ArrayList<QuestionView> list_q = questionDao.findAll("a38e3b99-b5b3-4a4b-b474-dea63680c7b0");
+                ArrayList<QuestionView> list_q = questionDao.findAll("de700c09-dd7c-4d46-b6cf-c0ad40c27a2e");
 
                 System.out.println("list "+ list_q.size());
              }

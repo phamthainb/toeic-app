@@ -84,7 +84,7 @@ public class QuestionDao extends SQLiteOpenHelper {
         String a = cursor.getString(cursor.getColumnIndex(_answer));
         questionView.setAnswer(a);
 
-        System.out.println("questionView dao: "+ questionView.getData());
+        System.out.println("questionView Dao: "+ questionView.getData());
         return questionView;
     }
 
@@ -93,7 +93,7 @@ public class QuestionDao extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         ArrayList<QuestionView> list = new ArrayList<>();
         String sql = "Select * from " + db_name + " where task_id = '" + task_id + "'";
-        System.out.println("sql: "+sql);
+//        System.out.println("sql: "+sql);
       Cursor cursor =  db.rawQuery(sql, null);
       cursor.moveToFirst();
 
@@ -129,7 +129,7 @@ public class QuestionDao extends SQLiteOpenHelper {
         }
 
         ContentValues contentValues = new ContentValues();
-        System.out.println("questionView.getPart(): "+questionView.getPart());
+//        System.out.println("questionView.getPart(): "+questionView.getPart());
         contentValues.put(_stt, questionView.getStt());
         contentValues.put(_question_id, questionView.getQuestion_id());
         contentValues.put(_part, questionView.getPart());
@@ -138,14 +138,14 @@ public class QuestionDao extends SQLiteOpenHelper {
         contentValues.put(_is_last, questionView.isIs_last());
         contentValues.put(_task_id, questionView.getTask_id());
 
-        System.out.println("String.valueOf(questionView.getData()): "+ questionView.getData().toString());
+//        System.out.println("String.valueOf(questionView.getData()): "+ questionView.getData().toString());
         contentValues.put(_data, questionView.getData().toString());
 
         if(questionView.getAnswer() != null){
             contentValues.put(_answer, questionView.getAnswer().toString());
         }
 
-        System.out.println("contentValues: "+contentValues);
+//        System.out.println("contentValues: "+contentValues);
       long id = db.insert(db_name, null, contentValues);
       db.close();
       System.out.println("Insert success: "+ String.valueOf(id));
@@ -164,7 +164,6 @@ public class QuestionDao extends SQLiteOpenHelper {
         }
 
         ContentValues contentValues = new ContentValues();
-
         contentValues.put(_stt, questionView.getStt());
         contentValues.put(_question_id, questionView.getQuestion_id());
         contentValues.put(_part, questionView.getPart());
@@ -174,12 +173,11 @@ public class QuestionDao extends SQLiteOpenHelper {
         contentValues.put(_task_id, questionView.getTask_id());
         contentValues.put(_data, String.valueOf(questionView.getData()));
         contentValues.put(_answer, String.valueOf(questionView.getAnswer()));
-
-        long id =  db.update(db_name, contentValues, _id + " = ?", new String[]{
+        db.update(db_name, contentValues, _id + " = ?", new String[]{
                 String.valueOf(questionView.getId())
         });
-
         db.close();
+
         return questionView;
     }
 
