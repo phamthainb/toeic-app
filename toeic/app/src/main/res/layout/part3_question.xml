@@ -39,35 +39,6 @@
         android:background="#FDFDFD"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quest_content">
-
-        <RadioButton
-            android:id="@+id/quest_answer_a"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="A. maximum" />
-
-        <RadioButton
-            android:id="@+id/quest_answer_b"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="B. maximum" />
-
-        <RadioButton
-            android:id="@+id/quest_answer_c"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="C. maximum" />
-
-        <RadioButton
-            android:id="@+id/quest_answer_d"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="D. maximum" />
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@+id/quest_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

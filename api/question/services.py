@@ -11,7 +11,7 @@ def gen_question(part, limit, sum_child=False):
     result = []
     # print("len " + str(part) + " => " + str(len_max))
     if(len_max >= 0):
-        while(len(count) <= limit):
+        while(len(count) + 1 <= int(limit)):
             r = random.randint(0, len_max)
             time_check = 0
 
@@ -25,13 +25,18 @@ def gen_question(part, limit, sum_child=False):
                     continue
                 else:
                     break
-            
+
             # print("r >> "+ str(r))
             q: Question = list_quest[r]
-            result.append(q)
+            result.append({
+                "id": q['id'],
+                "part": q['part'],
+                "correct_answers": q['correct_answers'],
+                "count_question": q['count_question'],
+            })
+            
             count.append(r)
-            # print(q['count_question'])
-            total+=q['count_question'] or 1
+            total += q['count_question'] or 1
 
             if sum_child and total >= limit:
                 break
