@@ -31,6 +31,7 @@ import com.ptit.toeic.model.General;
 import com.ptit.toeic.model.Question;
 import com.ptit.toeic.model_view.QuestionView;
 import com.ptit.toeic.utils.CallAPI;
+import com.ptit.toeic.utils.MySharedPreferences;
 import com.ptit.toeic.utils.Utils;
 
 import org.json.JSONArray;
@@ -61,63 +62,27 @@ public class Part3Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.part3_list_question);
+
         // api
 
-        callAPI = new CallAPI(this.getApplicationContext());
+      int stt = Integer.parseInt(MySharedPreferences.getPreferences(getApplicationContext(), "stt"));
+      String task = MySharedPreferences.getPreferences(getApplicationContext(), "task_id");
+
+//        callAPI = new CallAPI(this.getApplicationContext());
         questionDao = new QuestionDao(getApplicationContext());
-
-        callAPI.getWithToken("/question/233" , null, new JsonHttpResponseHandler(){
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                System.out.println(response);
-                try {
-                    String task_id = response.getJSONObject("result").getString("task_id");
-                    JSONArray data = response.getJSONObject("result").getJSONArray("data");
-
-                    long prev_id = 0;
-                    for (int i = 0; i < data.length(); i++) {
-                        JSONObject data_item = (JSONObject) data.get(i);
-                        System.out.println("data_item: "+ data_item.getInt("part"));
-                        QuestionView questionView = new QuestionView();
-
-                        questionView.setQuestion_id(data_item.getInt("id"));
-                        questionView.setStt(i+1);
-                        questionView.setPart(data_item.getInt("part"));
-                        questionView.setData(data_item.toString());
-                        questionView.setTask_id(task_id);
-
-                        if(prev_id != 0){
-                            questionView.setPrev_id(prev_id); // update prev_id
-                        }
-
-                        questionView.setIs_last(0);
-                        if(i == data.length() - 1){
-                            questionView.setIs_last(1);
-                        }
-
-                        QuestionView question_insert = questionDao.insert(questionView);
-
-                        long new_id = question_insert.getId();
-                        if(prev_id != 0){
-                            QuestionView pre_question = questionDao.findOne(prev_id);
-                            pre_question.setNext_id(new_id);
-                            questionDao.update(pre_question); // update next_id
-                        }
-                        prev_id = new_id;
-                        System.out.println("new_id: "+new_id);
-
-                    }
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-                ArrayList<QuestionView> list_q = questionDao.findAll("de700c09-dd7c-4d46-b6cf-c0ad40c27a2e");
-
-                System.out.println("list "+ list_q.size());
-             }
-
-        });
+        QuestionView a = questionDao.findOneByStt(task, stt, 0);
+        System.out.println("a: "+a.toString());
+//        callAPI.getWithToken("/question/233" , null, new JsonHttpResponseHandler(){
+//            @Override
+//            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+//                System.out.println(response);
+//
+//                ArrayList<QuestionView> list_q = questionDao.findAll("de700c09-dd7c-4d46-b6cf-c0ad40c27a2e");
+//
+//                System.out.println("list "+ list_q.size());
+//             }
+//
+//        });
 
 //        callAPI.login(new RequestParams().put("");)
 

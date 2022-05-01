@@ -7,6 +7,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import androidx.annotation.Nullable;
+
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -87,6 +89,47 @@ public class QuestionDao extends SQLiteOpenHelper {
         System.out.println("questionView Dao: "+ questionView.getData());
         return questionView;
     }
+
+    @SuppressLint("Range")
+    public QuestionView findOneByStt(String task_id, int stt, @Nullable int part){
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<QuestionView> list = new ArrayList<>();
+//        String sql = "Select * from " + db_name + " where task_id = '" + task_id + "'";
+        String s = String.format("Select * from %s where task_id = '%s' and stt = %s ", db_name, task_id, stt);
+
+        if(part > 0){
+            s += String.format("and part = %s", part);
+        }
+
+        System.out.println("sql: "+ s);
+        Cursor cursor =  db.rawQuery(s, null);
+        cursor.moveToFirst();
+
+        while (cursor.isAfterLast() == false){
+            QuestionView q = new QuestionView();
+            q.setId(cursor.getLong(cursor.getColumnIndex(_id)));
+            q.setTask_id(cursor.getString(cursor.getColumnIndex(_task_id)));
+            q.setNext_id(cursor.getLong(cursor.getColumnIndex(_next_id)));
+            q.setPrev_id(cursor.getLong(cursor.getColumnIndex(_prev_id)));
+            q.setPart(cursor.getInt(cursor.getColumnIndex(_part)));
+            q.setQuestion_id(cursor.getInt(cursor.getColumnIndex(_question_id)));
+            q.setStt(cursor.getInt(cursor.getColumnIndex(_stt)));
+            q.setIs_last(cursor.getInt(cursor.getColumnIndex(_is_last)));
+
+            q.setData(cursor.getString(cursor.getColumnIndex(_data)));
+            q.setAnswer(cursor.getString(cursor.getColumnIndex(_answer)));
+
+            list.add(q);
+            cursor.moveToNext();
+        }
+
+        if(list.size() > 0){
+            return list.get(0);
+        }
+
+        return null;
+    }
+
 
     @SuppressLint("Range")
     public ArrayList<QuestionView> findAll(String task_id){

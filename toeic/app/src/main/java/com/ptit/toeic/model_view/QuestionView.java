@@ -116,5 +116,21 @@ public class QuestionView {
     public void setData(String data) {
         this.data = data;
     }
+
+    @Override
+    public String toString() {
+        return "QuestionView{" +
+                "id=" + id +
+                ", stt=" + stt +
+                ", question_id=" + question_id +
+                ", part=" + part +
+                ", prev_id=" + prev_id +
+                ", next_id=" + next_id +
+                ", is_last=" + is_last +
+                ", task_id='" + task_id + '\'' +
+                ", answer='" + answer + '\'' +
+                ", data='" + data + '\'' +
+                '}';
+    }
 }
 
