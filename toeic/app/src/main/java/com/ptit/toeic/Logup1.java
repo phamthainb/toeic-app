@@ -97,7 +97,10 @@ public class Logup1 extends AppCompatActivity {
                         public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
                             try {
                                 System.out.println("response : " + errorResponse.getJSONObject("message").getJSONArray("email").get(0));
-                                tvError.setText("Email existed!");
+                                tvError.setText("Email existed, Please Signup email other.");
+                                tvEmail.setText("");
+                                tvPassword.setText("");
+                                tvRePassword.setText("");
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }

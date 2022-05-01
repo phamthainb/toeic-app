@@ -55,30 +55,24 @@ public class Login2 extends AppCompatActivity {
                     tvError.setText("");
                     String email = tvEmail.getText().toString();
                     String pass = tvPassword.getText().toString();
+//                    String email="yen@gmail.com";
+//                    String pass="12345678";
                     RequestParams params = new RequestParams();
                     params.put("email", email);
                     params.put("password", pass);
-
                     new CallAPI(getApplicationContext()).post("/account/login/", params, new JsonHttpResponseHandler() {
                         @Override
                         public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                             try {
-                                Intent intent=new Intent(Login2.this,Target32.class);
-                                startActivity(intent);
-                                MySharedPreferences.savePreferences(getApplicationContext(), "token", response.getString("token"));
+                                MySharedPreferences.savePreferences(getApplicationContext(), "access", response.getString("access"));
                                 MySharedPreferences.savePreferences(getApplicationContext(), "refresh", response.getString("refresh"));
-//                              //kiem tra xem co target # 0 trong csdl chua? neu co roi goi sang home, chua co goi sang select target
-//                                Intent intent=new Intent(Login2.this,Target32.class);
-//                                startActivity(intent);
-//                            System.out.println("response : "+ response.getString("message"));
-                                //Mo giao dien Home
-//                            Intent intent=new Intent(Login2.this,Home.class);
-//                            startActivity(intent);
+//                              kiem tra xem co target # 0 trong csdl chua? neu co roi goi sang home, chua co goi sang select target
+                                getTarget();
                             } catch (JSONException e) {
+                                System.out.println("that bai");
                                 e.printStackTrace();
                             }
                         }
-
                         @Override
                         public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
                             try {
@@ -113,5 +107,36 @@ public class Login2 extends AppCompatActivity {
         return Pattern.compile(regexPattern)
                 .matcher(emailAddress)
                 .matches();
+    }
+    public void getTarget() {
+        RequestParams params1 = new RequestParams();
+        new CallAPI(getApplicationContext()).getWithToken("/account/get_profile/", params1, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                try {
+                    System.out.println("get_target success");
+                    System.out.println("response : " + String.valueOf(response.getJSONObject("data").getInt("level")));
+                    int target = response.getJSONObject("data").getInt("level");
+                    if (target == 0) {
+                        Intent intent = new Intent(Login2.this, Target32.class);
+                        startActivity(intent);
+                    } else {
+                        System.out.println("Chuyen sang HOME");
+                        //Mo giao dien Home
+//                                  Intent intent=new Intent(Login2.this,Home.class);
+//                                  startActivity(intent);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                System.out.println("status + " + statusCode);
+                System.out.println("headers " + headers[0]);
+                System.out.println("error get target");
+            }
+        });
     }
 }

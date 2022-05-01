@@ -63,8 +63,9 @@ public class Target32 extends AppCompatActivity {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                     try {
-                        System.out.println("response : " + response.getString("message"));
+                        System.out.println("response : " + response.getString("data"));
                         System.out.println("set_target success");
+                        System.out.println("Chuyen sang HOME");
                         //Mo giao dien Home
 //                            Intent intent=new Intent(Target32.this,Home.class);
 //                            startActivity(intent);
