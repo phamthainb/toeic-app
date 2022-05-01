@@ -129,5 +129,22 @@ public class Question {
     public void setPart(Integer part) {
         this.part = part;
     }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id=" + id +
+                ", part=" + part +
+                ", tag='" + tag + '\'' +
+                ", kind='" + kind + '\'' +
+                ", general=" + general +
+                ", content=" + content +
+                ", correct_answers=" + correct_answers +
+                ", count_question=" + count_question +
+                ", title='" + title + '\'' +
+                ", title_transObject=" + title_transObject +
+                ", scores=" + scores +
+                '}';
+    }
 }
 
