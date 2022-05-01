@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/mobile_demo_example/toeic-app/toeic/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/mobile_demo_example/toeic-app/toeic/app/src/main/res/layout/activity_login2.xml" value="0.22" />
         <entry key="..\:/mobile_demo_example/toeic-app/toeic/app/src/main/res/layout/activity_logup1.xml" value="0.16666666666666666" />
+        <entry key="..\:/mobile_demo_example/toeic-app/toeic/app/src/main/res/layout/activity_target32.xml" value="0.153125" />
       </map>
     </option>
   </component>
