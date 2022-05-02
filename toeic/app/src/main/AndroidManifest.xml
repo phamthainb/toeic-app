@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Toeic">
         <activity
-            android:name=".Part3Activity"
+            android:name=".PageMain"
             android:exported="true"
             android:label="Part"
             >

@@ -10,46 +10,45 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <TextView
-            android:id="@+id/textViewptit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="172dp"
-            android:layout_marginTop="4dp"
-            android:text="PTIT Toeic"
-            android:textColor="#00BCD4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <TextView-->
+<!--            android:id="@+id/textViewptit"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="172dp"-->
+<!--            android:layout_marginTop="4dp"-->
+<!--            android:text="PTIT Toeic"-->
+<!--            android:textColor="#00BCD4"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <TextView
-            android:id="@+id/textViewPractice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="160dp"
-            android:layout_marginTop="9dp"
-            android:text="Quick Practice"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewptit" />
+<!--        <TextView-->
+<!--            android:id="@+id/textViewPractice"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="160dp"-->
+<!--            android:layout_marginTop="9dp"-->
+<!--            android:text="Quick Practice"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textViewptit" />-->
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="41dp"
-            android:layout_height="36dp"
-            android:layout_marginStart="92dp"
-            android:layout_marginTop="12dp"
-            app:layout_constraintStart_toEndOf="@+id/textViewPractice"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/seting_icon" />
+<!--        <ImageButton-->
+<!--            android:id="@+id/imageButton"-->
+<!--            android:layout_width="41dp"-->
+<!--            android:layout_height="36dp"-->
+<!--            android:layout_marginStart="92dp"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/textViewPractice"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            tools:srcCompat="@drawable/seting_icon" />-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="410dp"
             android:layout_height="661dp"
             android:layout_marginStart="1dp"
-            android:layout_marginTop="16dp"
             android:background="#F4F3F3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewPractice">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/textViewListening"
