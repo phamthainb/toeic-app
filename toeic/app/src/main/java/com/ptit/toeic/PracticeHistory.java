@@ -47,7 +47,6 @@ public class PracticeHistory extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-
     void genQuestion(Question question) {
         // general
         TextView textView1 = findViewById(R.id.textViewTimeResult);
@@ -57,7 +56,7 @@ public class PracticeHistory extends AppCompatActivity {
         ListView contentItemView = findViewById(R.id.quest_list);
         ArrayList<ContentItem> contentItem = question.getContent();
 
-        contentItemView.setAdapter(new ContentItemAdapter(contentItem));
+//        contentItemView.setAdapter(new ContentItemAdapter(contentItem));
 
         System.out.println("fsdnjsahb");
     }

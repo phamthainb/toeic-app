@@ -33,8 +33,8 @@ public class History extends AppCompatActivity {
         actionBar.setTitle(ss);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Intent intent1 = new Intent(this, Part3Activity.class);
-        Intent intent2 = new Intent(this, Part3Activity.class);
+        Intent intent1 = new Intent(this, PracticeHistory.class);
+        Intent intent2 = new Intent(this, TestHistory.class);
 
         ConstraintLayout contrainL1 = findViewById(R.id.constraintLayout2);
         ConstraintLayout contrainL2 = findViewById(R.id.constraintLayout3);

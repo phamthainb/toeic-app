@@ -1,5 +1,6 @@
 package com.ptit.toeic;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,10 +14,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 import com.ptit.toeic.dao.QuestionDao;
 import com.ptit.toeic.model.Question;
 import com.ptit.toeic.model_view.QuestionView;
 import com.ptit.toeic.utils.CallAPI;
+import com.ptit.toeic.utils.MySharedPreferences;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,13 +31,17 @@ import cz.msebera.android.httpclient.Header;
 
 public class PageMain extends AppCompatActivity {
     CallAPI callAPI;
-    Question question;
     QuestionDao questionDao;
+    Context context;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.page1);
+        callAPI = new CallAPI(this.getApplicationContext());
+        questionDao = new QuestionDao(this.getApplicationContext());
+        context = this.getApplicationContext();
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
@@ -48,6 +55,11 @@ public class PageMain extends AppCompatActivity {
                 toolbar_title.length(),
                 Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
         actionBar.setTitle(ss);
+
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setLogo(R.drawable.seting_icon);    //Icon muốn hiện thị
+        actionBar.setDisplayUseLogoEnabled(true);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ConstraintLayout contrainL1 = findViewById(R.id.constraintLayout2);
@@ -59,73 +71,228 @@ public class PageMain extends AppCompatActivity {
         ConstraintLayout contrainL7 = findViewById(R.id.constraintLayout8);
         ConstraintLayout contrainL8 = findViewById(R.id.constraintLayout9);
 
-        Intent intent = new Intent(this, Part3Activity.class);
-
-        contrainL1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                System.out.println("hiiiiiiii");
-
-                callAPI = new CallAPI(getApplicationContext());
-                questionDao = new QuestionDao(getApplicationContext());
-
-                callAPI.getWithToken("/question" , null, new JsonHttpResponseHandler(){
+        contrainL1.setOnClickListener(
+                new View.OnClickListener() {
                     @Override
-                    public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                        System.out.println("res:");
-                        System.out.println(response);
-                        try {
-                            String task_id = response.getJSONObject("result").getString("task_id");
-                            JSONArray data = response.getJSONObject("result").getJSONArray("data");
+                    public void onClick(View view) {
+                        select_part(1, 10);
+                    }
+                }
+        );
+        contrainL2.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        System.out.println("1: " + MySharedPreferences.getPreferences(context, "current_id", ""));
+                        select_part(2, 10);
 
-                            long prev_id = 0;
-                            for (int i = 0; i < data.length(); i++) {
-                                JSONObject data_item = (JSONObject) data.get(i);
-                                System.out.println("data_item: "+ data_item.getInt("part"));
-                                QuestionView questionView = new QuestionView();
+                    }
+                }
+        );
+        contrainL3.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        select_part(3, 10);
+                    }
+                }
+        );
+        contrainL4.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        select_part(4, 10);
+                    }
+                }
+        );
+        contrainL5.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        select_part(5, 10);
+                    }
+                }
+        );
+        contrainL6.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        select_part(6, 10);
+                    }
+                }
+        );
+        contrainL7.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        select_part(7, 10);
+                    }
+                }
+        );
+        contrainL8.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        get_test();
+                    }
+                }
+        );
+    }
 
-                                questionView.setQuestion_id(data_item.getInt("id"));
-                                questionView.setStt(i+1);
-                                questionView.setPart(data_item.getInt("part"));
-                                questionView.setData(data_item.toString());
-                                questionView.setTask_id(task_id);
+//    void login() {
+//        RequestParams login = new RequestParams();
+//        login.put("email", "phamthainb@gmail.com");
+//        login.put("password", "12345678");
+//        callAPI.login(login);
+//    }
 
-                                if(prev_id != 0){
-                                    questionView.setPrev_id(prev_id); // update prev_id
-                                }
+    void select_part(Integer part, Integer limit) {
+        seed_data(part, limit);
+    }
 
-                                questionView.setIs_last(0);
-                                if(i == data.length() - 1){
-                                    questionView.setIs_last(1);
-                                }
+    void seed_data(Integer part, Integer limit) {
+        callAPI.getWithToken(String.format("/pratice/get_question/?part=%s&limmit=%s", part, limit), null, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                System.out.println(response);
+                String task_id = "";
+                Integer stt = 0;
+                Long current_id = Long.valueOf(1);
+                JSONArray data;
 
-                                QuestionView question_insert = questionDao.insert(questionView);
+                try {
+                    task_id = response.getJSONObject("result").getString("task_id");
+                    data = response.getJSONObject("result").getJSONArray("data");
 
-                                long new_id = question_insert.getId();
-                                if(prev_id != 0){
-                                    QuestionView pre_question = questionDao.findOne(prev_id);
-                                    pre_question.setNext_id(new_id);
-                                    questionDao.update(pre_question); // update next_id
-                                }
-                                prev_id = new_id;
-                                System.out.println("new_id: "+new_id);
+                    long prev_id = 0;
+                    for (int i = 0; i < data.length(); i++) {
+                        JSONObject data_item = (JSONObject) data.get(i);
+                        System.out.println("data_item: " + data_item.getInt("part"));
+                        QuestionView questionView = new QuestionView();
 
-                            }
+                        questionView.setQuestion_id(data_item.getInt("id"));
+                        questionView.setStt(i + 1);
+                        questionView.setPart(data_item.getInt("part"));
+                        questionView.setData(data_item.toString());
+                        questionView.setTask_id(task_id);
+                        questionView.setType("practice");
 
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                        if (prev_id != 0) {
+                            questionView.setPrev_id(prev_id); // update prev_id
                         }
 
-                        ArrayList<QuestionView> list_q = questionDao.findAll("de700c09-dd7c-4d46-b6cf-c0ad40c27a2e");
+                        questionView.setIs_last(0);
+                        if (i == data.length() - 1) {
+                            questionView.setIs_last(1);
+                        }
 
-                        System.out.println("list "+ list_q.size());
+                        QuestionView question_insert = questionDao.insert(questionView);
 
-                        startActivity(intent);
+                        long new_id = question_insert.getId();
+                        if (prev_id != 0) {
+                            QuestionView pre_question = questionDao.findOne(prev_id);
+                            pre_question.setNext_id(new_id);
+                            questionDao.update(pre_question); // update next_id
+                        }
+                        prev_id = new_id;
+                        System.out.println("new_id: " + new_id);
+
+                        if (i == 0) {
+                            stt = question_insert.getStt();
+                            current_id = question_insert.getId();
+                        }
+
                     }
 
-                });
-            }
-        });
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
+//                ArrayList<QuestionView> list_q = questionDao.findAll("a38e3b99-b5b3-4a4b-b474-dea63680c7b0");
+
+//                System.out.println("list "+ list_q.size());
+                MySharedPreferences.savePreferences(context, "task_id", task_id);
+                MySharedPreferences.savePreferences(context, "stt", String.valueOf(stt));
+                MySharedPreferences.savePreferences(context, "current_id", String.valueOf(current_id));
+                MySharedPreferences.savePreferences(context, "timer", "0.0");
+
+                intent = new Intent(context, Part3Activity.class);
+                startActivity(intent);
+            }
+
+        });
+    }
+
+    void get_test() {
+        callAPI.getWithToken("/pratice/get_test", null, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                System.out.println(response);
+                String task_id = "";
+                Integer stt = 0;
+                Long current_id = Long.valueOf(1);
+                JSONArray data;
+
+                try {
+                    task_id = response.getJSONObject("result").getString("task_id");
+                    data = response.getJSONObject("result").getJSONArray("data");
+
+                    long prev_id = 0;
+                    for (int i = 0; i < data.length(); i++) {
+                        JSONObject data_item = (JSONObject) data.get(i);
+                        System.out.println("data_item: " + data_item.getInt("part"));
+                        QuestionView questionView = new QuestionView();
+
+                        questionView.setQuestion_id(data_item.getInt("id"));
+                        questionView.setStt(i + 1);
+                        questionView.setPart(data_item.getInt("part"));
+                        questionView.setData(data_item.toString());
+                        questionView.setTask_id(task_id);
+                        questionView.setType("test");
+
+                        if (prev_id != 0) {
+                            questionView.setPrev_id(prev_id); // update prev_id
+                        }
+
+                        questionView.setIs_last(0);
+                        if (i == data.length() - 1) {
+                            questionView.setIs_last(1);
+                        }
+
+                        QuestionView question_insert = questionDao.insert(questionView);
+
+                        long new_id = question_insert.getId();
+                        if (prev_id != 0) {
+                            QuestionView pre_question = questionDao.findOne(prev_id);
+                            pre_question.setNext_id(new_id);
+                            questionDao.update(pre_question); // update next_id
+                        }
+                        prev_id = new_id;
+                        System.out.println("new_id: " + new_id);
+
+                        if (i == 0) {
+                            stt = question_insert.getStt();
+                            current_id = question_insert.getId();
+                        }
+
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+//                ArrayList<QuestionView> list_q = questionDao.findAll("a38e3b99-b5b3-4a4b-b474-dea63680c7b0");
+
+//                System.out.println("list "+ list_q.size());
+                MySharedPreferences.savePreferences(context, "task_id", task_id);
+                MySharedPreferences.savePreferences(context, "stt", String.valueOf(stt));
+                MySharedPreferences.savePreferences(context, "current_id", String.valueOf(current_id));
+                MySharedPreferences.savePreferences(context, "timer", "0.0");
+
+                intent = new Intent(context, Part3Activity.class);
+                startActivity(intent);
+            }
+
+        });
     }
 }

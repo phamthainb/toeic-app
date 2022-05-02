@@ -42,6 +42,8 @@ public class QuestionDao extends SQLiteOpenHelper {
     String _stt = "stt";
     String _answer = "answer"; // json array
     String _data = "data"; // json object
+    String _type = "type"; // json object
+
 
     ObjectMapper objectMapper = new ObjectMapper();
 
@@ -52,8 +54,8 @@ public class QuestionDao extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String sql = String.format(
-                "CREATE TABLE %s (%s INTEGER PRIMARY KEY, %s INTEGER, %s INTEGER, %s INTEGER, %s INTEGER, %s INTEGER, %s INTEGER, %s TEXT, %s TEXT, %s TEXT)",
-                db_name, _id, _stt, _question_id, _part, _prev_id, _next_id, _is_last, _task_id, _answer, _data);
+                "CREATE TABLE %s (%s INTEGER PRIMARY KEY, %s INTEGER, %s INTEGER, %s INTEGER, %s INTEGER, %s INTEGER, %s INTEGER, %s TEXT, %s TEXT, %s TEXT, %s TEXT)",
+                db_name, _id, _stt, _question_id, _part, _prev_id, _next_id, _is_last, _task_id, _answer, _data, _type);
         System.out.println(sql);
         sqLiteDatabase.execSQL(sql);
     }
@@ -87,6 +89,7 @@ public class QuestionDao extends SQLiteOpenHelper {
         questionView.setQuestion_id(cursor.getInt(cursor.getColumnIndex(_question_id)));
         questionView.setStt(cursor.getInt(cursor.getColumnIndex(_stt)));
         questionView.setIs_last(cursor.getInt(cursor.getColumnIndex(_is_last)));
+        questionView.setType(cursor.getString(cursor.getColumnIndex(_type)));
 
         String d = cursor.getString(cursor.getColumnIndex(_data));
         questionView.setData(d);
@@ -122,6 +125,7 @@ public class QuestionDao extends SQLiteOpenHelper {
             q.setQuestion_id(cursor.getInt(cursor.getColumnIndex(_question_id)));
             q.setStt(cursor.getInt(cursor.getColumnIndex(_stt)));
             q.setIs_last(cursor.getInt(cursor.getColumnIndex(_is_last)));
+            q.setType(cursor.getString(cursor.getColumnIndex(_type)));
 
             q.setData(cursor.getString(cursor.getColumnIndex(_data)));
             q.setAnswer(cursor.getString(cursor.getColumnIndex(_answer)));
@@ -157,6 +161,7 @@ public class QuestionDao extends SQLiteOpenHelper {
             q.setQuestion_id(cursor.getInt(cursor.getColumnIndex(_question_id)));
             q.setStt(cursor.getInt(cursor.getColumnIndex(_stt)));
             q.setIs_last(cursor.getInt(cursor.getColumnIndex(_is_last)));
+            q.setType(cursor.getString(cursor.getColumnIndex(_type)));
 
             q.setData(cursor.getString(cursor.getColumnIndex(_data)));
             q.setAnswer(cursor.getString(cursor.getColumnIndex(_answer)));
@@ -187,6 +192,7 @@ public class QuestionDao extends SQLiteOpenHelper {
             q.setQuestion_id(cursor.getInt(cursor.getColumnIndex(_question_id)));
             q.setStt(cursor.getInt(cursor.getColumnIndex(_stt)));
             q.setIs_last(cursor.getInt(cursor.getColumnIndex(_is_last)));
+            q.setType(cursor.getString(cursor.getColumnIndex(_type)));
 
             q.setData(cursor.getString(cursor.getColumnIndex(_data)));
             q.setAnswer(cursor.getString(cursor.getColumnIndex(_answer)));
@@ -214,6 +220,7 @@ public class QuestionDao extends SQLiteOpenHelper {
         contentValues.put(_next_id, questionView.getNext_id());
         contentValues.put(_is_last, questionView.isIs_last());
         contentValues.put(_task_id, questionView.getTask_id());
+        contentValues.put(_type, questionView.getType());
 
         try {
             Map<String, Object> map
@@ -256,6 +263,8 @@ public class QuestionDao extends SQLiteOpenHelper {
         contentValues.put(_task_id, questionView.getTask_id());
         contentValues.put(_data, String.valueOf(questionView.getData()));
         contentValues.put(_answer, String.valueOf(questionView.getAnswer()));
+        contentValues.put(_type, String.valueOf(questionView.getType()));
+
         db.update(db_name, contentValues, _id + " = ?", new String[]{
                 String.valueOf(questionView.getId())
         });

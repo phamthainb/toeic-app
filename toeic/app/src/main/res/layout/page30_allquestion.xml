@@ -57,7 +57,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textViewquestion1"
+                android:id="@+id/textViewidchildrenquestionallchildrenpage11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -75,7 +75,7 @@
                 android:layout_marginTop="23dp"
                 android:text="B"
                 android:textColor="#D1534B"
-                app:layout_constraintStart_toEndOf="@+id/textViewquestion1"
+                app:layout_constraintStart_toEndOf="@+id/textViewidchildrenquestionallchildrenpage11"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView

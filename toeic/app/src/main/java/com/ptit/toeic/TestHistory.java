@@ -50,7 +50,7 @@ public class TestHistory extends AppCompatActivity {
         ListView contentItemView = findViewById(R.id.quest_list);
         ArrayList<ContentItem> contentItem = question.getContent();
 
-        contentItemView.setAdapter(new ContentItemAdapter(contentItem));
+//        contentItemView.setAdapter(new ContentItemAdapter(contentItem));
 
         System.out.println("fsdnjsahb");
     }
