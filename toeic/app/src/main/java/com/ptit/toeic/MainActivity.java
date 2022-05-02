@@ -1,19 +1,17 @@
 package com.ptit.toeic;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent intent=new Intent(MainActivity.this,SettingPageNgan.class);
+        Intent intent=new Intent(MainActivity.this, SettingActivity.class);
         startActivity(intent);
 
 

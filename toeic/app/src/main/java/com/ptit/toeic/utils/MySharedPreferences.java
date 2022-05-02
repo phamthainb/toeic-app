@@ -5,20 +5,19 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 public class MySharedPreferences {
-
     public static void savePreferences(Context mContext, String key, String value) {
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
+        SharedPreferences sharedPreferences = mContext.getSharedPreferences("my_data", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(key, value).apply();
     }
 
-    public static String getPreferences(Context context, String keyValue) {
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+    public static String getPreferences(Context mContext, String keyValue) {
+        SharedPreferences sharedPreferences = mContext.getSharedPreferences("my_data", Context.MODE_PRIVATE);
         return sharedPreferences.getString(keyValue, "");
     }
 
     public static void removeAllSharedPreferences(Context mContext) {
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
+        SharedPreferences sharedPreferences = mContext.getSharedPreferences("my_data", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear().apply();
     }

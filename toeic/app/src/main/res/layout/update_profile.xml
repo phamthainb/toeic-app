@@ -5,41 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginBottom="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout7"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/page9_setting_revert" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="40dp"
-        android:text="Update profile"
-        android:textColor="#00BCD4"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_back"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout7"
-        android:layout_width="409dp"
-        android:layout_height="637dp"
+        android:layout_width="407dp"
+        android:layout_height="731dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="25dp"
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_back">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="2dp">
 
         <EditText
             android:id="@+id/fill1"
@@ -47,7 +21,9 @@
             android:layout_height="40dp"
             android:background="@color/gray1"
             android:ems="10"
-            android:hint="   Name"
+            android:hint="Name"
+            android:paddingLeft="4pt"
+            android:paddingRight="4pt"
             android:inputType="textEmailAddress"
             android:text=""
             app:cornerRadius="30dp"
@@ -65,7 +41,9 @@
             android:layout_marginTop="15dp"
             android:background="@color/gray1"
             android:ems="10"
-            android:hint="  Birthday"
+            android:hint="Birthday"
+            android:paddingLeft="4pt"
+            android:paddingRight="4pt"
             android:inputType="date"
             android:text=""
             app:cornerRadius="30dp"
@@ -82,7 +60,9 @@
             android:layout_marginTop="15dp"
             android:background="@color/gray1"
             android:ems="10"
-            android:hint="  Phone number"
+            android:hint="Phone number"
+            android:paddingLeft="4pt"
+            android:paddingRight="4pt"
             android:inputType="textEmailAddress"
             android:text=""
             app:cornerRadius="30dp"
@@ -94,6 +74,7 @@
 
         <TextView
             android:id="@+id/gender_text"
+            android:layout_width="290dp"
             android:layout_height="30dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
@@ -101,13 +82,13 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:text="Gender"
-            android:layout_width="290dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fill3" />
 
         <RadioGroup
             android:id="@+id/gender_select"
+            android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
@@ -115,39 +96,39 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="290dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gender_text">
 
             <RadioButton
                 android:id="@+id/gender_male"
-                android:layout_width="match_parent"
+                android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:text="Male" />
 
             <RadioButton
                 android:id="@+id/gender_female"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:text="Female" />
         </RadioGroup>
 
         <TextView
             android:id="@+id/target_text"
+            android:layout_width="290dp"
             android:layout_height="30dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="19dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:text="Gender"
-            android:layout_width="290dp"
+            android:text="Target"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gender_select" />
 
         <RadioGroup
             android:id="@+id/target_select"
+            android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
@@ -155,24 +136,24 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="290dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/target_text">
 
             <RadioButton
                 android:id="@+id/target_level1"
-                android:layout_width="match_parent"
+                android:layout_width="122dp"
                 android:layout_height="30dp"
                 android:text="Level 1 - 490" />
 
             <RadioButton
                 android:id="@+id/target_level2"
-                android:layout_width="match_parent"
+                android:layout_width="122dp"
                 android:layout_height="30dp"
                 android:text="Level 2 - 750" />
+
             <RadioButton
                 android:id="@+id/target_level3"
-                android:layout_width="match_parent"
+                android:layout_width="122dp"
                 android:layout_height="30dp"
                 android:text="Level 3 - 990" />
         </RadioGroup>
