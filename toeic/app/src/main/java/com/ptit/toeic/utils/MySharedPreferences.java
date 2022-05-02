@@ -12,9 +12,9 @@ public class MySharedPreferences {
         editor.putString(key, value).apply();
     }
 
-    public static String getPreferences(Context mContext, String keyValue) {
+    public static String getPreferences(Context mContext, String keyValue, String defaultValue) {
         SharedPreferences sharedPreferences = mContext.getSharedPreferences("my_data", Context.MODE_PRIVATE);
-        return sharedPreferences.getString(keyValue, "");
+        return sharedPreferences.getString(keyValue, defaultValue);
     }
 
     public static void removeAllSharedPreferences(Context mContext) {

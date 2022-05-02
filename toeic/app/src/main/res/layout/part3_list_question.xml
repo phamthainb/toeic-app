@@ -8,6 +8,7 @@
     android:id="@+id/question_page"
     >
 
+
     <ScrollView
         android:layout_width="409dp"
         android:layout_height="729dp"
@@ -24,9 +25,11 @@
 
             <ImageView
                 android:id="@+id/quest_img"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="74dp"
+                android:layout_width="400dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="75dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@tools:sample/avatars" />
@@ -35,15 +38,17 @@
                 android:id="@+id/quest_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="74dp"
+                android:text="loading..."
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
             <ListView
                 android:id="@+id/quest_list"
                 android:layout_width="410dp"
-                android:layout_height="593dp"
+                android:layout_height="match_parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/quest_img" />
 
@@ -53,7 +58,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="37dp"
-                android:text="00:00:00"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -70,12 +74,62 @@
                 app:layout_constraintTop_toBottomOf="@id/time_left"
                 tools:ignore="MissingConstraints" />
 
+
+            <!--            question control-->
+
+            <Button
+                android:id="@+id/btn_quest_prev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="510dp"
+                android:text="Prev"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_quest_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="510dp"
+                android:layout_marginEnd="16dp"
+                android:text="Next"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_quest_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="510dp"
+                android:text="Pause"
+                app:layout_constraintStart_toEndOf="@+id/btn_quest_play"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_quest_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="510dp"
+                android:text="Play"
+                app:layout_constraintStart_toEndOf="@+id/btn_quest_prev"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_quest_prev" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-<!--    <include-->
-<!--        layout="@layout/part3_control"-->
-<!--        android:id="@+id/part_control"-->
-<!--        />-->
+<!--    <include layout="@layout/part3_control" android:id="@+id/part_control" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

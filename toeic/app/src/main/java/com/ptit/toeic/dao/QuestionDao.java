@@ -7,6 +7,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import androidx.annotation.Nullable;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -14,15 +19,18 @@ import com.google.gson.JsonObject;
 import com.ptit.toeic.model.Question;
 import com.ptit.toeic.model_view.QuestionData;
 import com.ptit.toeic.model_view.QuestionView;
+import com.ptit.toeic.utils.Convert;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Map;
 
 public class QuestionDao extends SQLiteOpenHelper {
-   static String db_name = "question";
+    static String db_name = "question";
 
     String _id = "id";
     String _task_id = "task_id";
@@ -34,6 +42,8 @@ public class QuestionDao extends SQLiteOpenHelper {
     String _stt = "stt";
     String _answer = "answer"; // json array
     String _data = "data"; // json object
+
+    ObjectMapper objectMapper = new ObjectMapper();
 
     public QuestionDao(Context context) {
         super(context, db_name, null, 1);
@@ -56,14 +66,14 @@ public class QuestionDao extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public QuestionView findOne(long id){
+    public QuestionView findOne(long id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(db_name, null, _id + " = ?",
-                new String[] {
-                  String.valueOf(id)
+                new String[]{
+                        String.valueOf(id)
                 },
                 null, null, null);
-        if(cursor != null) {
+        if (cursor != null) {
             cursor.moveToFirst();
         }
         Gson gson = new GsonBuilder().create();
@@ -84,52 +94,119 @@ public class QuestionDao extends SQLiteOpenHelper {
         String a = cursor.getString(cursor.getColumnIndex(_answer));
         questionView.setAnswer(a);
 
-        System.out.println("questionView Dao: "+ questionView.getData());
+        System.out.println("questionView Dao: " + questionView.getData());
         return questionView;
     }
 
     @SuppressLint("Range")
-    public ArrayList<QuestionView> findAll(String task_id){
+    public QuestionView findOneByStt(String task_id, int stt, @Nullable int part) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<QuestionView> list = new ArrayList<>();
+        String s = String.format("Select * from %s where task_id = '%s' and stt = %s ", db_name, task_id, stt);
+
+        if (part > 0) {
+            s += String.format("and part = %s", part);
+        }
+
+        System.out.println("sql: " + s);
+        Cursor cursor = db.rawQuery(s, null);
+        cursor.moveToFirst();
+
+        while (cursor.isAfterLast() == false) {
+            QuestionView q = new QuestionView();
+            q.setId(cursor.getLong(cursor.getColumnIndex(_id)));
+            q.setTask_id(cursor.getString(cursor.getColumnIndex(_task_id)));
+            q.setNext_id(cursor.getLong(cursor.getColumnIndex(_next_id)));
+            q.setPrev_id(cursor.getLong(cursor.getColumnIndex(_prev_id)));
+            q.setPart(cursor.getInt(cursor.getColumnIndex(_part)));
+            q.setQuestion_id(cursor.getInt(cursor.getColumnIndex(_question_id)));
+            q.setStt(cursor.getInt(cursor.getColumnIndex(_stt)));
+            q.setIs_last(cursor.getInt(cursor.getColumnIndex(_is_last)));
+
+            q.setData(cursor.getString(cursor.getColumnIndex(_data)));
+            q.setAnswer(cursor.getString(cursor.getColumnIndex(_answer)));
+
+            list.add(q);
+            cursor.moveToNext();
+        }
+
+        if (list.size() > 0) {
+            return list.get(0);
+        }
+
+        return null;
+    }
+
+    @SuppressLint("Range")
+    public ArrayList<QuestionView> findAllbyTask(String task_id) {
         SQLiteDatabase db = this.getReadableDatabase();
         ArrayList<QuestionView> list = new ArrayList<>();
         String sql = "Select * from " + db_name + " where task_id = '" + task_id + "'";
-//        System.out.println("sql: "+sql);
-      Cursor cursor =  db.rawQuery(sql, null);
-      cursor.moveToFirst();
+        Cursor cursor = db.rawQuery(sql, null);
+        cursor.moveToFirst();
 
-      while (cursor.isAfterLast() == false){
-          System.out.println("cursor: "+cursor.getString(cursor.getColumnIndex("task_id")));
+        while (cursor.isAfterLast() == false) {
+            System.out.println("cursor: " + cursor.getString(cursor.getColumnIndex("task_id")));
 
-          QuestionView q = new QuestionView();
-          q.setId(cursor.getLong(cursor.getColumnIndex(_id)));
-          q.setTask_id(cursor.getString(cursor.getColumnIndex(_task_id)));
-          q.setNext_id(cursor.getLong(cursor.getColumnIndex(_next_id)));
-          q.setPrev_id(cursor.getLong(cursor.getColumnIndex(_prev_id)));
-          q.setPart(cursor.getInt(cursor.getColumnIndex(_part)));
-          q.setQuestion_id(cursor.getInt(cursor.getColumnIndex(_question_id)));
-          q.setStt(cursor.getInt(cursor.getColumnIndex(_stt)));
-          q.setIs_last(cursor.getInt(cursor.getColumnIndex(_is_last)));
+            QuestionView q = new QuestionView();
+            q.setId(cursor.getLong(cursor.getColumnIndex(_id)));
+            q.setTask_id(cursor.getString(cursor.getColumnIndex(_task_id)));
+            q.setNext_id(cursor.getLong(cursor.getColumnIndex(_next_id)));
+            q.setPrev_id(cursor.getLong(cursor.getColumnIndex(_prev_id)));
+            q.setPart(cursor.getInt(cursor.getColumnIndex(_part)));
+            q.setQuestion_id(cursor.getInt(cursor.getColumnIndex(_question_id)));
+            q.setStt(cursor.getInt(cursor.getColumnIndex(_stt)));
+            q.setIs_last(cursor.getInt(cursor.getColumnIndex(_is_last)));
 
-          q.setData(cursor.getString(cursor.getColumnIndex(_data)));
-          q.setAnswer(cursor.getString(cursor.getColumnIndex(_answer)));
+            q.setData(cursor.getString(cursor.getColumnIndex(_data)));
+            q.setAnswer(cursor.getString(cursor.getColumnIndex(_answer)));
 
-          list.add(q);
-          cursor.moveToNext();
-      }
+            list.add(q);
+            cursor.moveToNext();
+        }
         return list;
     }
 
-    public QuestionView insert(QuestionView questionView){
+    @SuppressLint("Range")
+    public ArrayList<QuestionView> findAll() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<QuestionView> list = new ArrayList<>();
+        String sql = "Select * from " + db_name;
+        Cursor cursor = db.rawQuery(sql, null);
+        cursor.moveToFirst();
+
+        while (cursor.isAfterLast() == false) {
+            System.out.println("cursor: " + cursor.getString(cursor.getColumnIndex("task_id")));
+
+            QuestionView q = new QuestionView();
+            q.setId(cursor.getLong(cursor.getColumnIndex(_id)));
+            q.setTask_id(cursor.getString(cursor.getColumnIndex(_task_id)));
+            q.setNext_id(cursor.getLong(cursor.getColumnIndex(_next_id)));
+            q.setPrev_id(cursor.getLong(cursor.getColumnIndex(_prev_id)));
+            q.setPart(cursor.getInt(cursor.getColumnIndex(_part)));
+            q.setQuestion_id(cursor.getInt(cursor.getColumnIndex(_question_id)));
+            q.setStt(cursor.getInt(cursor.getColumnIndex(_stt)));
+            q.setIs_last(cursor.getInt(cursor.getColumnIndex(_is_last)));
+
+            q.setData(cursor.getString(cursor.getColumnIndex(_data)));
+            q.setAnswer(cursor.getString(cursor.getColumnIndex(_answer)));
+
+            list.add(q);
+            cursor.moveToNext();
+        }
+        return list;
+    }
+
+    public QuestionView insert(QuestionView questionView) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         boolean check_exist = tableExists(db, db_name);
 
-        if(!check_exist){
+        if (!check_exist) {
             onCreate(db);
         }
 
         ContentValues contentValues = new ContentValues();
-//        System.out.println("questionView.getPart(): "+questionView.getPart());
         contentValues.put(_stt, questionView.getStt());
         contentValues.put(_question_id, questionView.getQuestion_id());
         contentValues.put(_part, questionView.getPart());
@@ -138,28 +215,34 @@ public class QuestionDao extends SQLiteOpenHelper {
         contentValues.put(_is_last, questionView.isIs_last());
         contentValues.put(_task_id, questionView.getTask_id());
 
-//        System.out.println("String.valueOf(questionView.getData()): "+ questionView.getData().toString());
-        contentValues.put(_data, questionView.getData().toString());
+        try {
+            Map<String, Object> map
+                    = objectMapper.readValue(questionView.getData(), new TypeReference<Map<String, Object>>() {
+            });
 
-        if(questionView.getAnswer() != null){
-            contentValues.put(_answer, questionView.getAnswer().toString());
+            // set default answer to -1
+            ArrayList<Integer> an = new ArrayList<Integer>(Collections.nCopies((Integer) map.get("count_question"), -1));
+            contentValues.put(_answer, an.toString());
+
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
         }
+        contentValues.put(_data, questionView.getData());
 
-//        System.out.println("contentValues: "+contentValues);
-      long id = db.insert(db_name, null, contentValues);
-      db.close();
-      System.out.println("Insert success: "+ String.valueOf(id));
+        long id = db.insert(db_name, null, contentValues);
+        db.close();
+        System.out.println("Insert success: " + String.valueOf(id));
 
-      questionView.setId(id);
-      return questionView;
+        questionView.setId(id);
+        return questionView;
     }
 
-    public QuestionView update(QuestionView questionView){
+    public QuestionView update(QuestionView questionView) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         boolean check_exist = tableExists(db, db_name);
 
-        if(!check_exist){
+        if (!check_exist) {
             onCreate(db);
         }
 
@@ -182,16 +265,14 @@ public class QuestionDao extends SQLiteOpenHelper {
     }
 
     boolean tableExists(SQLiteDatabase db, String tableName) {
-        if (tableName == null || db == null || !db.isOpen())
-        {
+        if (tableName == null || db == null || !db.isOpen()) {
             return false;
         }
         Cursor cursor = db.rawQuery(
                 "SELECT COUNT(*) FROM sqlite_master WHERE type = ? AND name = ?",
-                new String[] {"table", tableName}
+                new String[]{"table", tableName}
         );
-        if (!cursor.moveToFirst())
-        {
+        if (!cursor.moveToFirst()) {
             cursor.close();
             return false;
         }
