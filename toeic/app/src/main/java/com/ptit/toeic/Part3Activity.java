@@ -39,7 +39,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
-import cz.msebera.android.httpclient.HttpResponse;
+
 
 public class Part3Activity extends AppCompatActivity {
     Gson gson = new Gson();
