@@ -112,6 +112,10 @@ def update_profile(request):
     if fullname:
         u.fullname = fullname
 
+    level = request.data.get('level', False)
+    if level:
+        u.level = level
+
     CustomUser.save(u)
 
     return Response(data={
