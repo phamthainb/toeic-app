@@ -22,6 +22,30 @@
         </activity>
 
         <activity
+            android:name=".PracticeHistory"
+            android:exported="true"
+            android:label="Part"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".TestHistory"
+            android:exported="true"
+            android:label="Part"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".History"
             android:exported="true"
             android:label="Part"

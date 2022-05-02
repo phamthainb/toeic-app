@@ -36,8 +36,8 @@ public class History extends AppCompatActivity {
         Intent intent1 = new Intent(this, PracticeHistory.class);
         Intent intent2 = new Intent(this, TestHistory.class);
 
-        ConstraintLayout contrainL1 = findViewById(R.id.constraintLayout2);
-        ConstraintLayout contrainL2 = findViewById(R.id.constraintLayout3);
+        ConstraintLayout contrainL1 = findViewById(R.id.constraintLayoutPracticehistory1);
+        ConstraintLayout contrainL2 = findViewById(R.id.constraintLayoutPracticehistory2);
 
         contrainL1.setOnClickListener(new View.OnClickListener() {
             @Override

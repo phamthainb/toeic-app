@@ -5,44 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginBottom="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout7"
-        app:layout_constraintEnd_toStartOf="@+id/textViewHistory"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/page9_setting_revert" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="28dp"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:layout_marginEnd="109dp"-->
+<!--        android:layout_marginBottom="25dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/constraintLayout7"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/textViewHistory"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/page9_setting_revert" />-->
 
-    <TextView
-        android:id="@+id/textViewHistory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="109dp"
-        android:layout_marginTop="33dp"
-        android:text="History"
-        android:textColor="#00BCD4"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/textViewHistory"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="109dp"-->
+<!--        android:layout_marginTop="33dp"-->
+<!--        android:text="History"-->
+<!--        android:textColor="#00BCD4"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/imageButton2"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout7"
-        android:layout_width="409dp"
-        android:layout_height="637dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="25dp"
-        android:background="#EDEDEF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2">
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:id="@+id/constraintLayout7"-->
+    <!--        android:layout_width="409dp"-->
+    <!--        android:layout_height="637dp"-->
+    <!--        android:layout_marginStart="1dp"-->
+    <!--        android:background="#EDEDEF"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout1"
+            android:id="@+id/constraintLayoutPracticehistory1"
             android:layout_width="410dp"
             android:layout_height="65dp"
             android:layout_marginTop="81dp"
@@ -63,13 +62,13 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout2"
+            android:id="@+id/constraintLayoutPracticehistory2"
             android:layout_width="409dp"
             android:layout_height="72dp"
             android:layout_marginTop="76dp"
             android:background="#FAF9F9"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout1">
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutPracticehistory1">
 
             <TextView
                 android:id="@+id/textViewTest"
@@ -83,5 +82,5 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,13 +9,15 @@ import android.widget.TextView;
 
 import com.ptit.toeic.R;
 import com.ptit.toeic.model.ContentItem;
+import com.ptit.toeic.model.Question;
+import com.ptit.toeic.model_view.QuestionView;
 
 import java.util.ArrayList;
 
 public class PracticeHistoryAdapter extends BaseAdapter {
-    final ArrayList<ContentItem> contentItems;
+    final ArrayList<QuestionView> contentItems;
 
-    public PracticeHistoryAdapter(ArrayList<ContentItem> contentItems) {
+    public PracticeHistoryAdapter(ArrayList<QuestionView> contentItems) {
         this.contentItems = contentItems;
     }
 
@@ -38,33 +40,18 @@ public class PracticeHistoryAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         View view1;
         if(view == null){
-            view1 = View.inflate(viewGroup.getContext(), R.layout.part3_question, null);
+            view1 = View.inflate(viewGroup.getContext(), R.layout.page34_practicehistorychildren, null);
         }else{
             view1 = view;
         }
 
-        // bind data to view
-        ContentItem q = (ContentItem) getItem(i);
-        System.out.println(q.getAnswers().getClass().getName());
-        ((TextView) view1.findViewById(R.id.quest_index)).setText("Question " + String.valueOf(i + 1));
-        ((TextView) view1.findViewById(R.id.quest_content)).setText(q.getQuestion());
+        System.out.println("listkxascxasjn: " + contentItems.size());
+        ((TextView) view1.findViewById(R.id.textViewPracticehistoryPartList)).setText("Part " + String.valueOf(i + 1));
 
-        // map list answer
-        ArrayList<Object> listAnswer = q.getAnswers();
-        RadioGroup listAnswerView = view1.findViewById(R.id.quest_list_answer);
-        listAnswerView.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                System.out.println("Clicked : "+ radioGroup.getCheckedRadioButtonId());
-            }
-        });
-        for (int n = 0; n < listAnswer.size(); n++) {
-            RadioButton rb = new RadioButton(view1.getContext());
-            rb.setText(String.valueOf(listAnswer.get(n)));
-            rb.setId(n);
-            listAnswerView.addView(rb);
+
+        for (int j = 0; j < contentItems.size(); j++) {
+
         }
-
         return view1;
     }
 }

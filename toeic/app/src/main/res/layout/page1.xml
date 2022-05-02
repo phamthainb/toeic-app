@@ -81,7 +81,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout2"
+                android:id="@+id/constraintLayout2Practicehistory"
                 android:layout_width="174dp"
                 android:layout_height="86dp"
                 android:layout_marginStart="16dp"
@@ -178,7 +178,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="45dp"
                 android:background="#ffff"
-                app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout2Practicehistory"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
@@ -269,7 +269,7 @@
                 android:layout_marginTop="12dp"
                 android:background="#ffff"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2Practicehistory">
 
                 <TextView
                     android:id="@+id/textViewPart3"

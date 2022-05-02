@@ -14,9 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
-import com.loopj.android.http.RequestParams;
 import com.ptit.toeic.dao.QuestionDao;
-import com.ptit.toeic.model.Question;
 import com.ptit.toeic.model_view.QuestionView;
 import com.ptit.toeic.utils.CallAPI;
 import com.ptit.toeic.utils.MySharedPreferences;
@@ -24,8 +22,6 @@ import com.ptit.toeic.utils.MySharedPreferences;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -62,7 +58,7 @@ public class PageMain extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ConstraintLayout contrainL1 = findViewById(R.id.constraintLayout2);
+        ConstraintLayout contrainL1 = findViewById(R.id.constraintLayout2Practicehistory);
         ConstraintLayout contrainL2 = findViewById(R.id.constraintLayout3);
         ConstraintLayout contrainL3 = findViewById(R.id.constraintLayout4);
         ConstraintLayout contrainL4 = findViewById(R.id.constraintLayout5);
