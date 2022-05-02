@@ -132,7 +132,7 @@ public class Part3Activity extends AppCompatActivity {
         // api
 //        MySharedPreferences.savePreferences(this.getApplicationContext(), "task_id", "30d32ade-437a-436c-9b24-ee0ce3a2c661");
 //        MySharedPreferences.savePreferences(this.getApplicationContext(), "stt", "1");
-//        MySharedPreferences.savePreferences(this.getApplicationContext(), "current_id", "12");
+//        MySharedPreferences.savePreferences(this.getApplicationContext(), "current_id", "27");
 //        MySharedPreferences.savePreferences(this.getApplicationContext(), "timer", "1");
 
 //        int stt = Integer.parseInt(MySharedPreferences.getPreferences(this.getApplicationContext(), "stt"));

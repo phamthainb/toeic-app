@@ -42,8 +42,7 @@
                 android:layout_marginTop="74dp"
                 android:text="loading..."
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ListView
                 android:id="@+id/quest_list"
@@ -52,6 +51,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/quest_img" />
 
+
+            <!--            question control-->
+
             <TextView
                 android:id="@+id/time_left"
                 android:layout_width="wrap_content"
@@ -59,61 +61,59 @@
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="37dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.193"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/quest_submit"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="16dp"
-                android:text="Submit"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="49dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="356dp"
+                android:layout_marginTop="16dp"
+                android:src="@android:drawable/stat_sys_upload"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/time_left"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintTop_toTopOf="parent" />
 
-
-            <!--            question control-->
-
-            <Button
+            <ImageButton
                 android:id="@+id/btn_quest_prev"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="510dp"
-                android:text="Prev"
+                android:src="@android:drawable/ic_media_previous"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn_quest_next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="510dp"
                 android:layout_marginEnd="16dp"
-                android:text="Next"
+                android:src="@android:drawable/ic_media_next"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn_quest_pause"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="510dp"
-                android:text="Pause"
+                android:layout_marginTop="508dp"
+                android:src="@android:drawable/ic_media_pause"
+                app:layout_constraintEnd_toStartOf="@+id/btn_quest_next"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/btn_quest_play"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn_quest_play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="7dp"
-                android:layout_marginTop="510dp"
-                android:text="Play"
+                android:layout_marginTop="508dp"
+                android:src="@android:drawable/ic_media_play"
+                app:layout_constraintEnd_toStartOf="@+id/btn_quest_pause"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/btn_quest_prev"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -126,6 +126,16 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_quest_prev" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="41dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/quest_submit"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/btn_star" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
