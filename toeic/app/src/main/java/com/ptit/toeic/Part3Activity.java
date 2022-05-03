@@ -16,6 +16,8 @@ import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.method.ScrollingMovementMethod;
 import android.text.style.ForegroundColorSpan;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -191,11 +193,11 @@ public class Part3Activity extends AppCompatActivity {
         return true;
     }
 
-
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        System.out.println("onDestroy");
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu_part, menu);
+        return true;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -211,7 +213,7 @@ public class Part3Activity extends AppCompatActivity {
         switch (part) {
             case 1: {
                 quest_desc.setVisibility(View.INVISIBLE);
-                Utils.loadImage(quest_img, question.getContent().get(0).getImage());
+                new Utils(context).loadImage(quest_img, question.getContent().get(0).getImage());
                 break;
             }
             case 2: {
@@ -376,6 +378,9 @@ public class Part3Activity extends AppCompatActivity {
             if (sTime >= eTime) {
                 btn_play.setEnabled(true);
                 btn_pause.setEnabled(false);
+                oTime = 0;
+                sTime = 0;
+                eTime = 0;
             }
             hdlr.postDelayed(this, 100);
         }
@@ -394,69 +399,6 @@ public class Part3Activity extends AppCompatActivity {
     private String formatTime(int seconds, int minutes, int hours) {
         return String.format("%02d", hours) + " : " + String.format("%02d", minutes) + " : " + String.format("%02d", seconds);
     }
-
-    void login() {
-        RequestParams login = new RequestParams();
-        login.put("email", "phamthainb@gmail.com");
-        login.put("password", "12345678");
-        callAPI.login(login);
-    }
-
-    void seed_data(Integer part, Integer limit) {
-        callAPI.getWithToken(String.format("/pratice/get_question/?part=%s&limmit=%s", part, limit), null, new JsonHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                System.out.println(response);
-                try {
-                    String task_id = response.getJSONObject("result").getString("task_id");
-                    JSONArray data = response.getJSONObject("result").getJSONArray("data");
-
-                    long prev_id = 0;
-                    for (int i = 0; i < data.length(); i++) {
-                        JSONObject data_item = (JSONObject) data.get(i);
-                        System.out.println("data_item: " + data_item.getInt("part"));
-                        QuestionView questionView = new QuestionView();
-
-                        questionView.setQuestion_id(data_item.getInt("id"));
-                        questionView.setStt(i + 1);
-                        questionView.setPart(data_item.getInt("part"));
-                        questionView.setData(data_item.toString());
-                        questionView.setTask_id(task_id);
-
-                        if (prev_id != 0) {
-                            questionView.setPrev_id(prev_id); // update prev_id
-                        }
-
-                        questionView.setIs_last(0);
-                        if (i == data.length() - 1) {
-                            questionView.setIs_last(1);
-                        }
-
-                        QuestionView question_insert = questionDao.insert(questionView);
-
-                        long new_id = question_insert.getId();
-                        if (prev_id != 0) {
-                            QuestionView pre_question = questionDao.findOne(prev_id);
-                            pre_question.setNext_id(new_id);
-                            questionDao.update(pre_question); // update next_id
-                        }
-                        prev_id = new_id;
-                        System.out.println("new_id: " + new_id);
-
-                    }
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-//                ArrayList<QuestionView> list_q = questionDao.findAll("a38e3b99-b5b3-4a4b-b474-dea63680c7b0");
-
-//                System.out.println("list "+ list_q.size());
-            }
-
-        });
-    }
-
 }
 
 

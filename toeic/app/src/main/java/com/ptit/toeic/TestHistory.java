@@ -1,6 +1,7 @@
 package com.ptit.toeic;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableString;
@@ -23,7 +24,6 @@ import java.util.ArrayList;
 
 public class TestHistory extends AppCompatActivity {
     ArrayList<QuestionView> list;
-    Question question;
     QuestionDao questionDao;
     Context context;
 
@@ -35,10 +35,9 @@ public class TestHistory extends AppCompatActivity {
         questionDao = new QuestionDao(this.getApplicationContext());
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        String toolbar_title = "Practive History";
+        String toolbar_title = "Test Exam History";
         SpannableString ss = new SpannableString(toolbar_title);
         ss.setSpan(
                 new ForegroundColorSpan(Color.parseColor("#00B7D1")),
@@ -49,9 +48,6 @@ public class TestHistory extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         list = questionDao.findAll();
-        System.out.println("list: " + list);
-//        listView.setAdapter(new PracticeHistoryAdapter(list));
-
 
         Integer part1 = 0;
         Integer part1Correct = 0;
@@ -71,5 +67,12 @@ public class TestHistory extends AppCompatActivity {
         }
 
         ((TextView) this.findViewById(R.id.textViewResultResultPartTest)).setText("True: " + part1Correct + "/" + part1 + ", False: " + String.valueOf((part1 - part1Correct)) + "/" + part1);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        Intent intent = new Intent(context, PageMain.class);
+        startActivity(intent);
+        return true;
     }
 }

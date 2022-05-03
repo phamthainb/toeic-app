@@ -7,8 +7,12 @@ import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -39,14 +43,16 @@ public class PageMain extends AppCompatActivity {
         callAPI = new CallAPI(this.getApplicationContext());
         questionDao = new QuestionDao(this.getApplicationContext());
         context = this.getApplicationContext();
-        // login
-//        login();
+
+        // check login
+        if (MySharedPreferences.getPreferences(context, "access", "") == "") {
+            Intent intent = new Intent(context, Login.class);
+            startActivity(intent);
+        }
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        String toolbar_title = "Ptit Toeic";
+        String toolbar_title = "PTIT Toeic App";
         SpannableString ss = new SpannableString(toolbar_title);
         ss.setSpan(
                 new ForegroundColorSpan(Color.parseColor("#00B7D1")),
@@ -54,12 +60,6 @@ public class PageMain extends AppCompatActivity {
                 toolbar_title.length(),
                 Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
         actionBar.setTitle(ss);
-
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setLogo(R.drawable.seting_icon);    //Icon muốn hiện thị
-        actionBar.setDisplayUseLogoEnabled(true);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ConstraintLayout contrainL1 = findViewById(R.id.constraintLayout2Practicehistory);
         ConstraintLayout contrainL2 = findViewById(R.id.constraintLayout3);
@@ -138,7 +138,31 @@ public class PageMain extends AppCompatActivity {
         );
     }
 
-//    void login() {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_history:{
+                Intent intent = new Intent(context, History.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.menu_logout:{
+                Intent intent = new Intent(context, Login.class);
+                startActivity(intent);
+                break;
+            }
+        }
+        return true;
+    }
+
+    //    void login() {
 //        RequestParams login = new RequestParams();
 //        login.put("email", "phamthainb@gmail.com");
 //        login.put("password", "12345678");

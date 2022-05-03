@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
 public class MySharedPreferences {
-
     public static void savePreferences(Context mContext, String key, String value) {
         SharedPreferences sharedPreferences = mContext.getSharedPreferences("my_data", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();

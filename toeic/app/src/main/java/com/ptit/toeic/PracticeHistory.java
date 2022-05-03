@@ -1,6 +1,7 @@
 package com.ptit.toeic;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.AudioManager;
@@ -15,6 +16,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -44,10 +46,8 @@ public class PracticeHistory extends AppCompatActivity {
         setContentView(R.layout.page34_practicehistory);
         context = this.getApplicationContext();
         questionDao = new QuestionDao(this.getApplicationContext());
-//        listView = findViewById(R.id.listViewPracticehistory);
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         String toolbar_title = "Practive History";
@@ -61,9 +61,6 @@ public class PracticeHistory extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         list = questionDao.findAll();
-        System.out.println("list: " + list);
-//        listView.setAdapter(new PracticeHistoryAdapter(list));
-
 
         Integer part1 = 0, part2 = 0, part3 = 0, part4 = 0, part5 = 0, part6 = 0, part7 = 0;
         Integer part1Correct = 0, part2Correct = 0, part3Correct = 0, part4Correct = 0, part5Correct = 0, part6Correct = 0, part7Correct = 0;
@@ -149,5 +146,12 @@ public class PracticeHistory extends AppCompatActivity {
         ((TextView) this.findViewById(R.id.textViewResultResultPracticehistoryPartList5)).setText("True: " + part5Correct + "/" + part5 + ", False: " + String.valueOf((part5 - part5Correct)) + "/" + part5);
         ((TextView) this.findViewById(R.id.textViewResultResultPracticehistoryPartList6)).setText("True: " + part6Correct + "/" + part6 + ", False: " + String.valueOf((part6 - part6Correct)) + "/" + part6);
         ((TextView) this.findViewById(R.id.textViewResultResultPracticehistoryPartList7)).setText("True: " + part7Correct + "/" + part7 + ", False: " + String.valueOf((part7 - part7Correct)) + "/" + part7);
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        Intent intent = new Intent(context, PageMain.class);
+        startActivity(intent);
+        return true;
     }
 }

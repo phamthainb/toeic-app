@@ -53,4 +53,11 @@ public class History extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        Intent intent = new Intent(this.getApplicationContext(), PageMain.class);
+        startActivity(intent);
+        return true;
+    }
 }
