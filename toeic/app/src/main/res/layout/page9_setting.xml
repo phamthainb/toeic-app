@@ -5,47 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginBottom="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout7"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/page9_setting_revert" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="109dp"
-        android:layout_marginTop="33dp"
-        android:text="Setting"
-        android:textColor="#00BCD4"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout7"
-        android:layout_width="409dp"
-        android:layout_height="637dp"
+        android:layout_width="413dp"
+        android:layout_height="730dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="25dp"
         android:background="#EDEDEF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2">
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout8"
             android:layout_width="410dp"
             android:layout_height="65dp"
-            android:layout_marginTop="81dp"
+            android:layout_marginTop="40dp"
             android:background="#FAF9F9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -66,7 +40,7 @@
             android:id="@+id/constraintLayout11"
             android:layout_width="409dp"
             android:layout_height="72dp"
-            android:layout_marginTop="68dp"
+            android:layout_marginTop="24dp"
             android:background="#FAF9F9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
@@ -78,6 +52,29 @@
                 android:layout_marginStart="38dp"
                 android:layout_marginTop="27dp"
                 android:text="History"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout12"
+            android:layout_width="409dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="24dp"
+            android:background="#FAF9F9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
+
+            <TextView
+                android:id="@+id/textChangePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="27dp"
+                android:text="Change password"
                 android:textColor="#00BCD4"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

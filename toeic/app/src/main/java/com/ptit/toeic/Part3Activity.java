@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.StrictMode;
 import android.text.Html;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -90,6 +91,13 @@ public class Part3Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                .detectDiskReads()
+                .detectDiskWrites()
+                .detectAll()   // or .detectAll() for all detectable problems
+                .penaltyLog()
+                .build());
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.part3_list_question);
 
@@ -262,8 +270,12 @@ public class Part3Activity extends AppCompatActivity {
         if (question.getTag().equals("listen")) {
             mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
             try {
-                mediaPlayer.setDataSource(question.getGeneral().getAudio());
+                String audio_url = question.getGeneral().getAudio();
+                System.out.println("audio_url: "+audio_url);
+                mediaPlayer.setDataSource("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
                 mediaPlayer.prepare();
+
+                System.out.println("mediaPlayer: "+mediaPlayer);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -271,7 +283,7 @@ public class Part3Activity extends AppCompatActivity {
             btn_play.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-//                    System.out.println("click play");
+                    System.out.println("click play");
                     mediaPlayer.start();
                     audio_play = true;
 

@@ -153,6 +153,13 @@ public class PageMain extends AppCompatActivity {
                 startActivity(intent);
                 break;
             }
+
+            case R.id.menu_setting:{
+                Intent intent = new Intent(context, SettingActivity.class);
+                startActivity(intent);
+                break;
+            }
+
             case R.id.menu_logout:{
                 Intent intent = new Intent(context, Login.class);
                 startActivity(intent);
