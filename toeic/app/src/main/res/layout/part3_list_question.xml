@@ -58,17 +58,15 @@
                 android:id="@+id/time_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="37dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.193"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/quest_submit"
-                android:layout_width="49dp"
-                android:layout_height="33dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="356dp"
                 android:layout_marginTop="16dp"
                 android:src="@android:drawable/stat_sys_upload"
@@ -129,8 +127,8 @@
 
             <ImageButton
                 android:id="@+id/imageButton"
-                android:layout_width="41dp"
-                android:layout_height="34dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="12dp"
                 app:layout_constraintEnd_toStartOf="@+id/quest_submit"

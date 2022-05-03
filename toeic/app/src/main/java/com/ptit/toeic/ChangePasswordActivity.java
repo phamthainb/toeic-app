@@ -36,8 +36,8 @@ public class ChangePasswordActivity extends AppCompatActivity {
         // setup toolbar
         ActionBar actionBar = getSupportActionBar();
         String toolbar_title = "Change password";
+
         // styles
-        // actionBar.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
         SpannableString ss = new SpannableString(toolbar_title);
         ss.setSpan(
                 new ForegroundColorSpan(Color.parseColor("#00B7D1")),
@@ -48,7 +48,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
         // back button
         actionBar.setDisplayHomeAsUpEnabled(true);
-
 
         oldPass = findViewById(R.id.old_pass);
         newPass1 = findViewById(R.id.new_pass1);
@@ -88,9 +87,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
                         }
                     });
 
-//                    Toast.makeText(ChangePassword.this, "Update password successfully", Toast.LENGTH_SHORT).show();
-//                    Intent intent = new Intent(ChangePassword.this, SettingPageNgan.class);
-//                    startActivity(intent);
+                    Toast.makeText(getApplicationContext(), "Update password successfully", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), Login.class);
+                    startActivity(intent);
                 }
             }
         });

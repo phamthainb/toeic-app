@@ -26,31 +26,26 @@
         android:id="@+id/tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="32dp"
         android:background="@color/gray"
         android:text="Total time:"
         android:textColor="@color/black1"
         android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.37"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
         android:background="@color/gray"
         android:text="01:25:00"
         android:textColor="@color/black1"
         android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintLeft_toRightOf="@id/tv2"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv1"
-        app:layout_constraintVertical_bias="0.014" />
+        app:layout_constraintTop_toBottomOf="@id/tv1" />
 
     <ImageView
         android:id="@+id/imgtotal"
@@ -63,7 +58,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintVertical_bias="0.143" />
 
     <ImageView
         android:id="@+id/imglistening"
@@ -127,25 +122,12 @@
         app:layout_constraintTop_toTopOf="@id/imgreading"
         app:layout_constraintVertical_bias="0.875" />
 
-    <TextView
-        android:id="@+id/certificate"
-        android:layout_width="168dp"
-        android:layout_height="16dp"
-        android:text="Green certificate 470-725"
-        android:textColor="@color/red"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="@id/imgtotal"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintLeft_toLeftOf="@id/imgtotal"
-        app:layout_constraintRight_toRightOf="@id/imgtotal"
-
-        app:layout_constraintTop_toTopOf="@id/imgtotal"
-        app:layout_constraintVertical_bias="0.305" />
 
     <TextView
         android:id="@+id/review"
         android:layout_width="165dp"
         android:layout_height="76dp"
+        android:layout_marginBottom="32dp"
         android:text="The ability to communicate in English isacceptable,
 and the conversation is a bit lack of vocabulary
 and simple sentences, but he can already master
@@ -154,29 +136,13 @@ in jobs with lower English-related levels."
         android:textColor="@color/black1"
         android:textSize="9dp"
         app:layout_constraintBottom_toBottomOf="@id/imgtotal"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintLeft_toLeftOf="@id/imgtotal"
-        app:layout_constraintRight_toRightOf="@id/imgtotal"
 
-        app:layout_constraintTop_toBottomOf="@+id/certificate"
-        app:layout_constraintVertical_bias="0.212" />
+        app:layout_constraintRight_toRightOf="@id/imgtotal" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Last score: 540"
-        android:textColor="@color/black1"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="@id/imgtotal"
-        app:layout_constraintHorizontal_bias="0.094"
-        app:layout_constraintLeft_toLeftOf="@id/imgtotal"
-        app:layout_constraintRight_toLeftOf="@id/imgtotalcircle"
-        app:layout_constraintTop_toTopOf="@id/review"
-        app:layout_constraintVertical_bias="0.906" />
-
-
-    <TextView
-        android:id="@+id/total"
+        android:id="@+id/score_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="600"
@@ -191,7 +157,7 @@ in jobs with lower English-related levels."
         app:layout_constraintVertical_bias="0.517" />
 
     <TextView
-        android:id="@+id/part1"
+        android:id="@+id/score_part1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Part 1: 80 (12/25)"
@@ -205,7 +171,7 @@ in jobs with lower English-related levels."
         app:layout_constraintVertical_bias="0.3" />
 
     <TextView
-        android:id="@+id/part2"
+        android:id="@+id/score_part2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Part 2: 50 (8/25)"
@@ -215,11 +181,11 @@ in jobs with lower English-related levels."
         app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintLeft_toLeftOf="@id/imglistening"
         app:layout_constraintRight_toLeftOf="@id/imglisteningcircle"
-        app:layout_constraintTop_toBottomOf="@id/part1"
+        app:layout_constraintTop_toBottomOf="@id/score_part1"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/part3"
+        android:id="@+id/score_part3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Part 3: 120 (15/25)"
@@ -229,11 +195,11 @@ in jobs with lower English-related levels."
         app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintLeft_toLeftOf="@id/imglistening"
         app:layout_constraintRight_toLeftOf="@id/imglisteningcircle"
-        app:layout_constraintTop_toBottomOf="@id/part2"
+        app:layout_constraintTop_toBottomOf="@id/score_part2"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/part4"
+        android:id="@+id/score_part4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Part 4: 50 (12/25)"
@@ -243,24 +209,11 @@ in jobs with lower English-related levels."
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintLeft_toLeftOf="@id/imglistening"
         app:layout_constraintRight_toLeftOf="@id/imglisteningcircle"
-        app:layout_constraintTop_toBottomOf="@id/part3"
+        app:layout_constraintTop_toBottomOf="@id/score_part3"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Last score: 280"
-        android:textColor="@color/black1"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="@id/imglistening"
-        app:layout_constraintHorizontal_bias="0.104"
-        app:layout_constraintLeft_toLeftOf="@id/imglistening"
-        app:layout_constraintRight_toLeftOf="@id/imglisteningcircle"
-        app:layout_constraintTop_toBottomOf="@+id/part4"
-        app:layout_constraintVertical_bias="0.433" />
-
-    <TextView
-        android:id="@+id/listening"
+        android:id="@+id/score_listening"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="300"
@@ -285,24 +238,11 @@ in jobs with lower English-related levels."
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintLeft_toLeftOf="@id/imglisteningcircle"
         app:layout_constraintRight_toRightOf="@id/imglisteningcircle"
-        app:layout_constraintTop_toBottomOf="@+id/listening"
+        app:layout_constraintTop_toBottomOf="@+id/score_listening"
         app:layout_constraintVertical_bias="0.041" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Last score: 260"
-        android:textColor="@color/black1"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="@id/imgreading"
-        app:layout_constraintHorizontal_bias="0.106"
-        app:layout_constraintLeft_toLeftOf="@id/imgreading"
-        app:layout_constraintRight_toLeftOf="@id/imgreadingcircle"
-        app:layout_constraintTop_toBottomOf="@id/part7"
-        app:layout_constraintVertical_bias="0.673" />
-
-    <TextView
-        android:id="@+id/part5"
+        android:id="@+id/score_part5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Part 5: 145 (15/40)"
@@ -316,7 +256,7 @@ in jobs with lower English-related levels."
         app:layout_constraintVertical_bias="0.32" />
 
     <TextView
-        android:id="@+id/part6"
+        android:id="@+id/score_part6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Part 6: 100 (10/30)"
@@ -326,11 +266,11 @@ in jobs with lower English-related levels."
         app:layout_constraintHorizontal_bias="0.139"
         app:layout_constraintLeft_toLeftOf="@id/imgreading"
         app:layout_constraintRight_toLeftOf="@id/imgreadingcircle"
-        app:layout_constraintTop_toBottomOf="@id/part5"
+        app:layout_constraintTop_toBottomOf="@id/score_part5"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/part7"
+        android:id="@+id/score_part7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Part 7: 55 (12/30)"
@@ -344,7 +284,7 @@ in jobs with lower English-related levels."
         app:layout_constraintVertical_bias="0.575" />
 
     <TextView
-        android:id="@+id/reading"
+        android:id="@+id/score_reading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="300"
@@ -369,7 +309,7 @@ in jobs with lower English-related levels."
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintLeft_toLeftOf="@id/imgreadingcircle"
         app:layout_constraintRight_toRightOf="@id/imgreadingcircle"
-        app:layout_constraintTop_toBottomOf="@+id/reading"
+        app:layout_constraintTop_toBottomOf="@+id/score_reading"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

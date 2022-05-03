@@ -8,8 +8,8 @@
         app:showAsAction="ifRoom">
         <menu>
             <item
-                android:id="@+id/menu_part_history"
-                android:title="History" />
+                android:id="@+id/menu_part_all_question"
+                android:title="All question" />
 <!--            <item-->
 <!--                android:id="@+id/menu_target"-->
 <!--                android:title="Target" />-->

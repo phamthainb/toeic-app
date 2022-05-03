@@ -9,32 +9,17 @@ import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.ListView;
-
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
-import com.loopj.android.http.JsonHttpResponseHandler;
 import com.ptit.toeic.adapter.QuestionListAdapter;
 import com.ptit.toeic.dao.QuestionDao;
-import com.ptit.toeic.model.Question;
 import com.ptit.toeic.model_view.QuestionView;
-import com.ptit.toeic.utils.CallAPI;
 import com.ptit.toeic.utils.MySharedPreferences;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
-
-import cz.msebera.android.httpclient.Header;
 
 public class QuestionList extends AppCompatActivity {
     ArrayList<QuestionView> list;
-    Question question;
     QuestionDao questionDao;
-    QuestionView questionView;
     Context context;
     ListView listView;
 
@@ -47,9 +32,7 @@ public class QuestionList extends AppCompatActivity {
         listView = findViewById(R.id.listViewChildrenQuesion);
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
         String toolbar_title = "All question";
         SpannableString ss = new SpannableString(toolbar_title);
         ss.setSpan(
@@ -58,10 +41,17 @@ public class QuestionList extends AppCompatActivity {
                 toolbar_title.length(),
                 Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
         actionBar.setTitle(ss);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
-        list = questionDao.findAllbyTask(MySharedPreferences.getPreferences(context, "task_id", ""));
-        System.out.println("list: " + list.size());
+        String task = MySharedPreferences.getPreferences(context, "task_id", "");
+        list = questionDao.findAllbyTask(task);
         listView.setAdapter(new QuestionListAdapter(list));
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        Intent intent = new Intent(context, Part3Activity.class);
+        startActivity(intent);
+        return true;
     }
 }

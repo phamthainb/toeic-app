@@ -6,12 +6,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.StrictMode;
-import android.text.Html;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -19,15 +16,15 @@ import android.text.method.ScrollingMovementMethod;
 import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -36,21 +33,16 @@ import androidx.core.text.HtmlCompat;
 
 import com.google.gson.Gson;
 import com.loopj.android.http.JsonHttpResponseHandler;
-import com.loopj.android.http.RequestParams;
-import com.loopj.android.http.ResponseHandlerInterface;
 import com.ptit.toeic.adapter.ContentItemAdapter;
 import com.ptit.toeic.dao.QuestionDao;
 import com.ptit.toeic.model.ContentItem;
-import com.ptit.toeic.model.General;
 import com.ptit.toeic.model.Question;
 import com.ptit.toeic.model_view.QuestionView;
 import com.ptit.toeic.utils.CallAPI;
+import com.ptit.toeic.utils.Convert;
 import com.ptit.toeic.utils.MySharedPreferences;
-import com.ptit.toeic.utils.URLImageParser;
 import com.ptit.toeic.utils.Utils;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -86,17 +78,14 @@ public class Part3Activity extends AppCompatActivity {
     TextView quest_desc, timer_text;
     ListView contentItemView;
 
-//
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
-                .detectDiskReads()
-                .detectDiskWrites()
-                .detectAll()   // or .detectAll() for all detectable problems
-                .penaltyLog()
-                .build());
+//        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+//                .detectDiskReads()
+//                .detectDiskWrites()
+//                .detectAll()   // or .detectAll() for all detectable problems
+//                .penaltyLog()
+//                .build());
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.part3_list_question);
@@ -131,32 +120,10 @@ public class Part3Activity extends AppCompatActivity {
         btn_submit = findViewById(R.id.quest_submit);
         btn_submit.setEnabled(false);
 
-//        login();
-//        seed_data(1, 10);
-//        seed_data(2, 10);
-//        seed_data(3, 10);
-//        seed_data(4, 10);
-//        seed_data(5, 10);
-//        seed_data(6, 10);
-//        seed_data(7, 10);
-
-//        ArrayList<QuestionView> s = questionDao.findAll();
-//        System.out.println(s.size());
-        // api
-//        MySharedPreferences.savePreferences(this.getApplicationContext(), "task_id", "30d32ade-437a-436c-9b24-ee0ce3a2c661");
-//        MySharedPreferences.savePreferences(this.getApplicationContext(), "stt", "1");
-//        MySharedPreferences.savePreferences(this.getApplicationContext(), "current_id", "3");
-//        MySharedPreferences.savePreferences(this.getApplicationContext(), "timer", "1");
-
-//        int stt = Integer.parseInt(MySharedPreferences.getPreferences(this.getApplicationContext(), "stt"));
-//        String task = MySharedPreferences.getPreferences(this.getApplicationContext(), "task_id");
-
-//        this.startTimer();
-
         int id = Integer.parseInt(MySharedPreferences.getPreferences(context, "current_id", "1"));
         time = Double.valueOf(MySharedPreferences.getPreferences(context, "timer", "0.0"));
 
-//        System.out.println("stt: "+ stt);
+        // get question in database local
         questionView = questionDao.findOne(id);
 
         callAPI.getWithToken("/question/" + questionView.getQuestion_id(), null, new JsonHttpResponseHandler() {
@@ -167,7 +134,6 @@ public class Part3Activity extends AppCompatActivity {
                 System.out.println("response: " + question.toString());
                 genQuestion(question);
             }
-
         });
 
         // setup toolbar
@@ -187,6 +153,7 @@ public class Part3Activity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
+        System.out.println("back clicked");
         new AlertDialog.Builder(this)
                 .setMessage("Are you sure you want to exit?")
                 .setCancelable(false)
@@ -208,12 +175,26 @@ public class Part3Activity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_part_all_question: {
+                Intent intent = new Intent(context, QuestionList.class);
+                startActivity(intent);
+            }
+            default:{
+                return super.onOptionsItemSelected(item);
+            }
+        }
+//        return true;
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     void genQuestion(Question question) {
 //        System.out.println("genQuestion: "+ question.toString());
         Integer part = question.getPart();
         // action bar
-        String t = "Part " + question.getPart() + " - " + question.getKind();
+        String t = "Part " + question.getPart() + " - Number " + questionView.getStt();
         actionBar.setTitle(t.toUpperCase(Locale.ROOT));
         // timer
         this.startTimer();
@@ -249,9 +230,6 @@ public class Part3Activity extends AppCompatActivity {
                 seekBar.setVisibility(View.INVISIBLE);
                 btn_pause.setVisibility(View.INVISIBLE);
                 btn_play.setVisibility(View.INVISIBLE);
-
-//                URLImageParser p = new URLImageParser(quest_desc, this);
-//                Spanned htmlSpan = Html.fromHtml(question.getGeneral().getTxt_read(), p, null);
                 Spanned htmlSpan = HtmlCompat.fromHtml(question.getGeneral().getTxt_read(), HtmlCompat.FROM_HTML_MODE_COMPACT);
                 quest_desc.setMovementMethod(LinkMovementMethod.getInstance());
                 quest_desc.setText(htmlSpan);
@@ -271,11 +249,11 @@ public class Part3Activity extends AppCompatActivity {
             mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
             try {
                 String audio_url = question.getGeneral().getAudio();
-                System.out.println("audio_url: "+audio_url);
-                mediaPlayer.setDataSource("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
+                System.out.println("audio_url: " + audio_url);
+                mediaPlayer.setDataSource(audio_url);
                 mediaPlayer.prepare();
 
-                System.out.println("mediaPlayer: "+mediaPlayer);
+                System.out.println("mediaPlayer: " + mediaPlayer);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -346,6 +324,8 @@ public class Part3Activity extends AppCompatActivity {
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(context, TestingResult26.class);
+                startActivity(intent);
                 System.out.println("submit");
             }
         });
@@ -372,7 +352,7 @@ public class Part3Activity extends AppCompatActivity {
                     @Override
                     public void run() {
                         time++;
-                        timer_text.setText(getTimerText(time));
+                        timer_text.setText(Convert.getTimerText(time));
                     }
                 });
             }
@@ -397,20 +377,6 @@ public class Part3Activity extends AppCompatActivity {
             hdlr.postDelayed(this, 100);
         }
     };
-
-    private String getTimerText(Double time) {
-        int rounded = (int) Math.round(time);
-
-        int seconds = ((rounded % 86400) % 3600) % 60;
-        int minutes = ((rounded % 86400) % 3600) / 60;
-        int hours = ((rounded % 86400) / 3600);
-
-        return formatTime(seconds, minutes, hours);
-    }
-
-    private String formatTime(int seconds, int minutes, int hours) {
-        return String.format("%02d", hours) + " : " + String.format("%02d", minutes) + " : " + String.format("%02d", seconds);
-    }
 }
 
 
