@@ -1,6 +1,7 @@
 package com.ptit.toeic;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.AudioManager;
@@ -26,6 +27,7 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
@@ -173,18 +175,27 @@ public class Part3Activity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        mediaPlayer.pause();
-//    }
+    @Override
+    public boolean onSupportNavigateUp() {
+        new AlertDialog.Builder(this)
+                .setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Intent intent = new Intent(context, PageMain.class);
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("No", null)
+                .show();
+        return true;
+    }
 
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         System.out.println("onDestroy");
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -211,11 +222,11 @@ public class Part3Activity extends AppCompatActivity {
             }
 
             case 3:
-            case 4:{
+            case 4: {
                 quest_desc.setText(question.getTitle());
                 break;
             }
-            case 5:{
+            case 5: {
                 quest_desc.setText(question.getTitle());
                 seekBar.setVisibility(View.INVISIBLE);
                 btn_pause.setVisibility(View.INVISIBLE);
@@ -224,7 +235,7 @@ public class Part3Activity extends AppCompatActivity {
                 break;
             }
             case 6:
-            case 7:{
+            case 7: {
                 seekBar.setVisibility(View.INVISIBLE);
                 btn_pause.setVisibility(View.INVISIBLE);
                 btn_play.setVisibility(View.INVISIBLE);

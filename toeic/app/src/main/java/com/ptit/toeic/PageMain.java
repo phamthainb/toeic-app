@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 import com.ptit.toeic.dao.QuestionDao;
 import com.ptit.toeic.model_view.QuestionView;
 import com.ptit.toeic.utils.CallAPI;
@@ -38,6 +39,8 @@ public class PageMain extends AppCompatActivity {
         callAPI = new CallAPI(this.getApplicationContext());
         questionDao = new QuestionDao(this.getApplicationContext());
         context = this.getApplicationContext();
+        // login
+//        login();
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
