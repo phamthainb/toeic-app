@@ -18,7 +18,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
-import com.loopj.android.http.RequestParams;
 import com.ptit.toeic.dao.QuestionDao;
 import com.ptit.toeic.model_view.QuestionView;
 import com.ptit.toeic.utils.CallAPI;
@@ -46,7 +45,7 @@ public class PageMain extends AppCompatActivity {
 
         // check login
         if (MySharedPreferences.getPreferences(context, "access", "") == "") {
-            Intent intent = new Intent(context, Login.class);
+            Intent intent = new Intent(context, LoginActivity.class);
             startActivity(intent);
         }
 
@@ -149,7 +148,7 @@ public class PageMain extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu_history:{
-                Intent intent = new Intent(context, History.class);
+                Intent intent = new Intent(context, HistoryActivity.class);
                 startActivity(intent);
                 break;
             }
@@ -161,7 +160,7 @@ public class PageMain extends AppCompatActivity {
             }
 
             case R.id.menu_logout:{
-                Intent intent = new Intent(context, Login.class);
+                Intent intent = new Intent(context, LoginActivity.class);
                 startActivity(intent);
                 break;
             }
@@ -246,7 +245,7 @@ public class PageMain extends AppCompatActivity {
                 MySharedPreferences.savePreferences(context, "current_id", String.valueOf(current_id));
                 MySharedPreferences.savePreferences(context, "timer", "0.0");
 
-                intent = new Intent(context, Part3Activity.class);
+                intent = new Intent(context, PartActivity.class);
                 startActivity(intent);
             }
 
@@ -319,7 +318,7 @@ public class PageMain extends AppCompatActivity {
                 MySharedPreferences.savePreferences(context, "current_id", String.valueOf(current_id));
                 MySharedPreferences.savePreferences(context, "timer", "0.0");
 
-                intent = new Intent(context, Part3Activity.class);
+                intent = new Intent(context, PartActivity.class);
                 startActivity(intent);
             }
 

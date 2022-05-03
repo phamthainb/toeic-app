@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray"
-    tools:context=".Target32">
+    tools:context=".TargetActivity">
 
     <ImageView
         android:id="@+id/level1"

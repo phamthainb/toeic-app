@@ -16,7 +16,6 @@ import com.loopj.android.http.RequestParams;
 import com.ptit.toeic.utils.CallAPI;
 import com.ptit.toeic.utils.MySharedPreferences;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -25,7 +24,7 @@ import java.util.regex.Pattern;
 import cz.msebera.android.httpclient.Header;
 
 
-public class Login2 extends AppCompatActivity {
+public class Login2Activity extends AppCompatActivity {
     Button btnSignIn1;
     TextView tvSignUp;
     TextView tvEmail, tvPassword, tvError;
@@ -91,7 +90,7 @@ public class Login2 extends AppCompatActivity {
         tvSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Login2.this, Logup1.class);
+                Intent intent = new Intent(Login2Activity.this, Logup1Activity.class);
                 startActivity(intent);
             }
         });
@@ -101,7 +100,7 @@ public class Login2 extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            Intent intent = new Intent(Login2.this, Login.class);
+            Intent intent = new Intent(Login2Activity.this, LoginActivity.class);
             startActivity(intent);
         }
         //onBackPressed();
@@ -124,12 +123,12 @@ public class Login2 extends AppCompatActivity {
                     System.out.println("response : " + String.valueOf(response.getJSONObject("data").getInt("level")));
                     int target = response.getJSONObject("data").getInt("level");
                     if (target == 0) {
-                        Intent intent = new Intent(Login2.this, Target32.class);
+                        Intent intent = new Intent(Login2Activity.this, TargetActivity.class);
                         startActivity(intent);
                     } else {
                         System.out.println("Chuyen sang HOME");
                         //Mo giao dien Home
-                        Intent intent = new Intent(Login2.this, PageMain.class);
+                        Intent intent = new Intent(Login2Activity.this, PageMain.class);
                         startActivity(intent);
                     }
                 } catch (JSONException e) {

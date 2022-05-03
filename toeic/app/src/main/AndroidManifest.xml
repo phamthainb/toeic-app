@@ -15,53 +15,53 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Toeic">
         <activity
-            android:name=".Part3Activity"
+            android:name=".PartActivity"
             android:exported="true"
             android:label="Part" />
 
         <activity
-            android:name=".PracticeHistory"
+            android:name=".PracticeHistoryActivity"
             android:exported="true"
             android:label="Part" />
 
         <activity
-            android:name=".QuestionList"
+            android:name=".QuestionListActivity"
             android:exported="true"
             android:label="QuestionList" />
 
         <activity
-            android:name=".TestHistory"
+            android:name=".TestHistoryActivity"
             android:exported="true"
             android:label="Part" />
 
         <activity
-            android:name=".History"
+            android:name=".HistoryActivity"
             android:exported="true"
             android:label="Part" />
 
         <activity
-            android:name=".TestingResult26"
+            android:name=".TestingResultActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
 
         <activity
-            android:name=".Target32"
+            android:name=".TargetActivity"
             android:exported="true" />
 
         <activity
-            android:name=".Login2"
+            android:name=".Login2Activity"
             android:exported="true" />
 
         <activity
-            android:name=".Logup1"
+            android:name=".Logup1Activity"
             android:exported="true" />
 
         <activity
-            android:name=".Login"
+            android:name=".LoginActivity"
             android:exported="true" />
 
         <activity

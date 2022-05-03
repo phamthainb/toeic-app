@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray"
-    tools:context=".TestingResult26">
+    tools:context=".TestingResultActivity">
 
     <TextView
         android:id="@+id/tv1"
@@ -228,7 +228,7 @@ in jobs with lower English-related levels."
         app:layout_constraintVertical_bias="0.436" />
 
     <TextView
-        android:id="@+id/numberListening"
+        android:id="@+id/number_listening"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="60/100"
@@ -299,7 +299,7 @@ in jobs with lower English-related levels."
         app:layout_constraintVertical_bias="0.464" />
 
     <TextView
-        android:id="@+id/numberReading"
+        android:id="@+id/number_reading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="60/100"

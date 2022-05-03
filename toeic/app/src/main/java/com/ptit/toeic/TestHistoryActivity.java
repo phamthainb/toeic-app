@@ -9,31 +9,35 @@ import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
+
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import com.ptit.toeic.adapter.QuestionListAdapter;
+
 import com.ptit.toeic.dao.QuestionDao;
+import com.ptit.toeic.model.ContentItem;
+import com.ptit.toeic.model.Question;
 import com.ptit.toeic.model_view.QuestionView;
-import com.ptit.toeic.utils.MySharedPreferences;
+import com.ptit.toeic.utils.Convert;
+
 import java.util.ArrayList;
 
-public class QuestionList extends AppCompatActivity {
+public class TestHistoryActivity extends AppCompatActivity {
     ArrayList<QuestionView> list;
     QuestionDao questionDao;
     Context context;
-    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.page11_allquestion);
+        setContentView(R.layout.page35_testhistory);
         context = this.getApplicationContext();
         questionDao = new QuestionDao(this.getApplicationContext());
-        listView = findViewById(R.id.listViewChildrenQuesion);
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         ActionBar actionBar = getSupportActionBar();
-        String toolbar_title = "All question";
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        String toolbar_title = "Test Exam History";
         SpannableString ss = new SpannableString(toolbar_title);
         ss.setSpan(
                 new ForegroundColorSpan(Color.parseColor("#00B7D1")),
@@ -41,16 +45,33 @@ public class QuestionList extends AppCompatActivity {
                 toolbar_title.length(),
                 Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
         actionBar.setTitle(ss);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        String task = MySharedPreferences.getPreferences(context, "task_id", "");
-        list = questionDao.findAllbyTask(task);
-        listView.setAdapter(new QuestionListAdapter(list));
+        list = questionDao.findAll();
+
+        Integer part1 = 0;
+        Integer part1Correct = 0;
+
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getType() == "test") {
+                part1 += 1;
+                ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
+                ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
+
+                for (int j = 0; j < answer.size(); j++) {
+                    if (answer.get(j) == correct_answer.get(j)) {
+                        part1Correct += 1;
+                    }
+                }
+            }
+        }
+
+        ((TextView) this.findViewById(R.id.textViewResultResultPartTest)).setText("True: " + part1Correct + "/" + part1 + ", False: " + String.valueOf((part1 - part1Correct)) + "/" + part1);
     }
 
     @Override
     public boolean onSupportNavigateUp() {
-        Intent intent = new Intent(context, Part3Activity.class);
+        Intent intent = new Intent(context, PageMain.class);
         startActivity(intent);
         return true;
     }

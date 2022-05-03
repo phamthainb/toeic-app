@@ -3,25 +3,21 @@ package com.ptit.toeic;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.ptit.toeic.utils.CallAPI;
-import com.ptit.toeic.utils.MySharedPreferences;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.Header;
 
-public class Target32 extends AppCompatActivity {
+public class TargetActivity extends AppCompatActivity {
     ImageView level1, level2, level3;
 
     @Override
@@ -39,21 +35,21 @@ public class Target32 extends AppCompatActivity {
         level1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Target32.this, "Choose level 1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(TargetActivity.this, "Choose level 1", Toast.LENGTH_SHORT).show();
                 CallAPISetTarger(1);
             }
         });
         level2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Target32.this, "Choose level 2", Toast.LENGTH_SHORT).show();
+                Toast.makeText(TargetActivity.this, "Choose level 2", Toast.LENGTH_SHORT).show();
                 CallAPISetTarger(2);
             }
         });
         level3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Target32.this, "Choose level 3", Toast.LENGTH_SHORT).show();
+                Toast.makeText(TargetActivity.this, "Choose level 3", Toast.LENGTH_SHORT).show();
                 CallAPISetTarger(3);
             }
         });

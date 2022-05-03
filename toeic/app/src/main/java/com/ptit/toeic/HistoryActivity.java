@@ -12,7 +12,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-public class History extends AppCompatActivity {
+public class HistoryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +33,8 @@ public class History extends AppCompatActivity {
         actionBar.setTitle(ss);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Intent intent1 = new Intent(this, PracticeHistory.class);
-        Intent intent2 = new Intent(this, TestHistory.class);
+        Intent intent1 = new Intent(this, PracticeHistoryActivity.class);
+        Intent intent2 = new Intent(this, TestHistoryActivity.class);
 
         ConstraintLayout contrainL1 = findViewById(R.id.constraintLayoutPracticehistory1);
         ConstraintLayout contrainL2 = findViewById(R.id.constraintLayoutPracticehistory2);

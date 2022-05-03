@@ -25,7 +25,7 @@ import java.util.regex.Pattern;
 
 import cz.msebera.android.httpclient.Header;
 
-public class Logup1 extends AppCompatActivity {
+public class Logup1Activity extends AppCompatActivity {
     Button btnSignUp1;
     TextView tvSignIn;
     TextView tvEmail;
@@ -75,14 +75,14 @@ public class Logup1 extends AppCompatActivity {
                             try {
                                 System.out.println("response : " + response.getString("message"));
                                 // khởi tạo AlertDialog từ đối tượng Builder. tham số truyền vào ở đây là context.
-                                AlertDialog.Builder builder = new AlertDialog.Builder(Logup1.this);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(Logup1Activity.this);
                                 // set Message là phương thức thiết lập câu thông báo
                                 builder.setMessage("Register success!!! Please login.")
 //                                     positiveButton là nút thuận : đặt là OK
                                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int id) {
                                                 dialog.dismiss();
-                                                Intent intent = new Intent(Logup1.this, Login2.class);
+                                                Intent intent = new Intent(Logup1Activity.this, Login2Activity.class);
                                                 startActivity(intent);
                                             }
                                         });
@@ -113,7 +113,7 @@ public class Logup1 extends AppCompatActivity {
         tvSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Logup1.this, Login2.class);
+                Intent intent = new Intent(Logup1Activity.this, Login2Activity.class);
                 startActivity(intent);
             }
         });
@@ -121,7 +121,7 @@ public class Logup1 extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
             if(item.getItemId()==android.R.id.home){
-                Intent intent=new Intent(Logup1.this, Login.class);
+                Intent intent=new Intent(Logup1Activity.this, LoginActivity.class);
                 startActivity(intent);}
                // onBackPressed();
                 return true;

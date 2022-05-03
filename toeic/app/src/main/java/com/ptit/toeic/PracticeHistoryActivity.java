@@ -34,7 +34,7 @@ import com.ptit.toeic.utils.Utils;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class PracticeHistory extends AppCompatActivity {
+public class PracticeHistoryActivity extends AppCompatActivity {
     ArrayList<QuestionView> list;
     Question question;
     QuestionDao questionDao;

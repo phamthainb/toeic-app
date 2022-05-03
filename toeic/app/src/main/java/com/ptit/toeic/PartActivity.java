@@ -53,7 +53,7 @@ import java.util.TimerTask;
 
 import cz.msebera.android.httpclient.Header;
 
-public class Part3Activity extends AppCompatActivity {
+public class PartActivity extends AppCompatActivity {
     CallAPI callAPI;
     Question question;
     QuestionDao questionDao;
@@ -132,6 +132,8 @@ public class Part3Activity extends AppCompatActivity {
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 question = gson.fromJson(String.valueOf(response), Question.class);
                 System.out.println("response: " + question.toString());
+
+                // gen data of question
                 genQuestion(question);
             }
         });
@@ -179,7 +181,7 @@ public class Part3Activity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_part_all_question: {
-                Intent intent = new Intent(context, QuestionList.class);
+                Intent intent = new Intent(context, QuestionListActivity.class);
                 startActivity(intent);
             }
             default:{
@@ -324,7 +326,7 @@ public class Part3Activity extends AppCompatActivity {
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, TestingResult26.class);
+                Intent intent = new Intent(context, TestingResultActivity.class);
                 startActivity(intent);
                 System.out.println("submit");
             }
@@ -340,7 +342,7 @@ public class Part3Activity extends AppCompatActivity {
         }
         MySharedPreferences.savePreferences(context, "timer", String.valueOf(time));
         MySharedPreferences.savePreferences(context, "current_id", String.valueOf(id));
-        Intent intent = new Intent(context, Part3Activity.class);
+        Intent intent = new Intent(context, PartActivity.class);
         startActivity(intent);
     }
 

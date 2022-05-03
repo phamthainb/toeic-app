@@ -7,9 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     Button btnSignIn,btnSignUp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +24,7 @@ public class Login extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Login.this,Login2.class);
+                Intent intent=new Intent(LoginActivity.this, Login2Activity.class);
                 //Toast.makeText(Login.this,"Sing In",Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
@@ -33,7 +32,7 @@ public class Login extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Login.this,Logup1.class);
+                Intent intent=new Intent(LoginActivity.this, Logup1Activity.class);
                 //Toast.makeText(Login.this,"Sing Up",Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }

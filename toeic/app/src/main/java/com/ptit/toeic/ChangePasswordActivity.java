@@ -72,7 +72,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                             Toast.makeText(ChangePasswordActivity.this, "Update password successfully, please login again!", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(ChangePasswordActivity.this, Login.class);
+                            Intent intent = new Intent(ChangePasswordActivity.this, LoginActivity.class);
                             startActivity(intent);
                         }
 
@@ -88,7 +88,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
                     });
 
                     Toast.makeText(getApplicationContext(), "Update password successfully", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), Login.class);
+                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                     startActivity(intent);
                 }
             }
