@@ -17,6 +17,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SeekBar;
@@ -74,7 +75,7 @@ public class Part3Activity extends AppCompatActivity {
     Double time = 0.0;
 
     // view element
-    Button btn_pause, btn_play, btn_next, btn_prev, btn_submit;
+    ImageButton btn_pause, btn_play, btn_next, btn_prev, btn_submit, btn_hide;
     SeekBar seekBar;
     ImageView quest_img;
     TextView quest_desc, timer_text;
@@ -132,7 +133,7 @@ public class Part3Activity extends AppCompatActivity {
         // api
 //        MySharedPreferences.savePreferences(this.getApplicationContext(), "task_id", "30d32ade-437a-436c-9b24-ee0ce3a2c661");
 //        MySharedPreferences.savePreferences(this.getApplicationContext(), "stt", "1");
-//        MySharedPreferences.savePreferences(this.getApplicationContext(), "current_id", "27");
+//        MySharedPreferences.savePreferences(this.getApplicationContext(), "current_id", "3");
 //        MySharedPreferences.savePreferences(this.getApplicationContext(), "timer", "1");
 
 //        int stt = Integer.parseInt(MySharedPreferences.getPreferences(this.getApplicationContext(), "stt"));
