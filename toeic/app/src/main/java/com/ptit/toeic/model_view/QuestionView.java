@@ -1,5 +1,7 @@
 package com.ptit.toeic.model_view;
 
+import androidx.annotation.Nullable;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -10,6 +12,7 @@ public class QuestionView {
     int part;
     long prev_id;
     long next_id;
+    String type; // test, practice
 
     int is_last; // 0 is false, 1 is true
 
@@ -17,7 +20,7 @@ public class QuestionView {
     String answer;
     String data;
 
-    public QuestionView(long id, String task_id, int question_id, int part, long prev_id, long next_id, int is_last, int stt, String answer, String data) {
+    public QuestionView(long id, String task_id, int question_id, int part, long prev_id, long next_id, int is_last, int stt, String answer, String data, @Nullable String type) {
         this.id = id;
         this.task_id = task_id;
         this.question_id = question_id;
@@ -28,9 +31,18 @@ public class QuestionView {
         this.stt = stt;
         this.answer = answer; // user pick
         this.data = data;
+        this.type = type;
     }
 
     public QuestionView() {
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public long getId() {

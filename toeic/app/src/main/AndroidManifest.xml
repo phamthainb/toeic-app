@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ptit.toeic">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,9 +17,61 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PracticeHistory"
+            android:exported="true"
+            android:label="Part"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".TestHistory"
+            android:exported="true"
+            android:label="Part"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".History"
+            android:exported="true"
+            android:label="Part"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".TestingResult26"
+            android:exported="true" />
+        <activity
+            android:name=".Target32"
+            android:exported="true" />
+        <activity
+            android:name=".Login2"
+            android:exported="true" />
+        <activity
+            android:name=".Logup1"
+            android:exported="true" />
+        <activity
+            android:name=".Login"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
