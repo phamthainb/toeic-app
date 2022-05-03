@@ -44,7 +44,6 @@ public class QuestionDao extends SQLiteOpenHelper {
     String _data = "data"; // json object
     String _type = "type"; // json object
 
-
     ObjectMapper objectMapper = new ObjectMapper();
 
     public QuestionDao(Context context) {

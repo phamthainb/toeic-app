@@ -45,9 +45,7 @@ public class PracticeHistoryAdapter extends BaseAdapter {
             view1 = view;
         }
 
-        System.out.println("listkxascxasjn: " + contentItems.size());
         ((TextView) view1.findViewById(R.id.textViewPracticehistoryPartList)).setText("Part " + String.valueOf(i + 1));
-
 
         for (int j = 0; j < contentItems.size(); j++) {
 

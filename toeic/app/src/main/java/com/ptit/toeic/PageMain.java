@@ -168,13 +168,6 @@ public class PageMain extends AppCompatActivity {
         return true;
     }
 
-    //    void login() {
-//        RequestParams login = new RequestParams();
-//        login.put("email", "phamthainb@gmail.com");
-//        login.put("password", "12345678");
-//        callAPI.login(login);
-//    }
-
     void select_part(Integer part, Integer limit) {
         seed_data(part, limit);
     }

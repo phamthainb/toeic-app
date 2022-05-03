@@ -63,14 +63,10 @@ public class ContentItemAdapter extends BaseAdapter {
             view1 = ConstraintLayout.inflate(this.context, R.layout.part3_question, null);
             // bind data to view
             ContentItem q = (ContentItem) getItem(i);
-
             // stt, title, desc
             String title = question.getTitle();
-            if (question.getPart() == 2) {
-                title = question.getKind();
-            }
-            if (question.getPart() == 3 || question.getPart() == 4) {
-                title = "...";
+            if (question.getPart() == 2 || question.getPart() == 3 || question.getPart() == 4) {
+                title = "Listen and Pick your answer";
             }
             if (question.getPart() == 5) {
                 title = contentItems.get(i).getQuestion();
@@ -78,10 +74,8 @@ public class ContentItemAdapter extends BaseAdapter {
             if (question.getPart() == 7) {
                 title = contentItems.get(i).getQuestion();
             }
-
             ((TextView) view1.findViewById(R.id.quest_index)).setText("Question " + String.valueOf(questionView.getStt()) + "." + (i + 1));
             ((TextView) view1.findViewById(R.id.quest_content)).setText(title);
-
             // map list answer
             ArrayList<Object> listAnswer = q.getAnswers();
             RadioGroup listAnswerView = view1.findViewById(R.id.quest_list_answer);
