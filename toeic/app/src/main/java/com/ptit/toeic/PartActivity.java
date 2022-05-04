@@ -156,6 +156,12 @@ public class PartActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mediaPlayer.pause();
+    }
+
+    @Override
     public boolean onSupportNavigateUp() {
         System.out.println("back clicked");
         new AlertDialog.Builder(this)
