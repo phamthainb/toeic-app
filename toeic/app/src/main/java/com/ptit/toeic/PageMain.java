@@ -160,6 +160,7 @@ public class PageMain extends AppCompatActivity {
             }
 
             case R.id.menu_logout:{
+                MySharedPreferences.removeAllSharedPreferences(context);
                 Intent intent = new Intent(context, LoginActivity.class);
                 startActivity(intent);
                 break;
