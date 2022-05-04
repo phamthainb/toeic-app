@@ -28,8 +28,8 @@
 
         <TextView
             android:id="@+id/textViewResultResultPartTest"
-            android:layout_width="170dp"
-            android:layout_height="22dp"
+            android:layout_width="216dp"
+            android:layout_height="25dp"
             android:layout_marginStart="48dp"
             android:layout_marginTop="29dp"
             android:text="TextView"

@@ -66,78 +66,80 @@ public class PracticeHistoryActivity extends AppCompatActivity {
         Integer part1Correct = 0, part2Correct = 0, part3Correct = 0, part4Correct = 0, part5Correct = 0, part6Correct = 0, part7Correct = 0;
 
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getPart() == 1) {
-                part1 += 1;
-                ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
-                ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
+            if (list.get(i).getType().equals("test")) {
+                if (list.get(i).getPart() == 1) {
+                    part1 += 1;
+                    ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
+                    ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
 
-                for (int j = 0; j < answer.size(); j++) {
-                    if (answer.get(j) == correct_answer.get(j)) {
-                        part1Correct += 1;
+                    for (int j = 0; j < answer.size(); j++) {
+                        if (answer.get(j) == correct_answer.get(j)) {
+                            part1Correct += 1;
+                        }
                     }
-                }
-            } else if (list.get(i).getPart() == 2) {
-                part2 += 1;
-                ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
-                ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
+                } else if (list.get(i).getPart() == 2) {
+                    part2 += 1;
+                    ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
+                    ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
 
-                for (int j = 0; j < answer.size(); j++) {
-                    if (answer.get(j) == correct_answer.get(j)) {
-                        part2Correct += 1;
+                    for (int j = 0; j < answer.size(); j++) {
+                        if (answer.get(j) == correct_answer.get(j)) {
+                            part2Correct += 1;
+                        }
                     }
-                }
-            } else if (list.get(i).getPart() == 3) {
-                part3 += 1;
-                ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
-                ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
+                } else if (list.get(i).getPart() == 3) {
+                    part3 += 1;
+                    ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
+                    ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
 
-                for (int j = 0; j < answer.size(); j++) {
-                    if (answer.get(j) == correct_answer.get(j)) {
-                        part3Correct += 1;
+                    for (int j = 0; j < answer.size(); j++) {
+                        if (answer.get(j) == correct_answer.get(j)) {
+                            part3Correct += 1;
+                        }
                     }
-                }
-            } else if (list.get(i).getPart() == 4) {
-                part4 += 1;
-                ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
-                ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
+                } else if (list.get(i).getPart() == 4) {
+                    part4 += 1;
+                    ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
+                    ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
 
-                for (int j = 0; j < answer.size(); j++) {
-                    if (answer.get(j) == correct_answer.get(j)) {
-                        part4Correct += 1;
+                    for (int j = 0; j < answer.size(); j++) {
+                        if (answer.get(j) == correct_answer.get(j)) {
+                            part4Correct += 1;
+                        }
                     }
-                }
-            } else if (list.get(i).getPart() == 5) {
-                part5 += 1;
-                ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
-                ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
+                } else if (list.get(i).getPart() == 5) {
+                    part5 += 1;
+                    ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
+                    ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
 
-                for (int j = 0; j < answer.size(); j++) {
-                    if (answer.get(j) == correct_answer.get(j)) {
-                        part5Correct += 1;
+                    for (int j = 0; j < answer.size(); j++) {
+                        if (answer.get(j) == correct_answer.get(j)) {
+                            part5Correct += 1;
+                        }
                     }
-                }
-            } else if (list.get(i).getPart() == 6) {
-                part6 += 1;
-                ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
-                ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
+                } else if (list.get(i).getPart() == 6) {
+                    part6 += 1;
+                    ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
+                    ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
 
-                for (int j = 0; j < answer.size(); j++) {
-                    if (answer.get(j) == correct_answer.get(j)) {
-                        part6Correct += 1;
+                    for (int j = 0; j < answer.size(); j++) {
+                        if (answer.get(j) == correct_answer.get(j)) {
+                            part6Correct += 1;
+                        }
                     }
-                }
-            } else if (list.get(i).getPart() == 7) {
-                part7 += 1;
-                ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
-                ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
+                } else if (list.get(i).getPart() == 7) {
+                    part7 += 1;
+                    ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
+                    ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());
 
-                for (int j = 0; j < answer.size(); j++) {
-                    if (answer.get(j) == correct_answer.get(j)) {
-                        part7Correct += 1;
+                    for (int j = 0; j < answer.size(); j++) {
+                        if (answer.get(j) == correct_answer.get(j)) {
+                            part7Correct += 1;
+                        }
                     }
                 }
             }
-        }
+       }
 
         ((TextView) this.findViewById(R.id.textViewResultResultPracticehistoryPartList1)).setText("True: " + part1Correct + "/" + part1 + ", False: " + String.valueOf((part1 - part1Correct)) + "/" + part1);
         ((TextView) this.findViewById(R.id.textViewResultResultPracticehistoryPartList2)).setText("True: " + part2Correct + "/" + part2 + ", False: " + String.valueOf((part2 - part2Correct)) + "/" + part2);
