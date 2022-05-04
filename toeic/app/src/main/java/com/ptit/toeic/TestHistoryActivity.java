@@ -21,6 +21,8 @@ import com.ptit.toeic.model_view.QuestionView;
 import com.ptit.toeic.utils.Convert;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TestHistoryActivity extends AppCompatActivity {
     ArrayList<QuestionView> list;
@@ -47,13 +49,13 @@ public class TestHistoryActivity extends AppCompatActivity {
         actionBar.setTitle(ss);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        list = questionDao.findAll();
+        list = questionDao.findAllbyType("test");
 
         Integer part1 = 0;
         Integer part1Correct = 0;
 
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getType() == "test") {
+            if (list.get(i).getType().equals("test")) {
                 part1 += 1;
                 ArrayList<Object> correct_answer = (ArrayList<Object>) Convert.string2Json(list.get(i).getData()).get("correct_answers");
                 ArrayList<Object> answer = Convert.string2Array(list.get(i).getAnswer());

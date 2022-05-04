@@ -172,6 +172,37 @@ public class QuestionDao extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
+    public ArrayList<QuestionView> findAllbyType(String task_id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<QuestionView> list = new ArrayList<>();
+        String sql = "Select * from " + db_name + " where type = '" + task_id + "'";
+        Cursor cursor = db.rawQuery(sql, null);
+        cursor.moveToFirst();
+
+        while (cursor.isAfterLast() == false) {
+            System.out.println("cursor: " + cursor.getString(cursor.getColumnIndex("task_id")));
+
+            QuestionView q = new QuestionView();
+            q.setId(cursor.getLong(cursor.getColumnIndex(_id)));
+            q.setTask_id(cursor.getString(cursor.getColumnIndex(_task_id)));
+            q.setNext_id(cursor.getLong(cursor.getColumnIndex(_next_id)));
+            q.setPrev_id(cursor.getLong(cursor.getColumnIndex(_prev_id)));
+            q.setPart(cursor.getInt(cursor.getColumnIndex(_part)));
+            q.setQuestion_id(cursor.getInt(cursor.getColumnIndex(_question_id)));
+            q.setStt(cursor.getInt(cursor.getColumnIndex(_stt)));
+            q.setIs_last(cursor.getInt(cursor.getColumnIndex(_is_last)));
+            q.setType(cursor.getString(cursor.getColumnIndex(_type)));
+
+            q.setData(cursor.getString(cursor.getColumnIndex(_data)));
+            q.setAnswer(cursor.getString(cursor.getColumnIndex(_answer)));
+
+            list.add(q);
+            cursor.moveToNext();
+        }
+        return list;
+    }
+
+    @SuppressLint("Range")
     public ArrayList<QuestionView> findAll() {
         SQLiteDatabase db = this.getReadableDatabase();
         ArrayList<QuestionView> list = new ArrayList<>();
