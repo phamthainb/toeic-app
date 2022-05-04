@@ -120,6 +120,8 @@ public class PartActivity extends AppCompatActivity {
         btn_submit = findViewById(R.id.quest_submit);
         btn_submit.setEnabled(false);
 
+        btn_hide = findViewById(R.id.quest_hide);
+
         int id = Integer.parseInt(MySharedPreferences.getPreferences(context, "current_id", "1"));
         time = Double.valueOf(MySharedPreferences.getPreferences(context, "timer", "0.0"));
 
@@ -244,7 +246,8 @@ public class PartActivity extends AppCompatActivity {
 
         // list question
         ArrayList<ContentItem> contentItem = question.getContent();
-        contentItemView.setAdapter(new ContentItemAdapter(this.getApplicationContext(), contentItem, questionView, question));
+        ContentItemAdapter contentItemAdapter = new ContentItemAdapter(this.getApplicationContext(), contentItem, questionView, question);
+        contentItemView.setAdapter(contentItemAdapter);
 
         // control: prev, next, pause, audio process
         if (question.getTag().equals("listen")) {
@@ -330,6 +333,17 @@ public class PartActivity extends AppCompatActivity {
                 startActivity(intent);
                 System.out.println("submit");
             }
+        });
+
+        btn_hide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                overridePendingTransition(0, 0);
+                startActivity(getIntent());
+                overridePendingTransition(0, 0);
+            }
+
         });
     }
 
