@@ -26,7 +26,10 @@ public class Utils {
             public void run() {
                 try {
                     // download the drawable
-                    final Drawable drawable = Drawable.createFromStream((InputStream) new URL(url).getContent(), "src");
+//                    URL url1 = new URL();
+                    final Drawable drawable = Drawable.createFromStream(
+                            (InputStream) new URL(url).getContent(),
+                            "src");
                     // edit the view in the UI thread
                     imageView.post(new Runnable() {
                         public void run() {

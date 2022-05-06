@@ -19,7 +19,7 @@
             android:id="@+id/textViewResultPart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="29dp"
             android:text="Result :"
             android:textColor="#00BCD4"
@@ -28,12 +28,11 @@
 
         <TextView
             android:id="@+id/textViewResultResultPartTest"
-            android:layout_width="170dp"
+            android:layout_width="wrap_content"
             android:layout_height="22dp"
-            android:layout_marginStart="48dp"
             android:layout_marginTop="29dp"
             android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/textViewResultPart"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

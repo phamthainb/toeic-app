@@ -1,322 +1,328 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout1PracticehistoryPartList1"
-        android:layout_width="368dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:background="#ffff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textViewPracticehistoryPartList1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:text="Part 1"
-            android:textColor="#00BCD4"
-            android:textSize="20sp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout1PracticehistoryPartList1"
+            android:layout_width="368dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:background="#ffff"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textViewResultPracticehistoryPartList1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="91dp"
-            android:layout_marginTop="50dp"
-            android:text="Result :"
-            android:textColor="#00BCD4"
+            <TextView
+                android:id="@+id/textViewPracticehistoryPartList1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Part 1"
+                android:textColor="#00BCD4"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewResultPracticehistoryPartList1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="50dp"
+                android:text="Result :"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewResultResultPracticehistoryPartList1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="49dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout1PracticehistoryPartList2"
+            android:layout_width="368dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="21dp"
+            android:background="#ffff"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout1PracticehistoryPartList1">
 
-        <TextView
-            android:id="@+id/textViewResultResultPracticehistoryPartList1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="49dp"
-            android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList1"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/textViewPracticehistoryPartList2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Part 2"
+                android:textColor="#00BCD4"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:id="@+id/textViewResultPracticehistoryPartList2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="50dp"
+                android:text="Result :"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewResultResultPracticehistoryPartList2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="49dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout1PracticehistoryPartList3"
+            android:layout_width="368dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:background="#ffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout1PracticehistoryPartList2">
+
+            <TextView
+                android:id="@+id/textViewPracticehistoryPartList3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Part 3"
+                android:textColor="#00BCD4"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewResultPracticehistoryPartList3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="50dp"
+                android:text="Result :"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewResultResultPracticehistoryPartList3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="49dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout1PracticehistoryPartList4"
+            android:layout_width="368dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:background="#ffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout1PracticehistoryPartList3">
+
+            <TextView
+                android:id="@+id/textViewPracticehistoryPartList4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Part 4"
+                android:textColor="#00BCD4"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewResultPracticehistoryPartList4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="50dp"
+                android:text="Result :"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewResultResultPracticehistoryPartList4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="49dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout1PracticehistoryPartList5"
+            android:layout_width="368dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:background="#ffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout1PracticehistoryPartList4">
+
+            <TextView
+                android:id="@+id/textViewPracticehistoryPartList5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Part 5"
+                android:textColor="#00BCD4"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewResultPracticehistoryPartList5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="50dp"
+                android:text="Result :"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewResultResultPracticehistoryPartList5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="49dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout1PracticehistoryPartList7"
+            android:layout_width="368dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:background="#ffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout1PracticehistoryPartList6">
+
+            <TextView
+                android:id="@+id/textViewPracticehistoryPartList7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Part 7"
+                android:textColor="#00BCD4"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewResultPracticehistoryPartList7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="50dp"
+                android:text="Result :"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewResultResultPracticehistoryPartList7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="49dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList7"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout1PracticehistoryPartList6"
+            android:layout_width="368dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:background="#ffff"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout1PracticehistoryPartList5">
+
+            <TextView
+                android:id="@+id/textViewPracticehistoryPartList6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Part 6"
+                android:textColor="#00BCD4"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewResultPracticehistoryPartList6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="91dp"
+                android:layout_marginTop="50dp"
+                android:text="Result :"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewResultResultPracticehistoryPartList6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="49dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout1PracticehistoryPartList2"
-        android:layout_width="368dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="21dp"
-        android:background="#ffff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1PracticehistoryPartList1">
-
-        <TextView
-            android:id="@+id/textViewPracticehistoryPartList2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:text="Part 2"
-            android:textColor="#00BCD4"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewResultPracticehistoryPartList2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="91dp"
-            android:layout_marginTop="50dp"
-            android:text="Result :"
-            android:textColor="#00BCD4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewResultResultPracticehistoryPartList2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="49dp"
-            android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList2"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout1PracticehistoryPartList3"
-        android:layout_width="368dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:background="#ffff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1PracticehistoryPartList2">
-
-        <TextView
-            android:id="@+id/textViewPracticehistoryPartList3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:text="Part 3"
-            android:textColor="#00BCD4"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewResultPracticehistoryPartList3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="91dp"
-            android:layout_marginTop="50dp"
-            android:text="Result :"
-            android:textColor="#00BCD4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewResultResultPracticehistoryPartList3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="49dp"
-            android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList3"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout1PracticehistoryPartList4"
-        android:layout_width="368dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
-        android:background="#ffff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1PracticehistoryPartList3">
-
-        <TextView
-            android:id="@+id/textViewPracticehistoryPartList4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:text="Part 4"
-            android:textColor="#00BCD4"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewResultPracticehistoryPartList4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="91dp"
-            android:layout_marginTop="50dp"
-            android:text="Result :"
-            android:textColor="#00BCD4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewResultResultPracticehistoryPartList4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="49dp"
-            android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList4"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout1PracticehistoryPartList5"
-        android:layout_width="368dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
-        android:background="#ffff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1PracticehistoryPartList4">
-
-        <TextView
-            android:id="@+id/textViewPracticehistoryPartList5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:text="Part 5"
-            android:textColor="#00BCD4"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewResultPracticehistoryPartList5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="91dp"
-            android:layout_marginTop="50dp"
-            android:text="Result :"
-            android:textColor="#00BCD4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewResultResultPracticehistoryPartList5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="49dp"
-            android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList5"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout1PracticehistoryPartList7"
-        android:layout_width="368dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:background="#ffff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1PracticehistoryPartList6">
-
-        <TextView
-            android:id="@+id/textViewPracticehistoryPartList7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:text="Part 7"
-            android:textColor="#00BCD4"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewResultPracticehistoryPartList7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="91dp"
-            android:layout_marginTop="50dp"
-            android:text="Result :"
-            android:textColor="#00BCD4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewResultResultPracticehistoryPartList7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="49dp"
-            android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList7"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout1PracticehistoryPartList6"
-        android:layout_width="368dp"
-        android:layout_height="83dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
-        android:background="#ffff"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1PracticehistoryPartList5">
-
-        <TextView
-            android:id="@+id/textViewPracticehistoryPartList6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:text="Part 6"
-            android:textColor="#00BCD4"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewResultPracticehistoryPartList6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="91dp"
-            android:layout_marginTop="50dp"
-            android:text="Result :"
-            android:textColor="#00BCD4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textViewResultResultPracticehistoryPartList6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="49dp"
-            android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/textViewResultPracticehistoryPartList6"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
