@@ -1,6 +1,7 @@
 # toeic-app
 An mobile app for Learn && Test Exam Toeic
-![demo](https://raw.githubusercontent.com/phamthainb/toeic-app/main/docs/demo.gif "demo")
+<img src="https://raw.githubusercontent.com/phamthainb/toeic-app/main/docs/demo.gif" width="400">
+
 
 # How to run
 ## api
